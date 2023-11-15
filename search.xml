@@ -1064,7 +1064,13 @@
   <entry>
     <title>K-means讲解</title>
     <url>/2023/11/15/test/k-means/</url>
-    <content><![CDATA[<h1 id="k-均值算法"><a href="#k-均值算法" class="headerlink" title="k 均值算法"></a>k 均值算法</h1><p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/1234333422.gif"></p>
+    <content><![CDATA[<p>K-means的一些讲解</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+
+<h1 id="k-均值算法"><a href="#k-均值算法" class="headerlink" title="k 均值算法"></a>k 均值算法</h1><p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/1234333422.gif"></p>
 <p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20201018202041.png"></p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a><strong>步骤</strong></h2><ul>
 <li>随机选取样本作为初始均值向量（初始值：k 的值【即几个簇】）（也可以不用样本点）</li>
