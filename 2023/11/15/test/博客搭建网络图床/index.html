@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-pig.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/test.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/test.png">
+  <link rel="mask-icon" href="/images/test.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"imaginedream.top","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":14,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="因为我之前就有写一些md文件，并且有本地的图片存放处，所以要移植到博客中图片的位置要重新更改，比较麻烦。所以可以采用网络图床的方法，而gitee图床会有防盗链的问题。文末也给出了解决办法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客搭建的图床配置问题">
+<meta property="og:url" content="http://imaginedream.top/2023/11/15/test/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/index.html">
+<meta property="og:site_name" content="Old John World">
+<meta property="og:description" content="因为我之前就有写一些md文件，并且有本地的图片存放处，所以要移植到博客中图片的位置要重新更改，比较麻烦。所以可以采用网络图床的方法，而gitee图床会有防盗链的问题。文末也给出了解决办法。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-fea0257eb4c729201fc5e26266a8b474_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-b5fac8e771ae60e3bc084a58e324e007_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-40abd45ed1da8e980435daad3765323f_1440w.webp">
+<meta property="og:image" content="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-1d821f5ae80ccd249ba68aa8089eda91_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-e376d26a38218d47abc3df7877c5337d_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-019866556acd3ccb1068ee7b969faff9_1440w.webp">
+<meta property="og:image" content="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-fa36c8dba361449a427f840933dd8dc7_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-a01dffb661f597f1b4fabc913624584d_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-f17051a2605b4e6d4cda1237987a4ef1_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-885b8e694a36000b81964b455c797189_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-21be13aa6bf02c6d34a52cf97b53f9b5_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-34b0d953ec603e3c9a600e79f6a41ac7_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-73675bf4d9e879015b287da80bf12485_1440w.webp">
+<meta property="og:image" content="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-45cc87ed7075951b3ff1d7859cb9e7d3_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-e9f889cecda53684ebe557168b6ce153_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-14b41344f2a58fba70d35aaaae829c40_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-746fa20c3f5d4e4ba6b4a5dedafe75ea_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-8670fa2005cceff4f72fffdae7a59ed0_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-953d6af335644b7112ba894967e51a59_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-de04541b1a3730d9b4a27657aa2a92f0_1440w.webp">
+<meta property="og:image" content="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-a51cd449691b8fd8f47291088499c874_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-a6f4d86a2a8faa7b1ec43ece1446a10c_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-cd0c79c97d5a299e33bb948aaca894e7_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-8c42a46a26854b305e675751e12c8585_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-9f6b35fab118e7c6d6aad17aa428e290_1440w.webp">
+<meta property="og:image" content="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-436692777d410ff135402d1b0e75f565_1440w.webp">
+<meta property="og:image" content="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231115223016431.png">
+<meta property="article:published_time" content="2023-11-15T14:19:48.764Z">
+<meta property="article:modified_time" content="2023-11-15T14:30:19.622Z">
+<meta property="article:author" content="Old John">
+<meta property="article:tag" content="图床">
+<meta property="article:tag" content="博客搭建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-fea0257eb4c729201fc5e26266a8b474_1440w.webp">
+
+<link rel="canonical" href="http://imaginedream.top/2023/11/15/test/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>博客搭建的图床配置问题 | Old John World</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Old John World</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Welcome to my world</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="key fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="hand-o-right fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="list fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://imaginedream.top/2023/11/15/test/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Old John">
+      <meta itemprop="description" content="Hello">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Old John World">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          博客搭建的图床配置问题
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-15 22:19:48 / 修改时间：22:30:19" itemprop="dateCreated datePublished" datetime="2023-11-15T22:19:48+08:00">2023-11-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>因为我之前就有写一些md文件，并且有本地的图片存放处，所以要移植到博客中图片的位置要重新更改，比较麻烦。所以可以采用网络图床的方法，而gitee图床会有防盗链的问题。文末也给出了解决办法。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<p>本文参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/583732805">https://zhuanlan.zhihu.com/p/583732805</a></p>
+<h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3><p>Typora的下载安装和激活可以参考<a href="https://link.zhihu.com/?target=https://www.cnblogs.com/wjdzh/p/16522182.html">这篇文章</a>或者其他博客，这里主要介绍PicGo的安装过程。</p>
+<p>打开Typora，依次单击菜单栏【文件】&#x3D;&gt;【偏好设置】&#x3D;&gt;【图像】，会在页面上展示【下载PicGo】按钮，单击即可跳转下载页面。因为这里笔者做了主题颜色的修改，所以软件的背景是深色的，这个基本不影响本文的阅读。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-fea0257eb4c729201fc5e26266a8b474_1440w.webp" alt="img"></p>
+<p>从Typora进入PicGo软件下载界面</p>
+<p>在下载页面中单击【免费下载】，会跳转到github相应网站，下拉可以看到下载链接：例如笔者选择【PicGo-Setup-2.3.1.exe】这一项。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-b5fac8e771ae60e3bc084a58e324e007_1440w.webp" alt="img"></p>
+<p>单击免费下载</p>
+<p><img src="https://pic4.zhimg.com/80/v2-40abd45ed1da8e980435daad3765323f_1440w.webp" alt="img"></p>
+<p>转向github主页</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-1d821f5ae80ccd249ba68aa8089eda91_1440w.webp" alt="img"></p>
+<p>选择合适的文件进行下载</p>
+<p>接下来就是程序安装过程，可以自定义程序的安装路径，这些操作比较简单。</p>
+<p>注意如果想要正常使用PicGo，可能还需要安装<a href="https://link.zhihu.com/?target=https://nodejs.org/en/">NodeJS</a>环境，可以下载左侧稳定板，这个过程也是按部就班，按照提示进行安装即可。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-e376d26a38218d47abc3df7877c5337d_1440w.webp" alt="img"></p>
+<p>nodeJS下载</p>
+<p>以上软件安装完毕后，就可以进行仓库的创建。</p>
+<h3 id="2-2-GiTee账户令牌与仓库创建"><a href="#2-2-GiTee账户令牌与仓库创建" class="headerlink" title="2.2 GiTee账户令牌与仓库创建"></a>2.2 GiTee账户令牌与仓库创建</h3><p>Gitee账户的准备工作有以下几项工作需要做：</p>
+<ol>
+<li>创建账户</li>
+<li>创建项目（也就是仓库）</li>
+<li>修改仓库权限为公开</li>
+<li>生成私人令牌</li>
+</ol>
+<p>如果读者还没有Gitee账户，需要先创建<a href="https://link.zhihu.com/?target=https://gitee.com/login">Gitee</a>账户，如果已有账号，可以直接登录。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-019866556acd3ccb1068ee7b969faff9_1440w.webp" alt="img"></p>
+<p>Gitee登陆注册页面</p>
+<p>然后需要创建一个公开仓库，按照以下操作进行配置。</p>
+<p>首先新建仓库</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-fa36c8dba361449a427f840933dd8dc7_1440w.webp" alt="img"></p>
+<p>Gitee个人主页</p>
+<p>配置仓库相关参数，这里暂时还不能修改仓库权限。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-a01dffb661f597f1b4fabc913624584d_1440w.webp" alt="img"></p>
+<p>创建仓库</p>
+<p>新版Gitee无法再创建时选择权限，需要创建后在仓库设置中选择公开。在仓库界面单击选择【管理】，并且勾选相关单击【确定】。</p>
+<p>进入仓库主页。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-f17051a2605b4e6d4cda1237987a4ef1_1440w.webp" alt="img"></p>
+<p>从个人主页进到仓库主页</p>
+<p>进入仓库设置页面。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-885b8e694a36000b81964b455c797189_1440w.webp" alt="img"></p>
+<p>单击右上角管理按钮</p>
+<p>设置仓库权限为开源。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-21be13aa6bf02c6d34a52cf97b53f9b5_1440w.webp" alt="img"></p>
+<p>设置为开源</p>
+<p>接下来需要设置私人令牌，这个令牌相当于暗号或者密码，外部可以通过这个另外访问到当前账户下的数据，注意明文令牌只展示一次，需要及时保存在粘贴板中，后续要用到。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-34b0d953ec603e3c9a600e79f6a41ac7_1440w.webp" alt="img"></p>
+<p>进入个人主页</p>
+<p>进入个人主页设置。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-73675bf4d9e879015b287da80bf12485_1440w.webp" alt="img"></p>
+<p>单击个人设置</p>
+<p>在设置页面左侧找到【私人令牌】。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-45cc87ed7075951b3ff1d7859cb9e7d3_1440w.webp" alt="img"></p>
+<p>左侧单击私人令牌</p>
+<p>添加私人令牌。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-e9f889cecda53684ebe557168b6ce153_1440w.webp" alt="img"></p>
+<p>单击生成新令牌，这里笔者已经有了，所以页面上不是空的</p>
+<p>配置私人令牌参数。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-14b41344f2a58fba70d35aaaae829c40_1440w.webp" alt="img"></p>
+<p>创建私人令牌</p>
+<p>注意令牌明文只展示一次，需要记录下来，后面要用。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-746fa20c3f5d4e4ba6b4a5dedafe75ea_1440w.webp" alt="img"></p>
+<p>私人令牌只出现一次，需要及时记录下来</p>
+<p>到此为止，Gitee仓库创建完成，个人的令牌也已经生成，接下来就是要把账户（Gitee用户名和仓库名）和密码（私人令牌）写在PicGo中。</p>
+<h3 id="2-3-PicGo配置工作"><a href="#2-3-PicGo配置工作" class="headerlink" title="2.3 PicGo配置工作"></a>2.3 PicGo配置工作</h3><p>打开PicGo软件，做必要的安装配置。</p>
+<ol>
+<li>安装gitee－uploader插件</li>
+<li>设置gitee相关账户、仓库和令牌</li>
+<li>设置PicGo软件</li>
+</ol>
+<p>首先需要在【插件设置】中安装gitee插件，搜索gitee-uploader并单击安装，等待几分钟安装完毕。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-8670fa2005cceff4f72fffdae7a59ed0_1440w.webp" alt="img"></p>
+<p>在PicGo中设置GiteeUploader插件</p>
+<p>安装后重启PicGo，可以在【图床设置】选项中看到下拉选项【Gitee】，单击并进行配置。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-953d6af335644b7112ba894967e51a59_1440w.webp" alt="img"></p>
+<p>PicGo中Gitee配置</p>
+<p>有以下几项：</p>
+<ul>
+<li>repo：在自己的Gitee账户下，单击刚刚创建的根目录，在浏览器的当前页面链接中复制最后的账户名和仓库名部分，例如笔者的这一栏填“softargmax&#x2F;blog-pic”。</li>
+<li>branch：一般选择master</li>
+<li>token：刚才在剪贴板中粘贴的私人令牌，直接复制过来</li>
+<li>其他：保持默认即可</li>
+</ul>
+<p>注意账户名和仓库名要粘贴红色框里面的。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-de04541b1a3730d9b4a27657aa2a92f0_1440w.webp" alt="img"></p>
+<p>配置完毕后，单击【设为默认图床】和【确定】</p>
+<p>对PicGo进行一些其他的设置，正常情况下，【设置Server】中的监听网址保持默认就好。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-a51cd449691b8fd8f47291088499c874_1440w.webp" alt="img"></p>
+<p>一些配置</p>
+<p><img src="https://pic1.zhimg.com/80/v2-a6f4d86a2a8faa7b1ec43ece1446a10c_1440w.webp" alt="img"></p>
+<p>一些配置</p>
+<p>在设置server中，默认应该是这样的IP配置，如果不是就修改成这样。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-cd0c79c97d5a299e33bb948aaca894e7_1440w.webp" alt="img"></p>
+<p>PicGo的一些设置</p>
+<p><img src="https://pic2.zhimg.com/80/v2-8c42a46a26854b305e675751e12c8585_1440w.webp" alt="img"></p>
+<p>配置服务器</p>
+<h3 id="2-4-Typora配置工作"><a href="#2-4-Typora配置工作" class="headerlink" title="2.4 Typora配置工作"></a>2.4 Typora配置工作</h3><p>这是最后一步，配置Typora，主要有以下工作：</p>
+<ol>
+<li>设置插入图片的时执行的操作为【上传图片】，并设置相应动作</li>
+<li>配置上传服务为PicGoAPP，并且选择程序所在的安装路径</li>
+<li>单击相应按钮进行验证测试</li>
+</ol>
+<p>返回刚才打开的PicGo的偏好设置，在【图像】界面进行设置：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-9f6b35fab118e7c6d6aad17aa428e290_1440w.webp" alt="img"></p>
+<p>配置Typora</p>
+<p>设置完成后，可以单击【验证图片上传选项】按钮，证实自己的操作是正确的。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-436692777d410ff135402d1b0e75f565_1440w.webp" alt="img"></p>
+<p>验证图片上传功能</p>
+<p>如果出现红色的faild字样，说明以上配置存在错误，可以从以下几个方面排查：</p>
+<ul>
+<li>检查仓库的权限是否被修改为公有</li>
+<li>检查PicGo中的Gitee配置是否和账户中的情况一致，尤其是账户名和仓库名要选择从链接中粘出来的而不是别的</li>
+<li>重启各个软件再次尝试。</li>
+</ul>
+<p>如果提示出现successful字样，则说明上述配置成功。具体使用时，有以下现象：</p>
+<ul>
+<li>在使用Typora编写markdown文档时，不论以何种方式（例如选择本地文件或者其他网页的url文件）添加图片，图片都会自动上传到自己Gitee账户下的仓库中，并且在markdown中将链接地址修改为该图片的Gitee外往访问链接，这些链接是可以通过python或其他方式进行自动爬虫同步本地的，当然也可以自己登录仓库下载，也就意味着本地不需要再保存markdown中用到的图片了。</li>
+<li>打开仓库，可以看到按照时间戳排序的各个图片文件，可以供用户批量下载备份。</li>
+<li>在PicGo的【相册】栏目中也会出现通过该软件上传过的图片。</li>
+</ul>
+<h2 id="解决博客上传不显示的问题"><a href="#解决博客上传不显示的问题" class="headerlink" title="解决博客上传不显示的问题"></a>解决博客上传不显示的问题</h2><p>解决的办法很简单，就是在博客md首段添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如图所下：</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231115223016431.png" alt="image-20231115223016431"></p>
+
+    </div>
+
+    
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------未完待续<i class="fa fa-paw"></i>欢迎下次光临-------------</div>
+    
+</div>
+      
+    </div>
+        <div class="reward-container">
+  <div>谢谢你想打赏的心~</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag"><i class="fa fa-tag"></i> 图床</a>
+              <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag"><i class="fa fa-tag"></i> 博客搭建</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/11/15/test/k-means/" rel="prev" title="K-means讲解">
+      <i class="fa fa-chevron-left"></i> K-means讲解
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.</span> <span class="nav-text">软件下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-GiTee%E8%B4%A6%E6%88%B7%E4%BB%A4%E7%89%8C%E4%B8%8E%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">2.2 GiTee账户令牌与仓库创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-PicGo%E9%85%8D%E7%BD%AE%E5%B7%A5%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">2.3 PicGo配置工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-Typora%E9%85%8D%E7%BD%AE%E5%B7%A5%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">2.4 Typora配置工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number"></span> <span class="nav-text">解决博客上传不显示的问题</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Old John"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Old John</p>
+  <div class="site-description" itemprop="description">Hello</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/notlu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;notlu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/winterlude202104@gmail.com" title="E-Mail → winterlude202104@gmail.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      link
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://space.bilibili.com/8823002?spm_id_from=333.1007.0.0" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;8823002?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank">Bilibili</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2022-12 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Old John</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">37k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:08</span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("05/10/2022 10:00:00"); //此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
