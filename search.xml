@@ -1130,7 +1130,7 @@
 <p><img src="https://pic2.zhimg.com/80/v2-e376d26a38218d47abc3df7877c5337d_1440w.webp" alt="img"></p>
 <p>nodeJS下载</p>
 <p>以上软件安装完毕后，就可以进行仓库的创建。</p>
-<h3 id="2-2-GiTee账户令牌与仓库创建"><a href="#2-2-GiTee账户令牌与仓库创建" class="headerlink" title="2.2 GiTee账户令牌与仓库创建"></a>2.2 GiTee账户令牌与仓库创建</h3><p>Gitee账户的准备工作有以下几项工作需要做：</p>
+<h3 id="GiTee账户令牌与仓库创建"><a href="#GiTee账户令牌与仓库创建" class="headerlink" title="GiTee账户令牌与仓库创建"></a>GiTee账户令牌与仓库创建</h3><p>Gitee账户的准备工作有以下几项工作需要做：</p>
 <ol>
 <li>创建账户</li>
 <li>创建项目（也就是仓库）</li>
@@ -1176,7 +1176,7 @@
 <p><img src="https://pic3.zhimg.com/80/v2-746fa20c3f5d4e4ba6b4a5dedafe75ea_1440w.webp" alt="img"></p>
 <p>私人令牌只出现一次，需要及时记录下来</p>
 <p>到此为止，Gitee仓库创建完成，个人的令牌也已经生成，接下来就是要把账户（Gitee用户名和仓库名）和密码（私人令牌）写在PicGo中。</p>
-<h3 id="2-3-PicGo配置工作"><a href="#2-3-PicGo配置工作" class="headerlink" title="2.3 PicGo配置工作"></a>2.3 PicGo配置工作</h3><p>打开PicGo软件，做必要的安装配置。</p>
+<h3 id="PicGo配置工作"><a href="#PicGo配置工作" class="headerlink" title="PicGo配置工作"></a>PicGo配置工作</h3><p>打开PicGo软件，做必要的安装配置。</p>
 <ol>
 <li>安装gitee－uploader插件</li>
 <li>设置gitee相关账户、仓库和令牌</li>
@@ -1208,7 +1208,7 @@
 <p>PicGo的一些设置</p>
 <p><img src="https://pic2.zhimg.com/80/v2-8c42a46a26854b305e675751e12c8585_1440w.webp" alt="img"></p>
 <p>配置服务器</p>
-<h3 id="2-4-Typora配置工作"><a href="#2-4-Typora配置工作" class="headerlink" title="2.4 Typora配置工作"></a>2.4 Typora配置工作</h3><p>这是最后一步，配置Typora，主要有以下工作：</p>
+<h3 id="Typora配置工作"><a href="#Typora配置工作" class="headerlink" title="Typora配置工作"></a>Typora配置工作</h3><p>这是最后一步，配置Typora，主要有以下工作：</p>
 <ol>
 <li>设置插入图片的时执行的操作为【上传图片】，并设置相应动作</li>
 <li>配置上传服务为PicGoAPP，并且选择程序所在的安装路径</li>
@@ -1232,7 +1232,7 @@
 <li>打开仓库，可以看到按照时间戳排序的各个图片文件，可以供用户批量下载备份。</li>
 <li>在PicGo的【相册】栏目中也会出现通过该软件上传过的图片。</li>
 </ul>
-<h2 id="解决博客上传不显示的问题"><a href="#解决博客上传不显示的问题" class="headerlink" title="解决博客上传不显示的问题"></a>解决博客上传不显示的问题</h2><p>解决的办法很简单，就是在博客md首段添加</p>
+<h3 id="解决博客上传不显示的问题"><a href="#解决博客上传不显示的问题" class="headerlink" title="解决博客上传不显示的问题"></a>解决博客上传不显示的问题</h3><p>解决的办法很简单，就是在博客md首段添加</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;</span><br></pre></td></tr></table></figure>
 
 <p>如图所下：</p>
