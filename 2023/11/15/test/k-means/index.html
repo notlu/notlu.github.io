@@ -20,20 +20,29 @@
     var CONFIG = {"hostname":"imaginedream.top","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":14,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="支持正版！">
+  <meta name="description" content="k 均值算法  步骤 随机选取样本作为初始均值向量（初始值：k 的值【即几个簇】）（也可以不用样本点） 分别计算每个样本点到初始均值向量的距离（数据做了标准化），距离哪个点最近就属于哪个簇 每个簇重新计算中心点，重复第二步直到收敛 找到质心和离某个质心距离最近的点就分为一类。      问题：需要指定k值，难以确定k值。  确定k值1.手肘法手肘法的核心指标是SSE(sum of the squa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一些常用软件的安装教程">
-<meta property="og:url" content="http://imaginedream.top/2023/02/25/test/%E5%A6%82%E4%BD%95%E7%99%BD%E5%AB%96office%E7%B3%BB%E5%88%97/index.html">
+<meta property="og:title" content="K-means讲解">
+<meta property="og:url" content="http://imaginedream.top/2023/11/15/test/k-means/index.html">
 <meta property="og:site_name" content="Old John World">
-<meta property="og:description" content="支持正版！">
+<meta property="og:description" content="k 均值算法  步骤 随机选取样本作为初始均值向量（初始值：k 的值【即几个簇】）（也可以不用样本点） 分别计算每个样本点到初始均值向量的距离（数据做了标准化），距离哪个点最近就属于哪个簇 每个簇重新计算中心点，重复第二步直到收敛 找到质心和离某个质心距离最近的点就分为一类。      问题：需要指定k值，难以确定k值。  确定k值1.手肘法手肘法的核心指标是SSE(sum of the squa">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-25T12:26:42.513Z">
-<meta property="article:modified_time" content="2023-10-10T12:04:31.366Z">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/1234333422.gif">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20201018202041.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021340.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021518.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021531.png">
+<meta property="og:image" content="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231115213147472.png">
+<meta property="article:published_time" content="2023-11-15T13:01:51.769Z">
+<meta property="article:modified_time" content="2023-11-15T13:54:37.842Z">
 <meta property="article:author" content="Old John">
-<meta property="article:tag" content="blog">
+<meta property="article:tag" content="机器学习">
+<meta property="article:tag" content="聚类算法">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/1234333422.gif">
 
-<link rel="canonical" href="http://imaginedream.top/2023/02/25/test/%E5%A6%82%E4%BD%95%E7%99%BD%E5%AB%96office%E7%B3%BB%E5%88%97/">
+<link rel="canonical" href="http://imaginedream.top/2023/11/15/test/k-means/">
 
 
 <script id="page-configurations">
@@ -46,7 +55,7 @@
   };
 </script>
 
-  <title>一些常用软件的安装教程 | Old John World</title>
+  <title>K-means讲解 | Old John World</title>
   
 
 
@@ -191,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://imaginedream.top/2023/02/25/test/%E5%A6%82%E4%BD%95%E7%99%BD%E5%AB%96office%E7%B3%BB%E5%88%97/">
+    <link itemprop="mainEntityOfPage" href="http://imaginedream.top/2023/11/15/test/k-means/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -204,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          一些常用软件的安装教程
+          K-means讲解
         </h1>
 
         <div class="post-meta">
@@ -213,16 +222,19 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-02-25 20:26:42" itemprop="dateCreated datePublished" datetime="2023-02-25T20:26:42+08:00">2023-02-25</time>
+              <time title="创建时间：2023-11-15 21:01:51 / 修改时间：21:54:37" itemprop="dateCreated datePublished" datetime="2023-11-15T21:01:51+08:00">2023-11-15</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-10 20:04:31" itemprop="dateModified" datetime="2023-10-10T20:04:31+08:00">2023-10-10</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
+                </span>
+            </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -237,14 +249,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>245</span>
+              <span>949</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -256,16 +268,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>支持正版！</p>
-<span id="more"></span>
-
-<h1 id="1-office系列"><a href="#1-office系列" class="headerlink" title="1. office系列"></a>1. office系列</h1><ol>
-<li>参考视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1g64y1d7az?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1g64y1d7az?spm_id_from=333.999.0.0</a></li>
-<li>下载office tool plus</li>
-<li>部署完毕</li>
-<li>输入命令&#x2F;osppilbyid ProPlus2021Volume &#x2F;osppsethst:kms.loli.beer &#x2F;osppsetprt:1688 &#x2F;osppact</li>
-</ol>
-<p>kms.cangshui.net（这个命令经常会变，请上网找到最新的命令）</p>
+        <h1 id="k-均值算法"><a href="#k-均值算法" class="headerlink" title="k 均值算法"></a>k 均值算法</h1><p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/1234333422.gif"></p>
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20201018202041.png"></p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a><strong>步骤</strong></h2><ul>
+<li>随机选取样本作为初始均值向量（初始值：k 的值【即几个簇】）（也可以不用样本点）</li>
+<li>分别计算每个样本点到初始均值向量的<strong>距离</strong>（数据做了标准化），距离哪个点最近就属于哪个簇</li>
+<li>每个簇重新计算中心点，重复第二步直到<strong>收敛</strong></li>
+<li>找到质心和离某个质心距离最近的点就分为一类。</li>
+</ul>
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021340.png"></p>
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021518.png"></p>
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021531.png"></p>
+<blockquote>
+<p>问题：需要指定k值，难以确定k值。</p>
+</blockquote>
+<h2 id="确定k值"><a href="#确定k值" class="headerlink" title="确定k值"></a>确定k值</h2><h3 id="1-手肘法"><a href="#1-手肘法" class="headerlink" title="1.手肘法"></a>1.手肘法</h3><p>手肘法的核心指标是SSE(sum of the squared errors，误差平方和)，</p>
+<p>$$S S E &#x3D; \sum _ { i &#x3D; 1 } ^ { k } \sum _ {  p∈m_i }| p - m _ {i } | ^ { 2 }$$</p>
+<p>其中，Ci是第i个簇，p是Ci中的样本点，mi是Ci的质心（Ci中所有样本的均值），SSE是所有样本的聚类误差，代表了聚类效果的好坏。</p>
+<p>手肘法的核心思想是：随着聚类数k的增大，样本划分会更加精细，每个簇的聚合程度会逐渐提高，那么误差平方和SSE自然会逐渐变小。并且，当k小于真实聚类数时，由于k的增大会大幅增加每个簇的聚合程度，故SSE的下降幅度会很大，而当k到达真实聚类数时，再增加k所得到的聚合程度回报会迅速变小，所以SSE的下降幅度会骤减，然后随着k值的继续增大而趋于平缓，也就是说SSE和k的关系图是一个手肘的形状，而这个肘部对应的k值就是数据的真实聚类数。当然，这也是该方法被称为手肘法的原因。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231115213147472.png" alt="image-20231115213147472"></p>
+<h3 id="2-轮廓系数法"><a href="#2-轮廓系数法" class="headerlink" title="2. 轮廓系数法"></a>2. 轮廓系数法</h3><p>该方法的核心指标是轮廓系数（Silhouette Coefficient），某个样本点Xi的轮廓系数定义如下：</p>
+<p>$$S &#x3D; \frac { b - a } { m a x ( a , b ) }$$</p>
+<p>其中，a是Xi与同簇的其他样本的平均距离，称为凝聚度，b是Xi与最近簇中所有样本的平均距离，称为分离度。而最近簇的定义是</p>
+<p>$$C _ { j } &#x3D;{ a r g } m i n \frac { 1 } { n } \sum _ { p ∈c _ { s } } | p - X _ { i }| ^ { 2 }$$</p>
+<p>其中p是某个簇Ck中的样本。事实上，简单点讲，就是用Xi到某个簇所有样本平均距离作为衡量该点到该簇的距离后，选择离Xi最近的一个簇作为最近簇。</p>
+<p>求出所有样本的轮廓系数后再求平均值就得到了<strong>平均轮廓系数</strong>。平均轮廓系数的取值范围为[-1,1]，且簇内样本的距离越近，簇间样本距离越远，平均轮廓系数越大，聚类效果越好。那么，很自然地，平均轮廓系数最大的k便是最佳聚类数。</p>
 
     </div>
 
@@ -294,6 +321,12 @@
 
 
       <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
+              <a href="/tags/%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 聚类算法</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          </div>
 
         
 
@@ -301,13 +334,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/02/25/test/Pandas%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC/" rel="prev" title="公司任务">
-      <i class="fa fa-chevron-left"></i> 公司任务
+    <a href="/2023/11/13/test/%E6%9D%8E%E6%B2%90/" rel="prev" title="动手学深度学习v2补充解释">
+      <i class="fa fa-chevron-left"></i> 动手学深度学习v2补充解释
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/03/02/test/%E4%B9%92%E4%B9%93%E7%90%83%E8%AE%AD%E7%BB%83%E6%97%A5%E8%AE%B0/" rel="next" title="关于乒乓球">
-      关于乒乓球 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -366,7 +396,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-office%E7%B3%BB%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text">1. office系列</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#k-%E5%9D%87%E5%80%BC%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">k 均值算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9Ak%E5%80%BC"><span class="nav-number">1.2.</span> <span class="nav-text">确定k值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%89%8B%E8%82%98%E6%B3%95"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.手肘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%BD%AE%E5%BB%93%E7%B3%BB%E6%95%B0%E6%B3%95"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 轮廓系数法</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -557,6 +587,59 @@ setInterval("createtime()",250);
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
