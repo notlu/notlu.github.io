@@ -413,10 +413,11 @@
 <li><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install &lt;库名&gt;			安装</span><br><span class="line">pip uninstall &lt;库名&gt;		卸载</span><br><span class="line">pip install -U &lt;库名&gt;		更新</span><br><span class="line">pip download &lt;库名&gt;			只下载，不安装</span><br><span class="line">pip show &lt;库名&gt;				展示这个库的信息</span><br><span class="line">pip search &lt;库名&gt;			搜索关键字</span><br><span class="line">pip list				列出安装的库</span><br><span class="line">查看用conda安装的包：</span><br><span class="line">conda list</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
-      <categories>
-        <category>深度学习</category>
-        <category>python</category>
-      </categories>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>python</tag>
+        <tag>anaconda</tag>
+      </tags>
   </entry>
   <entry>
     <title>关于乒乓球</title>
@@ -1089,12 +1090,18 @@
 <p>其中，Ci是第i个簇，p是Ci中的样本点，mi是Ci的质心（Ci中所有样本的均值），SSE是所有样本的聚类误差，代表了聚类效果的好坏。</p>
 <p>手肘法的核心思想是：随着聚类数k的增大，样本划分会更加精细，每个簇的聚合程度会逐渐提高，那么误差平方和SSE自然会逐渐变小。并且，当k小于真实聚类数时，由于k的增大会大幅增加每个簇的聚合程度，故SSE的下降幅度会很大，而当k到达真实聚类数时，再增加k所得到的聚合程度回报会迅速变小，所以SSE的下降幅度会骤减，然后随着k值的继续增大而趋于平缓，也就是说SSE和k的关系图是一个手肘的形状，而这个肘部对应的k值就是数据的真实聚类数。当然，这也是该方法被称为手肘法的原因。</p>
 <p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231115213147472.png"></p>
-<h3 id="2-轮廓系数法"><a href="#2-轮廓系数法" class="headerlink" title="2. 轮廓系数法"></a>2. 轮廓系数法</h3><p>该方法的核心指标是轮廓系数（Silhouette Coefficient），某个样本点Xi的轮廓系数定义如下：</p>
+<h3 id="2-轮廓系数法"><a href="#2-轮廓系数法" class="headerlink" title="2. 轮廓系数法"></a>2. 轮廓系数法</h3><p>思想：簇内样本的距离越近，簇间样本距离越远，平均轮廓系数越大，聚类效果越好。</p>
+<p>该方法的核心指标是轮廓系数（Silhouette Coefficient），某个样本点Xi的轮廓系数定义如下：</p>
 <p>$$S &#x3D; \frac { b - a } { m a x ( a , b ) }$$</p>
-<p>其中，a是Xi与同簇的其他样本的平均距离，称为凝聚度，b是Xi与最近簇中所有样本的平均距离，称为分离度。而最近簇的定义是</p>
+<p>其中</p>
+<p>a是Xi与同簇的其他样本的平均距离，称为凝聚度</p>
+<p>b是Xi与最近簇中所有样本的平均距离，称为分离度。</p>
+<p>最近簇的定义是，簇间不相似，最近的不相似</p>
 <p>$$C _ { j } &#x3D;{ a r g } m i n \frac { 1 } { n } \sum _ { p ∈c _ { s } } | p - X _ { i }| ^ { 2 }$$</p>
 <p>其中p是某个簇Ck中的样本。事实上，简单点讲，就是用Xi到某个簇所有样本平均距离作为衡量该点到该簇的距离后，选择离Xi最近的一个簇作为最近簇。</p>
-<p>求出所有样本的轮廓系数后再求平均值就得到了<strong>平均轮廓系数</strong>。平均轮廓系数的取值范围为[-1,1]，且簇内样本的距离越近，簇间样本距离越远，平均轮廓系数越大，聚类效果越好。那么，很自然地，平均轮廓系数最大的k便是最佳聚类数。</p>
+<p>求出所有样本的轮廓系数后再求平均值就得到了<strong>平均轮廓系数</strong>。</p>
+<p>平均轮廓系数的取值范围为[-1,1]。</p>
+<p>那么，很自然地，平均轮廓系数最大的k便是最佳聚类数。</p>
 ]]></content>
       <categories>
         <category>机器学习</category>
@@ -1244,6 +1251,60 @@
       <tags>
         <tag>图床</tag>
         <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>什么是端到端</title>
+    <url>/2023/11/23/test/%E4%BB%80%E4%B9%88%E5%8F%AB%E7%AB%AF%E5%88%B0%E7%AB%AF/</url>
+    <content><![CDATA[<p>端到端是深度学习中一个简单的概念。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+
+
+<p>我们可以将中文语音转英文文字的任务拆解成，语音转文字和中文翻译成英文两个任务。</p>
+<p>而端到端的学习则是直接将这个任务放到神经网络中学习。</p>
+<p>形成：输入-模型-目标，输入和目标就是两个端，直接通过一个模型便是端到端。</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>参数与超参数</title>
+    <url>/2023/11/17/test/%E5%8F%82%E6%95%B0%E4%B8%8E%E8%B6%85%E5%8F%82%E6%95%B0/</url>
+    <content><![CDATA[<p>参数与超参数的一些介绍，哪些是参数哪些是超参数</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<p>参数是可学习的，超参数需要自己设定的。</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给自己的环境装上jupyter</title>
+    <url>/2023/11/20/test/%E8%A3%85%E4%B8%8Ajupyter/</url>
+    <content><![CDATA[<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 添加</span></span><br><span class="line">conda install ipykernel</span><br><span class="line"><span class="comment"># python -m ipykernel install --user --name [anaconda名称] --display-name &quot;[在jupyter的名称]&quot;</span></span><br><span class="line">python -m ipykernel install --user --name mytensor --display-name <span class="string">&quot;mytensor&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 删除</span></span><br><span class="line">jupyter kernelspec <span class="built_in">list</span></span><br><span class="line">jupyter kernelspec remove &lt;kernel_name&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在base环境下，输入目标路劲，即可在网页中切换环境。</p>
+]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>anaconda</tag>
       </tags>
   </entry>
 </search>
