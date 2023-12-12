@@ -1244,6 +1244,7 @@
 
 <p>如图所下：</p>
 <p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231115223016431.png" alt="image-20231115223016431"></p>
+<h3 id="本地图片"><a href="#本地图片" class="headerlink" title="本地图片"></a>本地图片</h3><p>其实typora也在本地帮我们备份了一份本地图片，地址在：C:\Users\Lu\AppData\Roaming\Typora\typora-user-images</p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
@@ -1430,6 +1431,16 @@
 <p>然而对于认知智能，也就是像人一样，能够自主应对复杂多变的现实场景，我们到现在甚至没有找到正确的方向，这种尴尬是语音识别乃至整个人工智能领域，从感知智能进入到认知智能之前的常态。所以可以理解，但不完全可以理解的是，那些试图超越技术发展阶段的产品逻辑。</p>
 <p>找对语音识别的应用场景往往很重要。</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201211848798.png" alt="image-20231201211848798"></p>
+<h2 id="评论区大神补充"><a href="#评论区大神补充" class="headerlink" title="评论区大神补充"></a>评论区大神补充</h2><ol>
+<li><p>最近开源了一个端到端框架，speechbrain。他们的目标是打造最牛批语音框架。我自己用过，还挺灵活，有兴趣的可以试试。</p>
+</li>
+<li><p>cnn的前身是tdnn，对于dnn hmm来说效果确实不错，单手源代码使用c++写的，网上有来源的pytorch版本。</p>
+</li>
+<li><p>流行的Transformer也可以用在语音识别里面，配合ctc解码，效果相当不错。不过google又搞出来了conformer，又进一步提高了正确率。</p>
+</li>
+<li><p>我写论文用的是Tedlium，就是ted演讲的内容。语音和文本都是现成的，后期校对一下就好。还有中文的aishell数据库是中文语音库，国内的一家公司特地值作然后开源出来的。更多开源的库，可以去看看openasr</p>
+</li>
+</ol>
 ]]></content>
       <tags>
         <tag>深度学习</tag>
@@ -1476,5 +1487,65 @@
 <p>part4:<a href="https://youtu.be/baONhoO9c7Q">https://youtu.be/baONhoO9c7Q</a></p>
 <p>整理了托福四个Part的答题模板</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Zotero使用说明</title>
+    <url>/2023/12/04/test/Zotero%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
+    <content><![CDATA[<p>Zotero是一款论文文献管理软件，这里我会介绍一些我使用到的功能。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<p>原视频指路：<a href="https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&vd_source=065dbebb8f309dd36ff6dbc4c04cbd15">https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&amp;vd_source=065dbebb8f309dd36ff6dbc4c04cbd15</a></p>
+<h1 id="英文和中文文献导入"><a href="#英文和中文文献导入" class="headerlink" title="英文和中文文献导入"></a>英文和中文文献导入</h1><ol>
+<li>利用Zotero Connector从相关论文网站导入（最推荐，可以直接获得PDF）<br> 英文可以一个页面都导入并且找到PDF，中文只能具体页面找到PDF</li>
+<li>如果需要大批量导入，下载参考文献格式导入</li>
+<li>PDF拖拽导入，算法自动识别。</li>
+<li>PDF拖拽导入，创建父条目，DOI号识别。</li>
+<li>直接doi号</li>
+</ol>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image.png" alt="image.png"></p>
+<p>5.安装茉莉花插件, 下载地址[<a href="https://github.com/l0o0/jasminum/releases/tag/v0.2.8]%EF%BC%8CPDF%E6%8B%96%E6%8B%BD%E5%90%8E%EF%BC%8C%E5%8F%B3%E9%94%AE%E7%9F%A5%E7%BD%91%E5%8A%A9%E6%89%8B%E4%B9%9F%E5%8F%AF%E8%8E%B7%E5%BE%97%E4%BF%A1%E6%81%AF%E3%80%82">https://github.com/l0o0/jasminum/releases/tag/v0.2.8]，PDF拖拽后，右键知网助手也可获得信息。</a></p>
+<p>可以选择更新茉莉花中非官方维护中文翻译器和connector</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image%201.png" alt="image.png"></p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image%202.png" alt="image.png"></p>
+<h1 id="小tips"><a href="#小tips" class="headerlink" title="小tips"></a>小tips</h1><ol>
+<li><p>选中某篇文献，长按Ctrl键，可以查看该文献属于哪些文件夹；</p>
+</li>
+<li><p>删除条目会删除这篇文献在所有文件夹。</p>
+</li>
+<li><p>删除从分类中移除条目只删除此分类中。</p>
+</li>
+</ol>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ol>
+<li><p>选择关闭自动添加标签。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204193058146.png" alt="image-20231204193058146"></p>
+</li>
+<li><p>添加完标签，点击某个文件夹，在左下角则会出现这个文件夹里的所有标签。点击某一个标签，则会在中间筛选出贴上这个标签的所有文献；</p>
+</li>
+<li><p>将某条文献拖拽到某个标签上可以快速建立标签；</p>
+</li>
+<li><p>右键标签，点击指派颜色，可以添加标签颜色，“位置”指的是标签的排列位置，设置为1，这个标签就会排在首位；</p>
+</li>
+<li><p>对于有颜色的标签，我们可以通过选中文献，然后键盘按下标签的位置号，从而赋予标签。</p>
+</li>
+</ol>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>可以根据各种文献信息</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204194645394.png" alt="image-20231204194645394"></p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h2 id="word中引用"><a href="#word中引用" class="headerlink" title="word中引用"></a>word中引用</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204195111773.png" alt="image-20231204195111773"></p>
+<p>在想要引用处 Add&#x2F;Edit Citation 加入编号</p>
+<p>在参考文献处 Add&#x2F;Edit Bibliography 加入文献内容</p>
+<h2 id="引用格式添加"><a href="#引用格式添加" class="headerlink" title="引用格式添加"></a>引用格式添加</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204195406392.png" alt="image-20231204195406392"></p>
+<h1 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h1><p>下载插件：<a href="http://file.zhouw.top/share/bfP7zqgE">http://file.zhouw.top/share/bfP7zqgE</a></p>
+]]></content>
+      <tags>
+        <tag>科研工具</tag>
+        <tag>Zotero</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/12/04/test/%E6%A6%82%E7%8E%87%E8%AE%BA%E9%80%9A%E8%AF%86/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
