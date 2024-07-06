@@ -13,34 +13,6 @@
       </categories>
   </entry>
   <entry>
-    <title>anki</title>
-    <url>/2023/12/15/test/ANKI%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="anki的使用场景"><a href="#anki的使用场景" class="headerlink" title="anki的使用场景"></a>anki的使用场景</h1><h1 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h1><h1 id="好用插件"><a href="#好用插件" class="headerlink" title="好用插件"></a>好用插件</h1><h2 id="Ankiconnect"><a href="#Ankiconnect" class="headerlink" title="Ankiconnect"></a>Ankiconnect</h2><h2 id="AwesomeTTS"><a href="#AwesomeTTS" class="headerlink" title="AwesomeTTS"></a>AwesomeTTS</h2><h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;#ContextCloze&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&lt;section&gt;&#123;&#123;&#123;&#123;type:cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line"> </span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;^ContextCloze&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;Text&#125;&#125;&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Note&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;hint:Note&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Note&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Title&#125;&#125;</span><br><span class="line">&lt;section class=&quot;tsource&quot;&gt;</span><br><span class="line">&lt;hr /&gt;</span><br><span class="line">&#123;&#123;#Favicon&#125;&#125;&lt;img src=&quot;&#123;&#123;Favicon&#125;&#125;&quot; /&gt;&#123;&#123;/Favicon&#125;&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123;Url&#125;&#125;&quot;&gt;&#123;&#123;Title&#125;&#125;&lt;/a&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Audio&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Audio&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Audio&#125;&#125;</span><br><span class="line">&#123;&#123;/Title&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;#ContextCloze&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&lt;section&gt;&#123;&#123;&#123;&#123;type:cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;^ContextCloze&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;Text&#125;&#125;&lt;/h1&gt;</span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Note&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Note&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Note&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Title&#125;&#125;</span><br><span class="line">&lt;section class=&quot;tsource&quot;&gt;</span><br><span class="line">&lt;hr /&gt;</span><br><span class="line">&#123;&#123;#Favicon&#125;&#125;&lt;img src=&quot;&#123;&#123;Favicon&#125;&#125;&quot; /&gt;&#123;&#123;/Favicon&#125;&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123;Url&#125;&#125;&quot;&gt;&#123;&#123;Title&#125;&#125;&lt;/a&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Audio&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Audio&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Audio&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;/Title&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.card &#123;</span><br><span class="line">  font-family: arial;</span><br><span class="line">  font-size: 20px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #333;</span><br><span class="line">  background-color: white;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">  color: #5caf9e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">input &#123;</span><br><span class="line">  border: 1px solid #eee;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">section &#123;</span><br><span class="line">  margin: 1em 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans &#123;</span><br><span class="line">  border: 1px solid #eee;</span><br><span class="line">  padding: 0.5em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans_title &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  font-size: 0.9em;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans_content &#123;</span><br><span class="line">  margin-bottom: 0.5em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.cloze &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  color: #f9690e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  font-size: .8em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource img &#123;</span><br><span class="line">  height: .7em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource a &#123;</span><br><span class="line">  text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeGood &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #1EBC61;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeBad &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #F75C4C;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeMissed &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #7C8A99;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;答案&#125;&#125;&lt;br&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;&#x27;&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;float:left&#x27;&gt;&lt;/div&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 20px;&#x27;&gt;&lt;b&gt;解析:&lt;/b&gt;&lt;/div&gt;&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;&#x27;&gt;&#123;&#123;解析&#125;&#125;&lt;/div&gt;&lt;br&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a>选择题</h2><p>来源：<a href="https://zhuanlan.zhihu.com/p/77627743">https://zhuanlan.zhihu.com/p/77627743</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Question 中添加问题，Options 中添加选项，各选项间用 *** 进行分隔，Answer 中添加答案（一个就是单选，多个就是多选），Remark 中添加问题解析。</span><br></pre></td></tr></table></figure>
-
-<p>批量操作：</p>
-<p>将数据列到 Excel 中，然后导出成 UTF-8 的 CSV 格式，最后导入到 Anki 中。</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>R语言-时间序列分析</title>
     <url>/2023/03/24/test/R%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<p>本文介绍时间序列模型的基本r语言代码，包括平稳性和非平稳性的处理。</p>
@@ -109,6 +81,34 @@
       </categories>
       <tags>
         <tag>时间序列分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>anki</title>
+    <url>/2023/12/15/test/ANKI%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="anki的使用场景"><a href="#anki的使用场景" class="headerlink" title="anki的使用场景"></a>anki的使用场景</h1><h1 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h1><h1 id="好用插件"><a href="#好用插件" class="headerlink" title="好用插件"></a>好用插件</h1><h2 id="Ankiconnect"><a href="#Ankiconnect" class="headerlink" title="Ankiconnect"></a>Ankiconnect</h2><h2 id="AwesomeTTS"><a href="#AwesomeTTS" class="headerlink" title="AwesomeTTS"></a>AwesomeTTS</h2><h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;#ContextCloze&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&lt;section&gt;&#123;&#123;&#123;&#123;type:cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line"> </span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;^ContextCloze&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;Text&#125;&#125;&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Note&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;hint:Note&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Note&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Title&#125;&#125;</span><br><span class="line">&lt;section class=&quot;tsource&quot;&gt;</span><br><span class="line">&lt;hr /&gt;</span><br><span class="line">&#123;&#123;#Favicon&#125;&#125;&lt;img src=&quot;&#123;&#123;Favicon&#125;&#125;&quot; /&gt;&#123;&#123;/Favicon&#125;&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123;Url&#125;&#125;&quot;&gt;&#123;&#123;Title&#125;&#125;&lt;/a&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Audio&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Audio&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Audio&#125;&#125;</span><br><span class="line">&#123;&#123;/Title&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;#ContextCloze&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&lt;section&gt;&#123;&#123;&#123;&#123;type:cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;^ContextCloze&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;Text&#125;&#125;&lt;/h1&gt;</span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Note&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Note&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Note&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Title&#125;&#125;</span><br><span class="line">&lt;section class=&quot;tsource&quot;&gt;</span><br><span class="line">&lt;hr /&gt;</span><br><span class="line">&#123;&#123;#Favicon&#125;&#125;&lt;img src=&quot;&#123;&#123;Favicon&#125;&#125;&quot; /&gt;&#123;&#123;/Favicon&#125;&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123;Url&#125;&#125;&quot;&gt;&#123;&#123;Title&#125;&#125;&lt;/a&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Audio&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Audio&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Audio&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;/Title&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.card &#123;</span><br><span class="line">  font-family: arial;</span><br><span class="line">  font-size: 20px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #333;</span><br><span class="line">  background-color: white;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">  color: #5caf9e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">input &#123;</span><br><span class="line">  border: 1px solid #eee;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">section &#123;</span><br><span class="line">  margin: 1em 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans &#123;</span><br><span class="line">  border: 1px solid #eee;</span><br><span class="line">  padding: 0.5em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans_title &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  font-size: 0.9em;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans_content &#123;</span><br><span class="line">  margin-bottom: 0.5em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.cloze &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  color: #f9690e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  font-size: .8em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource img &#123;</span><br><span class="line">  height: .7em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource a &#123;</span><br><span class="line">  text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeGood &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #1EBC61;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeBad &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #F75C4C;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeMissed &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #7C8A99;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;答案&#125;&#125;&lt;br&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;&#x27;&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;float:left&#x27;&gt;&lt;/div&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 20px;&#x27;&gt;&lt;b&gt;解析:&lt;/b&gt;&lt;/div&gt;&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;&#x27;&gt;&#123;&#123;解析&#125;&#125;&lt;/div&gt;&lt;br&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a>选择题</h2><p>来源：<a href="https://zhuanlan.zhihu.com/p/77627743">https://zhuanlan.zhihu.com/p/77627743</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Question 中添加问题，Options 中添加选项，各选项间用 *** 进行分隔，Answer 中添加答案（一个就是单选，多个就是多选），Remark 中添加问题解析。</span><br></pre></td></tr></table></figure>
+
+<p>批量操作：</p>
+<p>将数据列到 Excel 中，然后导出成 UTF-8 的 CSV 格式，最后导入到 Anki 中。</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
@@ -505,6 +505,41 @@
       </tags>
   </entry>
   <entry>
+    <title>word排版论文</title>
+    <url>/2024/05/14/test/word%E6%8E%92%E7%89%88%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/</url>
+    <content><![CDATA[<p>虽然以后可能用latex，但是这也算是个基础技能。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />]]></content>
+      <tags>
+        <tag>技能</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于乒乓球</title>
+    <url>/2023/03/02/test/%E4%B9%92%E4%B9%93%E7%90%83%E8%AE%AD%E7%BB%83%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>本文为博主自己练习乒乓球时的碎碎念，博主十分高兴能够找到一个能够坚持的体育爱好。</p>
+<span id="more"></span>
+
+<h1 id="乒乓球训练日记"><a href="#乒乓球训练日记" class="headerlink" title="乒乓球训练日记"></a>乒乓球训练日记</h1><ol>
+<li><p>今晚练习乒乓球，这种性格上的改变好像影响了我的乒乓球风格。正手好像是找到了腿和身体和手的协调统一，反手的进步或许源于还原的意识更强烈。通过看视频，我更注重自己身体要稳定，不能散掉。前后的步伐还有待加强。发球的旋转仍然是困难的。</p>
+</li>
+<li><p>反手的重心要压低一点，要用身体发力的动作。</p>
+</li>
+<li><p>正手打球的时候太急了一点。</p>
+</li>
+<li><p>打比赛的时候精神信念，要专注于比赛本身，敢于发力，精神集中。不要觉得自己很弱不敢打，对待好每个球，要有一些自己的判断，不能瞎打。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>乒乓球</category>
+      </categories>
+      <tags>
+        <tag>乒乓球</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>simple passion</title>
     <url>/2024/05/14/test/simple%20passion/</url>
     <content><![CDATA[<p>一本小而短的书，英文原版贴一下，方便学习。</p>
@@ -618,62 +653,6 @@
       </categories>
       <tags>
         <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>word排版论文</title>
-    <url>/2024/05/14/test/word%E6%8E%92%E7%89%88%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/</url>
-    <content><![CDATA[<p>虽然以后可能用latex，但是这也算是个基础技能。</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />]]></content>
-      <tags>
-        <tag>技能</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>什么是端到端</title>
-    <url>/2023/11/23/test/%E4%BB%80%E4%B9%88%E5%8F%AB%E7%AB%AF%E5%88%B0%E7%AB%AF/</url>
-    <content><![CDATA[<p>端到端是深度学习中一个简单的概念。</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-
-
-<p>我们可以将中文语音转英文文字的任务拆解成，语音转文字和中文翻译成英文两个任务。</p>
-<p>而端到端的学习则是直接将这个任务放到神经网络中学习。</p>
-<p>形成：输入-模型-目标，输入和目标就是两个端，直接通过一个模型便是端到端。</p>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于乒乓球</title>
-    <url>/2023/03/02/test/%E4%B9%92%E4%B9%93%E7%90%83%E8%AE%AD%E7%BB%83%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>本文为博主自己练习乒乓球时的碎碎念，博主十分高兴能够找到一个能够坚持的体育爱好。</p>
-<span id="more"></span>
-
-<h1 id="乒乓球训练日记"><a href="#乒乓球训练日记" class="headerlink" title="乒乓球训练日记"></a>乒乓球训练日记</h1><ol>
-<li><p>今晚练习乒乓球，这种性格上的改变好像影响了我的乒乓球风格。正手好像是找到了腿和身体和手的协调统一，反手的进步或许源于还原的意识更强烈。通过看视频，我更注重自己身体要稳定，不能散掉。前后的步伐还有待加强。发球的旋转仍然是困难的。</p>
-</li>
-<li><p>反手的重心要压低一点，要用身体发力的动作。</p>
-</li>
-<li><p>正手打球的时候太急了一点。</p>
-</li>
-<li><p>打比赛的时候精神信念，要专注于比赛本身，敢于发力，精神集中。不要觉得自己很弱不敢打，对待好每个球，要有一些自己的判断，不能瞎打。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>乒乓球</category>
-      </categories>
-      <tags>
-        <tag>乒乓球</tag>
       </tags>
   </entry>
   <entry>
@@ -811,63 +790,8 @@
 </ol>
 ]]></content>
       <tags>
-        <tag>深度学习</tag>
         <tag>语音识别</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从0开始的pytorch环境配置</title>
-    <url>/2023/10/15/test/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84pytorch%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="从0开始的pytorch环境配置"><a href="#从0开始的pytorch环境配置" class="headerlink" title="从0开始的pytorch环境配置"></a>从0开始的pytorch环境配置</h1><p>前言：对电脑刷机了，装好了anaconda，但是环境还没配。炼丹必备<span id="more"></span></p>
-<h2 id="gpu相关的"><a href="#gpu相关的" class="headerlink" title="gpu相关的"></a>gpu相关的</h2><ol>
-<li><p>查看显卡：任务管理器查看是否有英伟达显卡</p>
-</li>
-<li><p>在官网查看自己的显卡是否支持 CUDA 安装<br>NVIDIA官网地址：<a href="https://developer.nvidia.com/cuda-gpus">https://developer.nvidia.com/cuda-gpus</a></p>
-</li>
-<li><p>查看自己的显卡驱动版本<br>命令行输入以下命令</p>
-</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">NVIDIA-SMI</span><br></pre></td></tr></table></figure>
-
-<p>如果没有，请将C:\Program Files\NVIDIA Corporation\NVSMI文件夹放置系统路径的path之中</p>
-<ol start="4">
-<li>升级显卡驱动程序</li>
-</ol>
-<p>去Nvidia官网地址 <a href="https://links.jianshu.com/go?to=https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a> 按系统版本，选择下载在线升级包, 下载完后，选择<strong>自定义</strong>先升级显卡驱动,如图:</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/28789528-198feb5cb4e4e010.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/582/format/webp" alt="img"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/28789528-03be5475ba381a22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/590/format/webp" alt="img"></p>
-<ol start="5">
-<li>CUDA安装是否成功</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvcc -V</span><br></pre></td></tr></table></figure>
-<h2 id="python环境安装"><a href="#python环境安装" class="headerlink" title="python环境安装"></a>python环境安装</h2><p>1.定义环境</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda create -n mytorch python==3.9</span><br></pre></td></tr></table></figure>
-<p>2.运行环境</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda activate mytorch</span><br></pre></td></tr></table></figure>
-<p>3.安装<a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a><br>pytorch：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.8 -c pytorch -c nvidia -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
-
-<p>4.测试一下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%进入python环境 </span><br><span class="line">python</span><br><span class="line">import torch</span><br><span class="line">torch.cuda.is_available()</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir(torch)</span><br><span class="line">help(torch.cuda.is_available)</span><br></pre></td></tr></table></figure>
-<p>5.jupyter编辑器<br>Anaconda Prompt<br>输入指令 </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda activate mytorch</span><br><span class="line">jupyter notebook</span><br><span class="line">#打开jupyter后</span><br><span class="line">import torch</span><br></pre></td></tr></table></figure>
-<p>6.查看和删除</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">环境的查看</span><br><span class="line">Anaconda Prompt</span><br><span class="line">conda info -e   </span><br><span class="line">环境的删除</span><br><span class="line">conda remove --name yolo5 --all</span><br></pre></td></tr></table></figure>
-
-<p>8.一些镜像源</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br><span class="line">pip install opencv-python</span><br><span class="line">pip install tensorflow-cpu==2.3.0 </span><br><span class="line">-i https://mirror.baidu.com/pypi/simple</span><br><span class="line">-i https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">-i http://pypi.douban.com/simple/</span><br><span class="line">阿里云：http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/</span><br><span class="line">华中理工大学：http://pypi.hustunique.com/</span><br><span class="line">山东理工大学：http://pypi.sdutlinux.org/</span><br></pre></td></tr></table></figure>
-
-<ol start="10">
-<li>Could not find a version that satisfies the requirement<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
-<li><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install &lt;库名&gt;			安装</span><br><span class="line">pip uninstall &lt;库名&gt;		卸载</span><br><span class="line">pip install -U &lt;库名&gt;		更新</span><br><span class="line">pip download &lt;库名&gt;			只下载，不安装</span><br><span class="line">pip show &lt;库名&gt;				展示这个库的信息</span><br><span class="line">pip search &lt;库名&gt;			搜索关键字</span><br><span class="line">pip list				列出安装的库</span><br><span class="line">查看用conda安装的包：</span><br><span class="line">conda list</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
         <tag>深度学习</tag>
-        <tag>python</tag>
-        <tag>anaconda</tag>
       </tags>
   </entry>
   <entry>
@@ -1013,6 +937,61 @@
       </tags>
   </entry>
   <entry>
+    <title>从0开始的pytorch环境配置</title>
+    <url>/2023/10/15/test/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84pytorch%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="从0开始的pytorch环境配置"><a href="#从0开始的pytorch环境配置" class="headerlink" title="从0开始的pytorch环境配置"></a>从0开始的pytorch环境配置</h1><p>前言：对电脑刷机了，装好了anaconda，但是环境还没配。炼丹必备<span id="more"></span></p>
+<h2 id="gpu相关的"><a href="#gpu相关的" class="headerlink" title="gpu相关的"></a>gpu相关的</h2><ol>
+<li><p>查看显卡：任务管理器查看是否有英伟达显卡</p>
+</li>
+<li><p>在官网查看自己的显卡是否支持 CUDA 安装<br>NVIDIA官网地址：<a href="https://developer.nvidia.com/cuda-gpus">https://developer.nvidia.com/cuda-gpus</a></p>
+</li>
+<li><p>查看自己的显卡驱动版本<br>命令行输入以下命令</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">NVIDIA-SMI</span><br></pre></td></tr></table></figure>
+
+<p>如果没有，请将C:\Program Files\NVIDIA Corporation\NVSMI文件夹放置系统路径的path之中</p>
+<ol start="4">
+<li>升级显卡驱动程序</li>
+</ol>
+<p>去Nvidia官网地址 <a href="https://links.jianshu.com/go?to=https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a> 按系统版本，选择下载在线升级包, 下载完后，选择<strong>自定义</strong>先升级显卡驱动,如图:</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/28789528-198feb5cb4e4e010.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/582/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/28789528-03be5475ba381a22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/590/format/webp" alt="img"></p>
+<ol start="5">
+<li>CUDA安装是否成功</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvcc -V</span><br></pre></td></tr></table></figure>
+<h2 id="python环境安装"><a href="#python环境安装" class="headerlink" title="python环境安装"></a>python环境安装</h2><p>1.定义环境</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda create -n mytorch python==3.9</span><br></pre></td></tr></table></figure>
+<p>2.运行环境</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda activate mytorch</span><br></pre></td></tr></table></figure>
+<p>3.安装<a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a><br>pytorch：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.8 -c pytorch -c nvidia -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+
+<p>4.测试一下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%进入python环境 </span><br><span class="line">python</span><br><span class="line">import torch</span><br><span class="line">torch.cuda.is_available()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir(torch)</span><br><span class="line">help(torch.cuda.is_available)</span><br></pre></td></tr></table></figure>
+<p>5.jupyter编辑器<br>Anaconda Prompt<br>输入指令 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda activate mytorch</span><br><span class="line">jupyter notebook</span><br><span class="line">#打开jupyter后</span><br><span class="line">import torch</span><br></pre></td></tr></table></figure>
+<p>6.查看和删除</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">环境的查看</span><br><span class="line">Anaconda Prompt</span><br><span class="line">conda info -e   </span><br><span class="line">环境的删除</span><br><span class="line">conda remove --name yolo5 --all</span><br></pre></td></tr></table></figure>
+
+<p>8.一些镜像源</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br><span class="line">pip install opencv-python</span><br><span class="line">pip install tensorflow-cpu==2.3.0 </span><br><span class="line">-i https://mirror.baidu.com/pypi/simple</span><br><span class="line">-i https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">-i http://pypi.douban.com/simple/</span><br><span class="line">阿里云：http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/</span><br><span class="line">华中理工大学：http://pypi.hustunique.com/</span><br><span class="line">山东理工大学：http://pypi.sdutlinux.org/</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>Could not find a version that satisfies the requirement<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
+<li><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install &lt;库名&gt;			安装</span><br><span class="line">pip uninstall &lt;库名&gt;		卸载</span><br><span class="line">pip install -U &lt;库名&gt;		更新</span><br><span class="line">pip download &lt;库名&gt;			只下载，不安装</span><br><span class="line">pip show &lt;库名&gt;				展示这个库的信息</span><br><span class="line">pip search &lt;库名&gt;			搜索关键字</span><br><span class="line">pip list				列出安装的库</span><br><span class="line">查看用conda安装的包：</span><br><span class="line">conda list</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>python</tag>
+        <tag>anaconda</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>参数与超参数</title>
     <url>/2023/11/17/test/%E5%8F%82%E6%95%B0%E4%B8%8E%E8%B6%85%E5%8F%82%E6%95%B0/</url>
     <content><![CDATA[<p>参数与超参数的一些介绍，哪些是参数哪些是超参数</p>
@@ -1030,19 +1009,25 @@
       </tags>
   </entry>
   <entry>
-    <title>一些常用软件的安装教程</title>
-    <url>/2023/02/25/test/%E5%A6%82%E4%BD%95%E7%99%BD%E5%AB%96office%E7%B3%BB%E5%88%97/</url>
-    <content><![CDATA[<p>支持正版！</p>
-<span id="more"></span>
+    <title>什么是端到端</title>
+    <url>/2023/11/23/test/%E4%BB%80%E4%B9%88%E5%8F%AB%E7%AB%AF%E5%88%B0%E7%AB%AF/</url>
+    <content><![CDATA[<p>端到端是深度学习中一个简单的概念。</p>
+<span id="more"></span>   
 
-<h1 id="1-office系列"><a href="#1-office系列" class="headerlink" title="1. office系列"></a>1. office系列</h1><ol>
-<li>参考视频：<a href="https://www.bilibili.com/video/BV1g64y1d7az?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1g64y1d7az?spm_id_from=333.999.0.0</a></li>
-<li>下载office tool plus</li>
-<li>部署完毕</li>
-<li>输入命令&#x2F;osppilbyid ProPlus2021Volume &#x2F;osppsethst:kms.loli.beer &#x2F;osppsetprt:1688 &#x2F;osppact</li>
-</ol>
-<p>kms.cangshui.net（这个命令经常会变，请上网找到最新的命令）</p>
+<meta name="referrer" content="no-referrer" />
+
+
+
+<p>我们可以将中文语音转英文文字的任务拆解成，语音转文字和中文翻译成英文两个任务。</p>
+<p>而端到端的学习则是直接将这个任务放到神经网络中学习。</p>
+<p>形成：输入-模型-目标，输入和目标就是两个端，直接通过一个模型便是端到端。</p>
 ]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
   </entry>
   <entry>
     <title>练习英语口语</title>
@@ -1074,6 +1059,21 @@
       </tags>
   </entry>
   <entry>
+    <title>一些常用软件的安装教程</title>
+    <url>/2023/02/25/test/%E5%A6%82%E4%BD%95%E7%99%BD%E5%AB%96office%E7%B3%BB%E5%88%97/</url>
+    <content><![CDATA[<p>支持正版！</p>
+<span id="more"></span>
+
+<h1 id="1-office系列"><a href="#1-office系列" class="headerlink" title="1. office系列"></a>1. office系列</h1><ol>
+<li>参考视频：<a href="https://www.bilibili.com/video/BV1g64y1d7az?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1g64y1d7az?spm_id_from=333.999.0.0</a></li>
+<li>下载office tool plus</li>
+<li>部署完毕</li>
+<li>输入命令&#x2F;osppilbyid ProPlus2021Volume &#x2F;osppsethst:kms.loli.beer &#x2F;osppsetprt:1688 &#x2F;osppact</li>
+</ol>
+<p>kms.cangshui.net（这个命令经常会变，请上网找到最新的命令）</p>
+]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/2023/11/30/test/%E6%89%98%E7%A6%8F%E5%8F%A3%E8%AF%AD%E7%AD%94%E9%A2%98%E6%A8%A1%E6%9D%BF/</url>
     <content><![CDATA[<p>学习视频为：</p>
@@ -1095,23 +1095,6 @@
 <li></li>
 </ol>
 ]]></content>
-  </entry>
-  <entry>
-    <title>动手学深度学习v2补充解释</title>
-    <url>/2023/11/13/test/%E6%9D%8E%E6%B2%90/</url>
-    <content><![CDATA[<h1 id="动手学深度学习v2"><a href="#动手学深度学习v2" class="headerlink" title="动手学深度学习v2"></a>动手学深度学习v2</h1><p>个人不理解的地方，进行一些原理的证明或是详细解释。</p>
-<span id="more"></span>
-
-<h2 id="每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致"><a href="#每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致" class="headerlink" title="每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致"></a>每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致</h2><p>来源：14 模型初始化和激活函数</p>
-<p>如果每层的输出和梯度都具有相同的均值和方差，那么在反向传播过程中，梯度会保持相同的比例。这样，梯度值在各层之间就不会发生太大的变化，从而减轻梯度消失或爆炸的问题。</p>
-<p>假设每层的输出和梯度都具有相同的均值和方差，即： $$E[h^t] &#x3D; E[g^t] &#x3D; 0$$ $$Var[h^t] &#x3D; Var[g^t] &#x3D; \sigma^2$$ 在反向传播过程中，梯度是通过链式法则计算的： $$g^{t-1} &#x3D; \frac{d}{dh^{t-1}} L(h^t, y)$$ 其中，$L$ 是损失函数。 根据链式法则，我们有： $$g^{t-1} &#x3D; \sigma’(W^th^{t-1}) W^t$$ 其中，$\sigma$ 是激活函数。 由于 $h^{t-1}$ 和 $g^t$ 都具有相同的均值和方差，因此 $\sigma’(W^th^{t-1})$ 也具有相同的均值和方差。 因此，我们有： $$E[g^{t-1}] &#x3D; \sigma’(0) E[W^t] &#x3D; 0$$ $$Var[g^{t-1}] &#x3D; \sigma’^2(0) Var[W^t] &#x3D; \sigma^2$$ 因此，在反向传播过程中，梯度的均值保持为零，而梯度的方差保持为 $\sigma^2$。 也就是说，在反向传播过程中，梯度会保持相同的比例。</p>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-      </tags>
   </entry>
   <entry>
     <title>数据库重点内容</title>
@@ -1694,34 +1677,6 @@
       </tags>
   </entry>
   <entry>
-    <title>概率论通识</title>
-    <url>/2023/12/04/test/%E6%A6%82%E7%8E%87%E8%AE%BA%E9%80%9A%E8%AF%86/</url>
-    <content><![CDATA[<p>介绍一些概率论思想</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-]]></content>
-      <tags>
-        <tag>得到</tag>
-        <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法通识</title>
-    <url>/2023/12/15/test/%E7%AE%97%E6%B3%95%E9%80%9A%E8%AF%86/</url>
-    <content><![CDATA[<p>介绍一些算法思想</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-]]></content>
-      <tags>
-        <tag>得到</tag>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于大学的终点和研究生的起点</title>
     <url>/2023/11/24/test/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%96%B9%E5%90%91%E7%9A%84%E9%80%89%E6%8B%A9/</url>
     <content><![CDATA[<p>对于大学的总结，希望警醒他人。</p>
@@ -1749,6 +1704,51 @@
 ]]></content>
       <tags>
         <tag>杂记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>概率论通识</title>
+    <url>/2023/12/04/test/%E6%A6%82%E7%8E%87%E8%AE%BA%E9%80%9A%E8%AF%86/</url>
+    <content><![CDATA[<p>介绍一些概率论思想</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+]]></content>
+      <tags>
+        <tag>得到</tag>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>动手学深度学习v2补充解释</title>
+    <url>/2023/11/13/test/%E6%9D%8E%E6%B2%90/</url>
+    <content><![CDATA[<h1 id="动手学深度学习v2"><a href="#动手学深度学习v2" class="headerlink" title="动手学深度学习v2"></a>动手学深度学习v2</h1><p>个人不理解的地方，进行一些原理的证明或是详细解释。</p>
+<span id="more"></span>
+
+<h2 id="每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致"><a href="#每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致" class="headerlink" title="每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致"></a>每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致</h2><p>来源：14 模型初始化和激活函数</p>
+<p>如果每层的输出和梯度都具有相同的均值和方差，那么在反向传播过程中，梯度会保持相同的比例。这样，梯度值在各层之间就不会发生太大的变化，从而减轻梯度消失或爆炸的问题。</p>
+<p>假设每层的输出和梯度都具有相同的均值和方差，即： $$E[h^t] &#x3D; E[g^t] &#x3D; 0$$ $$Var[h^t] &#x3D; Var[g^t] &#x3D; \sigma^2$$ 在反向传播过程中，梯度是通过链式法则计算的： $$g^{t-1} &#x3D; \frac{d}{dh^{t-1}} L(h^t, y)$$ 其中，$L$ 是损失函数。 根据链式法则，我们有： $$g^{t-1} &#x3D; \sigma’(W^th^{t-1}) W^t$$ 其中，$\sigma$ 是激活函数。 由于 $h^{t-1}$ 和 $g^t$ 都具有相同的均值和方差，因此 $\sigma’(W^th^{t-1})$ 也具有相同的均值和方差。 因此，我们有： $$E[g^{t-1}] &#x3D; \sigma’(0) E[W^t] &#x3D; 0$$ $$Var[g^{t-1}] &#x3D; \sigma’^2(0) Var[W^t] &#x3D; \sigma^2$$ 因此，在反向传播过程中，梯度的均值保持为零，而梯度的方差保持为 $\sigma^2$。 也就是说，在反向传播过程中，梯度会保持相同的比例。</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法通识</title>
+    <url>/2023/12/15/test/%E7%AE%97%E6%B3%95%E9%80%9A%E8%AF%86/</url>
+    <content><![CDATA[<p>介绍一些算法思想</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+]]></content>
+      <tags>
+        <tag>得到</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
