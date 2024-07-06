@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>公司任务</title>
+    <url>/2023/02/25/test/Pandas%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC/</url>
+    <content><![CDATA[<p>公司任务：有五个设备统计53周电器用电数据。现在要拆分到每周每种电器用电数据。 <span id="more"></span></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="comment"># 五个设备的表格，按周分别拆分出53个表格，共计53*3=159个表格</span></span><br><span class="line">data1 = pd.read_excel(<span class="string">&quot;CRT2_OUTPUT (1).xlsx&quot;</span>)</span><br><span class="line">gb = data1.groupby(<span class="string">&#x27;FISCAL_WEEK&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> week,df_son <span class="keyword">in</span> gb:</span><br><span class="line">	df_son.to_excel(<span class="string">f&#x27;<span class="subst">&#123;week&#125;</span>.xlsx&#x27;</span>,index=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># 再给五个设备合并</span></span><br><span class="line">path = <span class="string">&#x27;./APS2&#x27;</span> </span><br><span class="line">dlj = os.listdir(path)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> dlj:</span><br><span class="line">    name1=<span class="string">&#x27;./APS2/&#x27;</span>+i</span><br><span class="line">    data1 = pd.read_excel(name1)</span><br><span class="line">    name2=<span class="string">&#x27;./CART2/&#x27;</span>+i</span><br><span class="line">    data2 = pd.read_excel(name2)</span><br><span class="line">    name3=<span class="string">&#x27;./FIN2/&#x27;</span>+i</span><br><span class="line">    data3 = pd.read_excel(name3)</span><br><span class="line">    name4=<span class="string">&#x27;./ODT2/&#x27;</span>+i</span><br><span class="line">    data4 = pd.read_excel(name4)</span><br><span class="line">    name5=<span class="string">&#x27;./PRE2/&#x27;</span>+i</span><br><span class="line">    data5 = pd.read_excel(name5)</span><br><span class="line">    datanew = pd.concat([data1,data2,data3,data4,data5], axis=<span class="number">0</span>)</span><br><span class="line">    datanew.to_excel(<span class="string">f&#x27;<span class="subst">&#123;i&#125;</span>&#x27;</span>,index=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># 再分别计算五个设备的和    </span></span><br><span class="line">path = <span class="string">&#x27;./MERGE&#x27;</span> </span><br><span class="line">dlj = os.listdir(path)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> dlj:</span><br><span class="line">    name1=<span class="string">&#x27;./MERGE/&#x27;</span>+i</span><br><span class="line">    data1 = pd.read_excel(name1)</span><br><span class="line">    datanew = data1.groupby([<span class="string">&#x27;PART_NUM&#x27;</span>])[<span class="string">&#x27;OUTPUT&#x27;</span>].<span class="built_in">sum</span>()</span><br><span class="line">    datanew.to_excel(<span class="string">f&#x27;<span class="subst">&#123;i&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 再将53周合并到一个表格里，这里因为每周电器设备不同，用concat不太好，改用merge。</span></span><br><span class="line">path = <span class="string">&#x27;G:/桌面/e/type2/MERGE_SUM/&#x27;</span> </span><br><span class="line">dlj = os.listdir(path)</span><br><span class="line">datanew = pd.read_excel(<span class="string">&#x27;2.xlsx&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> dlj:</span><br><span class="line">    name1 = path+i</span><br><span class="line">    data1 = pd.read_excel(name1)</span><br><span class="line">    datanew = pd.merge(datanew, data1, how=<span class="string">&#x27;outer&#x27;</span>, on=[<span class="string">&#x27;PART_NUM&#x27;</span>])</span><br><span class="line">datanew.to_excel(<span class="string">&#x27;a.xlsx&#x27;</span>,index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Pandas</category>
+      </categories>
+  </entry>
+  <entry>
     <title>anki</title>
     <url>/2023/12/15/test/ANKI%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="anki的使用场景"><a href="#anki的使用场景" class="headerlink" title="anki的使用场景"></a>anki的使用场景</h1><h1 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h1><h1 id="好用插件"><a href="#好用插件" class="headerlink" title="好用插件"></a>好用插件</h1><h2 id="Ankiconnect"><a href="#Ankiconnect" class="headerlink" title="Ankiconnect"></a>Ankiconnect</h2><h2 id="AwesomeTTS"><a href="#AwesomeTTS" class="headerlink" title="AwesomeTTS"></a>AwesomeTTS</h2><h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;#ContextCloze&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&lt;section&gt;&#123;&#123;&#123;&#123;type:cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line"> </span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;^ContextCloze&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;Text&#125;&#125;&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Note&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;hint:Note&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Note&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Title&#125;&#125;</span><br><span class="line">&lt;section class=&quot;tsource&quot;&gt;</span><br><span class="line">&lt;hr /&gt;</span><br><span class="line">&#123;&#123;#Favicon&#125;&#125;&lt;img src=&quot;&#123;&#123;Favicon&#125;&#125;&quot; /&gt;&#123;&#123;/Favicon&#125;&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123;Url&#125;&#125;&quot;&gt;&#123;&#123;Title&#125;&#125;&lt;/a&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Audio&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Audio&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Audio&#125;&#125;</span><br><span class="line">&#123;&#123;/Title&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -27,73 +39,6 @@
       <tags>
         <tag>英语</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Zotero使用说明</title>
-    <url>/2023/12/04/test/Zotero%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
-    <content><![CDATA[<p>Zotero是一款论文文献管理软件，这里我会介绍一些我使用到的功能。</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-<p>原视频指路：<a href="https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&vd_source=065dbebb8f309dd36ff6dbc4c04cbd15">https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&amp;vd_source=065dbebb8f309dd36ff6dbc4c04cbd15</a></p>
-<h1 id="英文和中文文献导入"><a href="#英文和中文文献导入" class="headerlink" title="英文和中文文献导入"></a>英文和中文文献导入</h1><ol>
-<li>利用Zotero Connector从相关论文网站导入（最推荐，可以直接获得PDF）<br> 英文可以一个页面都导入并且找到PDF，中文只能具体页面找到PDF</li>
-<li>如果需要大批量导入，下载参考文献格式导入</li>
-<li>PDF拖拽导入，算法自动识别。</li>
-<li>PDF拖拽导入，创建父条目，DOI号识别。</li>
-<li>直接doi号</li>
-</ol>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image.png" alt="image.png"></p>
-<p>5.安装茉莉花插件, 下载地址[<a href="https://github.com/l0o0/jasminum/releases/tag/v0.2.8]%EF%BC%8CPDF%E6%8B%96%E6%8B%BD%E5%90%8E%EF%BC%8C%E5%8F%B3%E9%94%AE%E7%9F%A5%E7%BD%91%E5%8A%A9%E6%89%8B%E4%B9%9F%E5%8F%AF%E8%8E%B7%E5%BE%97%E4%BF%A1%E6%81%AF%E3%80%82">https://github.com/l0o0/jasminum/releases/tag/v0.2.8]，PDF拖拽后，右键知网助手也可获得信息。</a></p>
-<p>可以选择更新茉莉花中非官方维护中文翻译器和connector</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image%201.png" alt="image.png"></p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image%202.png" alt="image.png"></p>
-<h1 id="小tips"><a href="#小tips" class="headerlink" title="小tips"></a>小tips</h1><ol>
-<li><p>选中某篇文献，长按Ctrl键，可以查看该文献属于哪些文件夹；</p>
-</li>
-<li><p>删除条目会删除这篇文献在所有文件夹。</p>
-</li>
-<li><p>删除从分类中移除条目只删除此分类中。</p>
-</li>
-</ol>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ol>
-<li><p>选择关闭自动添加标签。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204193058146.png" alt="image-20231204193058146"></p>
-</li>
-<li><p>添加完标签，点击某个文件夹，在左下角则会出现这个文件夹里的所有标签。点击某一个标签，则会在中间筛选出贴上这个标签的所有文献；</p>
-</li>
-<li><p>将某条文献拖拽到某个标签上可以快速建立标签；</p>
-</li>
-<li><p>右键标签，点击指派颜色，可以添加标签颜色，“位置”指的是标签的排列位置，设置为1，这个标签就会排在首位；</p>
-</li>
-<li><p>对于有颜色的标签，我们可以通过选中文献，然后键盘按下标签的位置号，从而赋予标签。</p>
-</li>
-</ol>
-<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>可以根据各种文献信息</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204194645394.png" alt="image-20231204194645394"></p>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h2 id="word中引用"><a href="#word中引用" class="headerlink" title="word中引用"></a>word中引用</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204195111773.png" alt="image-20231204195111773"></p>
-<p>在想要引用处 Add&#x2F;Edit Citation 加入编号</p>
-<p>在参考文献处 Add&#x2F;Edit Bibliography 加入文献内容</p>
-<h2 id="引用格式添加"><a href="#引用格式添加" class="headerlink" title="引用格式添加"></a>引用格式添加</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204195406392.png" alt="image-20231204195406392"></p>
-<h1 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h1><p>下载插件：<a href="http://file.zhouw.top/share/bfP7zqgE">http://file.zhouw.top/share/bfP7zqgE</a></p>
-]]></content>
-      <tags>
-        <tag>科研工具</tag>
-        <tag>Zotero</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>公司任务</title>
-    <url>/2023/02/25/test/Pandas%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC/</url>
-    <content><![CDATA[<p>公司任务：有五个设备统计53周电器用电数据。现在要拆分到每周每种电器用电数据。 <span id="more"></span></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="comment"># 五个设备的表格，按周分别拆分出53个表格，共计53*3=159个表格</span></span><br><span class="line">data1 = pd.read_excel(<span class="string">&quot;CRT2_OUTPUT (1).xlsx&quot;</span>)</span><br><span class="line">gb = data1.groupby(<span class="string">&#x27;FISCAL_WEEK&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> week,df_son <span class="keyword">in</span> gb:</span><br><span class="line">	df_son.to_excel(<span class="string">f&#x27;<span class="subst">&#123;week&#125;</span>.xlsx&#x27;</span>,index=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># 再给五个设备合并</span></span><br><span class="line">path = <span class="string">&#x27;./APS2&#x27;</span> </span><br><span class="line">dlj = os.listdir(path)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> dlj:</span><br><span class="line">    name1=<span class="string">&#x27;./APS2/&#x27;</span>+i</span><br><span class="line">    data1 = pd.read_excel(name1)</span><br><span class="line">    name2=<span class="string">&#x27;./CART2/&#x27;</span>+i</span><br><span class="line">    data2 = pd.read_excel(name2)</span><br><span class="line">    name3=<span class="string">&#x27;./FIN2/&#x27;</span>+i</span><br><span class="line">    data3 = pd.read_excel(name3)</span><br><span class="line">    name4=<span class="string">&#x27;./ODT2/&#x27;</span>+i</span><br><span class="line">    data4 = pd.read_excel(name4)</span><br><span class="line">    name5=<span class="string">&#x27;./PRE2/&#x27;</span>+i</span><br><span class="line">    data5 = pd.read_excel(name5)</span><br><span class="line">    datanew = pd.concat([data1,data2,data3,data4,data5], axis=<span class="number">0</span>)</span><br><span class="line">    datanew.to_excel(<span class="string">f&#x27;<span class="subst">&#123;i&#125;</span>&#x27;</span>,index=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># 再分别计算五个设备的和    </span></span><br><span class="line">path = <span class="string">&#x27;./MERGE&#x27;</span> </span><br><span class="line">dlj = os.listdir(path)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> dlj:</span><br><span class="line">    name1=<span class="string">&#x27;./MERGE/&#x27;</span>+i</span><br><span class="line">    data1 = pd.read_excel(name1)</span><br><span class="line">    datanew = data1.groupby([<span class="string">&#x27;PART_NUM&#x27;</span>])[<span class="string">&#x27;OUTPUT&#x27;</span>].<span class="built_in">sum</span>()</span><br><span class="line">    datanew.to_excel(<span class="string">f&#x27;<span class="subst">&#123;i&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 再将53周合并到一个表格里，这里因为每周电器设备不同，用concat不太好，改用merge。</span></span><br><span class="line">path = <span class="string">&#x27;G:/桌面/e/type2/MERGE_SUM/&#x27;</span> </span><br><span class="line">dlj = os.listdir(path)</span><br><span class="line">datanew = pd.read_excel(<span class="string">&#x27;2.xlsx&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> dlj:</span><br><span class="line">    name1 = path+i</span><br><span class="line">    data1 = pd.read_excel(name1)</span><br><span class="line">    datanew = pd.merge(datanew, data1, how=<span class="string">&#x27;outer&#x27;</span>, on=[<span class="string">&#x27;PART_NUM&#x27;</span>])</span><br><span class="line">datanew.to_excel(<span class="string">&#x27;a.xlsx&#x27;</span>,index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Pandas</category>
-      </categories>
   </entry>
   <entry>
     <title>R语言-时间序列分析</title>
@@ -165,6 +110,68 @@
       <tags>
         <tag>时间序列分析</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Zotero使用说明</title>
+    <url>/2023/12/04/test/Zotero%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
+    <content><![CDATA[<p>Zotero是一款论文文献管理软件，这里我会介绍一些我使用到的功能。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<p>原视频指路：<a href="https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&vd_source=065dbebb8f309dd36ff6dbc4c04cbd15">https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&amp;vd_source=065dbebb8f309dd36ff6dbc4c04cbd15</a></p>
+<h1 id="英文和中文文献导入"><a href="#英文和中文文献导入" class="headerlink" title="英文和中文文献导入"></a>英文和中文文献导入</h1><ol>
+<li>利用Zotero Connector从相关论文网站导入（最推荐，可以直接获得PDF）<br> 英文可以一个页面都导入并且找到PDF，中文只能具体页面找到PDF</li>
+<li>如果需要大批量导入，下载参考文献格式导入</li>
+<li>PDF拖拽导入，算法自动识别。</li>
+<li>PDF拖拽导入，创建父条目，DOI号识别。</li>
+<li>直接doi号</li>
+</ol>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image.png" alt="image.png"></p>
+<p>5.安装茉莉花插件, 下载地址[<a href="https://github.com/l0o0/jasminum/releases/tag/v0.2.8]%EF%BC%8CPDF%E6%8B%96%E6%8B%BD%E5%90%8E%EF%BC%8C%E5%8F%B3%E9%94%AE%E7%9F%A5%E7%BD%91%E5%8A%A9%E6%89%8B%E4%B9%9F%E5%8F%AF%E8%8E%B7%E5%BE%97%E4%BF%A1%E6%81%AF%E3%80%82">https://github.com/l0o0/jasminum/releases/tag/v0.2.8]，PDF拖拽后，右键知网助手也可获得信息。</a></p>
+<p>可以选择更新茉莉花中非官方维护中文翻译器和connector</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image%201.png" alt="image.png"></p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image%202.png" alt="image.png"></p>
+<h1 id="小tips"><a href="#小tips" class="headerlink" title="小tips"></a>小tips</h1><ol>
+<li><p>选中某篇文献，长按Ctrl键，可以查看该文献属于哪些文件夹；</p>
+</li>
+<li><p>删除条目会删除这篇文献在所有文件夹。</p>
+</li>
+<li><p>删除从分类中移除条目只删除此分类中。</p>
+</li>
+</ol>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ol>
+<li><p>选择关闭自动添加标签。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204193058146.png" alt="image-20231204193058146"></p>
+</li>
+<li><p>添加完标签，点击某个文件夹，在左下角则会出现这个文件夹里的所有标签。点击某一个标签，则会在中间筛选出贴上这个标签的所有文献；</p>
+</li>
+<li><p>将某条文献拖拽到某个标签上可以快速建立标签；</p>
+</li>
+<li><p>右键标签，点击指派颜色，可以添加标签颜色，“位置”指的是标签的排列位置，设置为1，这个标签就会排在首位；</p>
+</li>
+<li><p>对于有颜色的标签，我们可以通过选中文献，然后键盘按下标签的位置号，从而赋予标签。</p>
+</li>
+</ol>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>可以根据各种文献信息</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204194645394.png" alt="image-20231204194645394"></p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h2 id="word中引用"><a href="#word中引用" class="headerlink" title="word中引用"></a>word中引用</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204195111773.png" alt="image-20231204195111773"></p>
+<p>在想要引用处 Add&#x2F;Edit Citation 加入编号</p>
+<p>在参考文献处 Add&#x2F;Edit Bibliography 加入文献内容</p>
+<h2 id="引用格式添加"><a href="#引用格式添加" class="headerlink" title="引用格式添加"></a>引用格式添加</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204195406392.png" alt="image-20231204195406392"></p>
+<h1 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h1><p>下载插件：<a href="http://file.zhouw.top/share/bfP7zqgE">http://file.zhouw.top/share/bfP7zqgE</a></p>
+]]></content>
+      <tags>
+        <tag>科研工具</tag>
+        <tag>Zotero</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/12/29/test/hello-world/</url>
+    <content><![CDATA[<p>Hello World！</p>
+<p>这里是老约翰的世界。欢迎。</p>
+]]></content>
   </entry>
   <entry>
     <title>CSS入门知识</title>
@@ -498,24 +505,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/12/29/test/hello-world/</url>
-    <content><![CDATA[<p>Hello World！</p>
-<p>这里是老约翰的世界。欢迎。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>word排版论文</title>
-    <url>/2024/05/14/test/word%E6%8E%92%E7%89%88%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/</url>
-    <content><![CDATA[<p>虽然以后可能用latex，但是这也算是个基础技能。</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />]]></content>
-      <tags>
-        <tag>技能</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>simple passion</title>
     <url>/2024/05/14/test/simple%20passion/</url>
     <content><![CDATA[<p>一本小而短的书，英文原版贴一下，方便学习。</p>
@@ -632,6 +621,17 @@
       </tags>
   </entry>
   <entry>
+    <title>word排版论文</title>
+    <url>/2024/05/14/test/word%E6%8E%92%E7%89%88%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/</url>
+    <content><![CDATA[<p>虽然以后可能用latex，但是这也算是个基础技能。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />]]></content>
+      <tags>
+        <tag>技能</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>什么是端到端</title>
     <url>/2023/11/23/test/%E4%BB%80%E4%B9%88%E5%8F%AB%E7%AB%AF%E5%88%B0%E7%AB%AF/</url>
     <content><![CDATA[<p>端到端是深度学习中一个简单的概念。</p>
@@ -653,58 +653,27 @@
       </tags>
   </entry>
   <entry>
-    <title>从0开始的pytorch环境配置</title>
-    <url>/2023/10/15/test/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84pytorch%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="从0开始的pytorch环境配置"><a href="#从0开始的pytorch环境配置" class="headerlink" title="从0开始的pytorch环境配置"></a>从0开始的pytorch环境配置</h1><p>前言：对电脑刷机了，装好了anaconda，但是环境还没配。炼丹必备<span id="more"></span></p>
-<h2 id="gpu相关的"><a href="#gpu相关的" class="headerlink" title="gpu相关的"></a>gpu相关的</h2><ol>
-<li><p>查看显卡：任务管理器查看是否有英伟达显卡</p>
+    <title>关于乒乓球</title>
+    <url>/2023/03/02/test/%E4%B9%92%E4%B9%93%E7%90%83%E8%AE%AD%E7%BB%83%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>本文为博主自己练习乒乓球时的碎碎念，博主十分高兴能够找到一个能够坚持的体育爱好。</p>
+<span id="more"></span>
+
+<h1 id="乒乓球训练日记"><a href="#乒乓球训练日记" class="headerlink" title="乒乓球训练日记"></a>乒乓球训练日记</h1><ol>
+<li><p>今晚练习乒乓球，这种性格上的改变好像影响了我的乒乓球风格。正手好像是找到了腿和身体和手的协调统一，反手的进步或许源于还原的意识更强烈。通过看视频，我更注重自己身体要稳定，不能散掉。前后的步伐还有待加强。发球的旋转仍然是困难的。</p>
 </li>
-<li><p>在官网查看自己的显卡是否支持 CUDA 安装<br>NVIDIA官网地址：<a href="https://developer.nvidia.com/cuda-gpus">https://developer.nvidia.com/cuda-gpus</a></p>
+<li><p>反手的重心要压低一点，要用身体发力的动作。</p>
 </li>
-<li><p>查看自己的显卡驱动版本<br>命令行输入以下命令</p>
+<li><p>正手打球的时候太急了一点。</p>
 </li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">NVIDIA-SMI</span><br></pre></td></tr></table></figure>
-
-<p>如果没有，请将C:\Program Files\NVIDIA Corporation\NVSMI文件夹放置系统路径的path之中</p>
-<ol start="4">
-<li>升级显卡驱动程序</li>
-</ol>
-<p>去Nvidia官网地址 <a href="https://links.jianshu.com/go?to=https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a> 按系统版本，选择下载在线升级包, 下载完后，选择<strong>自定义</strong>先升级显卡驱动,如图:</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/28789528-198feb5cb4e4e010.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/582/format/webp" alt="img"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/28789528-03be5475ba381a22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/590/format/webp" alt="img"></p>
-<ol start="5">
-<li>CUDA安装是否成功</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvcc -V</span><br></pre></td></tr></table></figure>
-<h2 id="python环境安装"><a href="#python环境安装" class="headerlink" title="python环境安装"></a>python环境安装</h2><p>1.定义环境</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda create -n mytorch python==3.9</span><br></pre></td></tr></table></figure>
-<p>2.运行环境</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda activate mytorch</span><br></pre></td></tr></table></figure>
-<p>3.安装<a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a><br>pytorch：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.8 -c pytorch -c nvidia -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
-
-<p>4.测试一下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%进入python环境 </span><br><span class="line">python</span><br><span class="line">import torch</span><br><span class="line">torch.cuda.is_available()</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir(torch)</span><br><span class="line">help(torch.cuda.is_available)</span><br></pre></td></tr></table></figure>
-<p>5.jupyter编辑器<br>Anaconda Prompt<br>输入指令 </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda activate mytorch</span><br><span class="line">jupyter notebook</span><br><span class="line">#打开jupyter后</span><br><span class="line">import torch</span><br></pre></td></tr></table></figure>
-<p>6.查看和删除</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">环境的查看</span><br><span class="line">Anaconda Prompt</span><br><span class="line">conda info -e   </span><br><span class="line">环境的删除</span><br><span class="line">conda remove --name yolo5 --all</span><br></pre></td></tr></table></figure>
-
-<p>8.一些镜像源</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br><span class="line">pip install opencv-python</span><br><span class="line">pip install tensorflow-cpu==2.3.0 </span><br><span class="line">-i https://mirror.baidu.com/pypi/simple</span><br><span class="line">-i https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">-i http://pypi.douban.com/simple/</span><br><span class="line">阿里云：http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/</span><br><span class="line">华中理工大学：http://pypi.hustunique.com/</span><br><span class="line">山东理工大学：http://pypi.sdutlinux.org/</span><br></pre></td></tr></table></figure>
-
-<ol start="10">
-<li>Could not find a version that satisfies the requirement<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
-<li><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install &lt;库名&gt;			安装</span><br><span class="line">pip uninstall &lt;库名&gt;		卸载</span><br><span class="line">pip install -U &lt;库名&gt;		更新</span><br><span class="line">pip download &lt;库名&gt;			只下载，不安装</span><br><span class="line">pip show &lt;库名&gt;				展示这个库的信息</span><br><span class="line">pip search &lt;库名&gt;			搜索关键字</span><br><span class="line">pip list				列出安装的库</span><br><span class="line">查看用conda安装的包：</span><br><span class="line">conda list</span><br></pre></td></tr></table></figure></li>
+<li><p>打比赛的时候精神信念，要专注于比赛本身，敢于发力，精神集中。不要觉得自己很弱不敢打，对待好每个球，要有一些自己的判断，不能瞎打。</p>
+</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>乒乓球</category>
+      </categories>
       <tags>
-        <tag>深度学习</tag>
-        <tag>python</tag>
-        <tag>anaconda</tag>
+        <tag>乒乓球</tag>
       </tags>
   </entry>
   <entry>
@@ -847,44 +816,58 @@
       </tags>
   </entry>
   <entry>
-    <title>参数与超参数</title>
-    <url>/2023/11/17/test/%E5%8F%82%E6%95%B0%E4%B8%8E%E8%B6%85%E5%8F%82%E6%95%B0/</url>
-    <content><![CDATA[<p>参数与超参数的一些介绍，哪些是参数哪些是超参数</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-<p>参数是可学习的，超参数需要自己设定的。</p>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于乒乓球</title>
-    <url>/2023/03/02/test/%E4%B9%92%E4%B9%93%E7%90%83%E8%AE%AD%E7%BB%83%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>本文为博主自己练习乒乓球时的碎碎念，博主十分高兴能够找到一个能够坚持的体育爱好。</p>
-<span id="more"></span>
-
-<h1 id="乒乓球训练日记"><a href="#乒乓球训练日记" class="headerlink" title="乒乓球训练日记"></a>乒乓球训练日记</h1><ol>
-<li><p>今晚练习乒乓球，这种性格上的改变好像影响了我的乒乓球风格。正手好像是找到了腿和身体和手的协调统一，反手的进步或许源于还原的意识更强烈。通过看视频，我更注重自己身体要稳定，不能散掉。前后的步伐还有待加强。发球的旋转仍然是困难的。</p>
+    <title>从0开始的pytorch环境配置</title>
+    <url>/2023/10/15/test/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84pytorch%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="从0开始的pytorch环境配置"><a href="#从0开始的pytorch环境配置" class="headerlink" title="从0开始的pytorch环境配置"></a>从0开始的pytorch环境配置</h1><p>前言：对电脑刷机了，装好了anaconda，但是环境还没配。炼丹必备<span id="more"></span></p>
+<h2 id="gpu相关的"><a href="#gpu相关的" class="headerlink" title="gpu相关的"></a>gpu相关的</h2><ol>
+<li><p>查看显卡：任务管理器查看是否有英伟达显卡</p>
 </li>
-<li><p>反手的重心要压低一点，要用身体发力的动作。</p>
+<li><p>在官网查看自己的显卡是否支持 CUDA 安装<br>NVIDIA官网地址：<a href="https://developer.nvidia.com/cuda-gpus">https://developer.nvidia.com/cuda-gpus</a></p>
 </li>
-<li><p>正手打球的时候太急了一点。</p>
-</li>
-<li><p>打比赛的时候精神信念，要专注于比赛本身，敢于发力，精神集中。不要觉得自己很弱不敢打，对待好每个球，要有一些自己的判断，不能瞎打。</p>
+<li><p>查看自己的显卡驱动版本<br>命令行输入以下命令</p>
 </li>
 </ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">NVIDIA-SMI</span><br></pre></td></tr></table></figure>
+
+<p>如果没有，请将C:\Program Files\NVIDIA Corporation\NVSMI文件夹放置系统路径的path之中</p>
+<ol start="4">
+<li>升级显卡驱动程序</li>
+</ol>
+<p>去Nvidia官网地址 <a href="https://links.jianshu.com/go?to=https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a> 按系统版本，选择下载在线升级包, 下载完后，选择<strong>自定义</strong>先升级显卡驱动,如图:</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/28789528-198feb5cb4e4e010.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/582/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/28789528-03be5475ba381a22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/590/format/webp" alt="img"></p>
+<ol start="5">
+<li>CUDA安装是否成功</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvcc -V</span><br></pre></td></tr></table></figure>
+<h2 id="python环境安装"><a href="#python环境安装" class="headerlink" title="python环境安装"></a>python环境安装</h2><p>1.定义环境</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda create -n mytorch python==3.9</span><br></pre></td></tr></table></figure>
+<p>2.运行环境</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda activate mytorch</span><br></pre></td></tr></table></figure>
+<p>3.安装<a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a><br>pytorch：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.8 -c pytorch -c nvidia -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+
+<p>4.测试一下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%进入python环境 </span><br><span class="line">python</span><br><span class="line">import torch</span><br><span class="line">torch.cuda.is_available()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir(torch)</span><br><span class="line">help(torch.cuda.is_available)</span><br></pre></td></tr></table></figure>
+<p>5.jupyter编辑器<br>Anaconda Prompt<br>输入指令 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda activate mytorch</span><br><span class="line">jupyter notebook</span><br><span class="line">#打开jupyter后</span><br><span class="line">import torch</span><br></pre></td></tr></table></figure>
+<p>6.查看和删除</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">环境的查看</span><br><span class="line">Anaconda Prompt</span><br><span class="line">conda info -e   </span><br><span class="line">环境的删除</span><br><span class="line">conda remove --name yolo5 --all</span><br></pre></td></tr></table></figure>
+
+<p>8.一些镜像源</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br><span class="line">pip install opencv-python</span><br><span class="line">pip install tensorflow-cpu==2.3.0 </span><br><span class="line">-i https://mirror.baidu.com/pypi/simple</span><br><span class="line">-i https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">-i http://pypi.douban.com/simple/</span><br><span class="line">阿里云：http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/</span><br><span class="line">华中理工大学：http://pypi.hustunique.com/</span><br><span class="line">山东理工大学：http://pypi.sdutlinux.org/</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>Could not find a version that satisfies the requirement<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
+<li><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install &lt;库名&gt;			安装</span><br><span class="line">pip uninstall &lt;库名&gt;		卸载</span><br><span class="line">pip install -U &lt;库名&gt;		更新</span><br><span class="line">pip download &lt;库名&gt;			只下载，不安装</span><br><span class="line">pip show &lt;库名&gt;				展示这个库的信息</span><br><span class="line">pip search &lt;库名&gt;			搜索关键字</span><br><span class="line">pip list				列出安装的库</span><br><span class="line">查看用conda安装的包：</span><br><span class="line">conda list</span><br></pre></td></tr></table></figure></li>
+</ol>
 ]]></content>
-      <categories>
-        <category>乒乓球</category>
-      </categories>
       <tags>
-        <tag>乒乓球</tag>
+        <tag>深度学习</tag>
+        <tag>python</tag>
+        <tag>anaconda</tag>
       </tags>
   </entry>
   <entry>
@@ -1030,6 +1013,23 @@
       </tags>
   </entry>
   <entry>
+    <title>参数与超参数</title>
+    <url>/2023/11/17/test/%E5%8F%82%E6%95%B0%E4%B8%8E%E8%B6%85%E5%8F%82%E6%95%B0/</url>
+    <content><![CDATA[<p>参数与超参数的一些介绍，哪些是参数哪些是超参数</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<p>参数是可学习的，超参数需要自己设定的。</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一些常用软件的安装教程</title>
     <url>/2023/02/25/test/%E5%A6%82%E4%BD%95%E7%99%BD%E5%AB%96office%E7%B3%BB%E5%88%97/</url>
     <content><![CDATA[<p>支持正版！</p>
@@ -1083,6 +1083,35 @@
 <p>part4:<a href="https://youtu.be/baONhoO9c7Q">https://youtu.be/baONhoO9c7Q</a></p>
 <p>整理了托福四个Part的答题模板</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/12/20/test/%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E4%BB%A5%E5%8F%8A%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<ol>
+<li><p>谷歌日历，联系人记录生日可以提醒．使用很多todo软件，但是谷歌日历同步最方便，多设备同步管理．</p>
+</li>
+<li><p>wiki：卡片的形式，适合背诵记忆的任务反复巩固．</p>
+</li>
+<li></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>动手学深度学习v2补充解释</title>
+    <url>/2023/11/13/test/%E6%9D%8E%E6%B2%90/</url>
+    <content><![CDATA[<h1 id="动手学深度学习v2"><a href="#动手学深度学习v2" class="headerlink" title="动手学深度学习v2"></a>动手学深度学习v2</h1><p>个人不理解的地方，进行一些原理的证明或是详细解释。</p>
+<span id="more"></span>
+
+<h2 id="每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致"><a href="#每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致" class="headerlink" title="每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致"></a>每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致</h2><p>来源：14 模型初始化和激活函数</p>
+<p>如果每层的输出和梯度都具有相同的均值和方差，那么在反向传播过程中，梯度会保持相同的比例。这样，梯度值在各层之间就不会发生太大的变化，从而减轻梯度消失或爆炸的问题。</p>
+<p>假设每层的输出和梯度都具有相同的均值和方差，即： $$E[h^t] &#x3D; E[g^t] &#x3D; 0$$ $$Var[h^t] &#x3D; Var[g^t] &#x3D; \sigma^2$$ 在反向传播过程中，梯度是通过链式法则计算的： $$g^{t-1} &#x3D; \frac{d}{dh^{t-1}} L(h^t, y)$$ 其中，$L$ 是损失函数。 根据链式法则，我们有： $$g^{t-1} &#x3D; \sigma’(W^th^{t-1}) W^t$$ 其中，$\sigma$ 是激活函数。 由于 $h^{t-1}$ 和 $g^t$ 都具有相同的均值和方差，因此 $\sigma’(W^th^{t-1})$ 也具有相同的均值和方差。 因此，我们有： $$E[g^{t-1}] &#x3D; \sigma’(0) E[W^t] &#x3D; 0$$ $$Var[g^{t-1}] &#x3D; \sigma’^2(0) Var[W^t] &#x3D; \sigma^2$$ 因此，在反向传播过程中，梯度的均值保持为零，而梯度的方差保持为 $\sigma^2$。 也就是说，在反向传播过程中，梯度会保持相同的比例。</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
   </entry>
   <entry>
     <title>数据库重点内容</title>
@@ -1665,23 +1694,6 @@
       </tags>
   </entry>
   <entry>
-    <title>动手学深度学习v2补充解释</title>
-    <url>/2023/11/13/test/%E6%9D%8E%E6%B2%90/</url>
-    <content><![CDATA[<h1 id="动手学深度学习v2"><a href="#动手学深度学习v2" class="headerlink" title="动手学深度学习v2"></a>动手学深度学习v2</h1><p>个人不理解的地方，进行一些原理的证明或是详细解释。</p>
-<span id="more"></span>
-
-<h2 id="每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致"><a href="#每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致" class="headerlink" title="每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致"></a>每层的输出和梯度都看作随机变量，让他们的均值和方差都保持一致</h2><p>来源：14 模型初始化和激活函数</p>
-<p>如果每层的输出和梯度都具有相同的均值和方差，那么在反向传播过程中，梯度会保持相同的比例。这样，梯度值在各层之间就不会发生太大的变化，从而减轻梯度消失或爆炸的问题。</p>
-<p>假设每层的输出和梯度都具有相同的均值和方差，即： $$E[h^t] &#x3D; E[g^t] &#x3D; 0$$ $$Var[h^t] &#x3D; Var[g^t] &#x3D; \sigma^2$$ 在反向传播过程中，梯度是通过链式法则计算的： $$g^{t-1} &#x3D; \frac{d}{dh^{t-1}} L(h^t, y)$$ 其中，$L$ 是损失函数。 根据链式法则，我们有： $$g^{t-1} &#x3D; \sigma’(W^th^{t-1}) W^t$$ 其中，$\sigma$ 是激活函数。 由于 $h^{t-1}$ 和 $g^t$ 都具有相同的均值和方差，因此 $\sigma’(W^th^{t-1})$ 也具有相同的均值和方差。 因此，我们有： $$E[g^{t-1}] &#x3D; \sigma’(0) E[W^t] &#x3D; 0$$ $$Var[g^{t-1}] &#x3D; \sigma’^2(0) Var[W^t] &#x3D; \sigma^2$$ 因此，在反向传播过程中，梯度的均值保持为零，而梯度的方差保持为 $\sigma^2$。 也就是说，在反向传播过程中，梯度会保持相同的比例。</p>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>概率论通识</title>
     <url>/2023/12/04/test/%E6%A6%82%E7%8E%87%E8%AE%BA%E9%80%9A%E8%AF%86/</url>
     <content><![CDATA[<p>介绍一些概率论思想</p>
@@ -1693,6 +1705,20 @@
       <tags>
         <tag>得到</tag>
         <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法通识</title>
+    <url>/2023/12/15/test/%E7%AE%97%E6%B3%95%E9%80%9A%E8%AF%86/</url>
+    <content><![CDATA[<p>介绍一些算法思想</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+]]></content>
+      <tags>
+        <tag>得到</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1723,32 +1749,6 @@
 ]]></content>
       <tags>
         <tag>杂记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/12/20/test/%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E4%BB%A5%E5%8F%8A%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<ol>
-<li><p>谷歌日历，联系人记录生日可以提醒．使用很多todo软件，但是谷歌日历同步最方便，多设备同步管理．</p>
-</li>
-<li><p>wiki：卡片的形式，适合背诵记忆的任务反复巩固．</p>
-</li>
-<li></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>算法通识</title>
-    <url>/2023/12/15/test/%E7%AE%97%E6%B3%95%E9%80%9A%E8%AF%86/</url>
-    <content><![CDATA[<p>介绍一些算法思想</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-]]></content>
-      <tags>
-        <tag>得到</tag>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
