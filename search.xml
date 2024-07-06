@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>anki</title>
+    <url>/2023/12/15/test/ANKI%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="anki的使用场景"><a href="#anki的使用场景" class="headerlink" title="anki的使用场景"></a>anki的使用场景</h1><h1 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h1><h1 id="好用插件"><a href="#好用插件" class="headerlink" title="好用插件"></a>好用插件</h1><h2 id="Ankiconnect"><a href="#Ankiconnect" class="headerlink" title="Ankiconnect"></a>Ankiconnect</h2><h2 id="AwesomeTTS"><a href="#AwesomeTTS" class="headerlink" title="AwesomeTTS"></a>AwesomeTTS</h2><h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;#ContextCloze&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&lt;section&gt;&#123;&#123;&#123;&#123;type:cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line"> </span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;^ContextCloze&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;Text&#125;&#125;&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Note&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;hint:Note&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Note&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Title&#125;&#125;</span><br><span class="line">&lt;section class=&quot;tsource&quot;&gt;</span><br><span class="line">&lt;hr /&gt;</span><br><span class="line">&#123;&#123;#Favicon&#125;&#125;&lt;img src=&quot;&#123;&#123;Favicon&#125;&#125;&quot; /&gt;&#123;&#123;/Favicon&#125;&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123;Url&#125;&#125;&quot;&gt;&#123;&#123;Title&#125;&#125;&lt;/a&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Audio&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Audio&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Audio&#125;&#125;</span><br><span class="line">&#123;&#123;/Title&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;#ContextCloze&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&lt;section&gt;&#123;&#123;&#123;&#123;type:cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;^ContextCloze&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;Text&#125;&#125;&lt;/h1&gt;</span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Note&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Note&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Note&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Title&#125;&#125;</span><br><span class="line">&lt;section class=&quot;tsource&quot;&gt;</span><br><span class="line">&lt;hr /&gt;</span><br><span class="line">&#123;&#123;#Favicon&#125;&#125;&lt;img src=&quot;&#123;&#123;Favicon&#125;&#125;&quot; /&gt;&#123;&#123;/Favicon&#125;&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123;Url&#125;&#125;&quot;&gt;&#123;&#123;Title&#125;&#125;&lt;/a&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Audio&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Audio&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Audio&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;/Title&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.card &#123;</span><br><span class="line">  font-family: arial;</span><br><span class="line">  font-size: 20px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #333;</span><br><span class="line">  background-color: white;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">  color: #5caf9e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">input &#123;</span><br><span class="line">  border: 1px solid #eee;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">section &#123;</span><br><span class="line">  margin: 1em 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans &#123;</span><br><span class="line">  border: 1px solid #eee;</span><br><span class="line">  padding: 0.5em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans_title &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  font-size: 0.9em;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans_content &#123;</span><br><span class="line">  margin-bottom: 0.5em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.cloze &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  color: #f9690e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  font-size: .8em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource img &#123;</span><br><span class="line">  height: .7em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource a &#123;</span><br><span class="line">  text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeGood &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #1EBC61;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeBad &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #F75C4C;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeMissed &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #7C8A99;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;答案&#125;&#125;&lt;br&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;&#x27;&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;float:left&#x27;&gt;&lt;/div&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 20px;&#x27;&gt;&lt;b&gt;解析:&lt;/b&gt;&lt;/div&gt;&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;&#x27;&gt;&#123;&#123;解析&#125;&#125;&lt;/div&gt;&lt;br&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a>选择题</h2><p>来源：<a href="https://zhuanlan.zhihu.com/p/77627743">https://zhuanlan.zhihu.com/p/77627743</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Question 中添加问题，Options 中添加选项，各选项间用 *** 进行分隔，Answer 中添加答案（一个就是单选，多个就是多选），Remark 中添加问题解析。</span><br></pre></td></tr></table></figure>
+
+<p>批量操作：</p>
+<p>将数据列到 Excel 中，然后导出成 UTF-8 的 CSV 格式，最后导入到 Anki 中。</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Zotero使用说明</title>
+    <url>/2023/12/04/test/Zotero%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
+    <content><![CDATA[<p>Zotero是一款论文文献管理软件，这里我会介绍一些我使用到的功能。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<p>原视频指路：<a href="https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&vd_source=065dbebb8f309dd36ff6dbc4c04cbd15">https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&amp;vd_source=065dbebb8f309dd36ff6dbc4c04cbd15</a></p>
+<h1 id="英文和中文文献导入"><a href="#英文和中文文献导入" class="headerlink" title="英文和中文文献导入"></a>英文和中文文献导入</h1><ol>
+<li>利用Zotero Connector从相关论文网站导入（最推荐，可以直接获得PDF）<br> 英文可以一个页面都导入并且找到PDF，中文只能具体页面找到PDF</li>
+<li>如果需要大批量导入，下载参考文献格式导入</li>
+<li>PDF拖拽导入，算法自动识别。</li>
+<li>PDF拖拽导入，创建父条目，DOI号识别。</li>
+<li>直接doi号</li>
+</ol>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image.png" alt="image.png"></p>
+<p>5.安装茉莉花插件, 下载地址[<a href="https://github.com/l0o0/jasminum/releases/tag/v0.2.8]%EF%BC%8CPDF%E6%8B%96%E6%8B%BD%E5%90%8E%EF%BC%8C%E5%8F%B3%E9%94%AE%E7%9F%A5%E7%BD%91%E5%8A%A9%E6%89%8B%E4%B9%9F%E5%8F%AF%E8%8E%B7%E5%BE%97%E4%BF%A1%E6%81%AF%E3%80%82">https://github.com/l0o0/jasminum/releases/tag/v0.2.8]，PDF拖拽后，右键知网助手也可获得信息。</a></p>
+<p>可以选择更新茉莉花中非官方维护中文翻译器和connector</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image%201.png" alt="image.png"></p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image%202.png" alt="image.png"></p>
+<h1 id="小tips"><a href="#小tips" class="headerlink" title="小tips"></a>小tips</h1><ol>
+<li><p>选中某篇文献，长按Ctrl键，可以查看该文献属于哪些文件夹；</p>
+</li>
+<li><p>删除条目会删除这篇文献在所有文件夹。</p>
+</li>
+<li><p>删除从分类中移除条目只删除此分类中。</p>
+</li>
+</ol>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ol>
+<li><p>选择关闭自动添加标签。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204193058146.png" alt="image-20231204193058146"></p>
+</li>
+<li><p>添加完标签，点击某个文件夹，在左下角则会出现这个文件夹里的所有标签。点击某一个标签，则会在中间筛选出贴上这个标签的所有文献；</p>
+</li>
+<li><p>将某条文献拖拽到某个标签上可以快速建立标签；</p>
+</li>
+<li><p>右键标签，点击指派颜色，可以添加标签颜色，“位置”指的是标签的排列位置，设置为1，这个标签就会排在首位；</p>
+</li>
+<li><p>对于有颜色的标签，我们可以通过选中文献，然后键盘按下标签的位置号，从而赋予标签。</p>
+</li>
+</ol>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>可以根据各种文献信息</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204194645394.png" alt="image-20231204194645394"></p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h2 id="word中引用"><a href="#word中引用" class="headerlink" title="word中引用"></a>word中引用</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204195111773.png" alt="image-20231204195111773"></p>
+<p>在想要引用处 Add&#x2F;Edit Citation 加入编号</p>
+<p>在参考文献处 Add&#x2F;Edit Bibliography 加入文献内容</p>
+<h2 id="引用格式添加"><a href="#引用格式添加" class="headerlink" title="引用格式添加"></a>引用格式添加</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204195406392.png" alt="image-20231204195406392"></p>
+<h1 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h1><p>下载插件：<a href="http://file.zhouw.top/share/bfP7zqgE">http://file.zhouw.top/share/bfP7zqgE</a></p>
+]]></content>
+      <tags>
+        <tag>科研工具</tag>
+        <tag>Zotero</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>公司任务</title>
     <url>/2023/02/25/test/Pandas%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC/</url>
     <content><![CDATA[<p>公司任务：有五个设备统计53周电器用电数据。现在要拆分到每周每种电器用电数据。 <span id="more"></span></p>
@@ -365,6 +448,211 @@
       </categories>
   </entry>
   <entry>
+    <title>K-means讲解</title>
+    <url>/2023/11/15/test/k-means/</url>
+    <content><![CDATA[<p>K-means的一些讲解</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+
+<h1 id="k-均值算法"><a href="#k-均值算法" class="headerlink" title="k 均值算法"></a>k 均值算法</h1><p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/1234333422.gif"></p>
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20201018202041.png"></p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a><strong>步骤</strong></h2><ul>
+<li>随机选取样本作为初始均值向量（初始值：k 的值【即几个簇】）（也可以不用样本点）</li>
+<li>分别计算每个样本点到初始均值向量的<strong>距离</strong>（数据做了标准化），距离哪个点最近就属于哪个簇</li>
+<li>每个簇重新计算中心点，重复第二步直到<strong>收敛</strong></li>
+<li>找到质心和离某个质心距离最近的点就分为一类。</li>
+</ul>
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021340.png"></p>
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021518.png"></p>
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021531.png"></p>
+<blockquote>
+<p>问题：需要指定k值，难以确定k值。</p>
+</blockquote>
+<h2 id="确定k值"><a href="#确定k值" class="headerlink" title="确定k值"></a>确定k值</h2><h3 id="1-手肘法"><a href="#1-手肘法" class="headerlink" title="1.手肘法"></a>1.手肘法</h3><p>手肘法的核心指标是SSE(sum of the squared errors，误差平方和)，</p>
+<p>$$S S E &#x3D; \sum _ { i &#x3D; 1 } ^ { k } \sum _ {  p∈m_i }| p - m _ {i } | ^ { 2 }$$</p>
+<p>其中，Ci是第i个簇，p是Ci中的样本点，mi是Ci的质心（Ci中所有样本的均值），SSE是所有样本的聚类误差，代表了聚类效果的好坏。</p>
+<p>手肘法的核心思想是：随着聚类数k的增大，样本划分会更加精细，每个簇的聚合程度会逐渐提高，那么误差平方和SSE自然会逐渐变小。并且，当k小于真实聚类数时，由于k的增大会大幅增加每个簇的聚合程度，故SSE的下降幅度会很大，而当k到达真实聚类数时，再增加k所得到的聚合程度回报会迅速变小，所以SSE的下降幅度会骤减，然后随着k值的继续增大而趋于平缓，也就是说SSE和k的关系图是一个手肘的形状，而这个肘部对应的k值就是数据的真实聚类数。当然，这也是该方法被称为手肘法的原因。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231115213147472.png"></p>
+<h3 id="2-轮廓系数法"><a href="#2-轮廓系数法" class="headerlink" title="2. 轮廓系数法"></a>2. 轮廓系数法</h3><p>思想：簇内样本的距离越近，簇间样本距离越远，平均轮廓系数越大，聚类效果越好。</p>
+<p>该方法的核心指标是轮廓系数（Silhouette Coefficient），某个样本点Xi的轮廓系数定义如下：</p>
+<p>$$S &#x3D; \frac { b - a } { m a x ( a , b ) }$$</p>
+<p>其中</p>
+<p>a是Xi与同簇的其他样本的平均距离，称为凝聚度</p>
+<p>b是Xi与最近簇中所有样本的平均距离，称为分离度。</p>
+<p>最近簇的定义是，簇间不相似，最近的不相似</p>
+<p>$$C _ { j } &#x3D;{ a r g } m i n \frac { 1 } { n } \sum _ { p ∈c _ { s } } | p - X _ { i }| ^ { 2 }$$</p>
+<p>其中p是某个簇Ck中的样本。事实上，简单点讲，就是用Xi到某个簇所有样本平均距离作为衡量该点到该簇的距离后，选择离Xi最近的一个簇作为最近簇。</p>
+<p>求出所有样本的轮廓系数后再求平均值就得到了<strong>平均轮廓系数</strong>。</p>
+<p>平均轮廓系数的取值范围为[-1,1]。</p>
+<p>那么，很自然地，平均轮廓系数最大的k便是最佳聚类数。</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>聚类算法</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/12/29/test/hello-world/</url>
+    <content><![CDATA[<p>Hello World！</p>
+<p>这里是老约翰的世界。欢迎。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>word排版论文</title>
+    <url>/2024/05/14/test/word%E6%8E%92%E7%89%88%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/</url>
+    <content><![CDATA[<p>虽然以后可能用latex，但是这也算是个基础技能。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />]]></content>
+      <tags>
+        <tag>技能</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>simple passion</title>
+    <url>/2024/05/14/test/simple%20passion/</url>
+    <content><![CDATA[<p>一本小而短的书，英文原版贴一下，方便学习。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<p>THIS SUMMER, for the first time, I watched an X-rated film on Canal Plus. My television set doesn’t have a decoder; the images on the screen were blurred, the words replaced by strange sound effects, hissing and babbling, a different sort of language, soft and continuous. One could make out the figure of a woman in a corset and stockings, and a man. The story was incomprehensible; it was impossible to predict any of their actions or movements. The man walked up to the woman. There was a close-up of the woman’s genitals, clearly visible among the shimmerings of the screen, then of the man’s penis, fully erect, sliding into the woman’s vagina. For a long time this coming and going of the two sex organs was shown from several angles. The cock reappeared, in the man’s hand, and the sperm spilled on to the woman’s belly. No doubt one gets used to such a sight; the first time is shattering. Centuries and centuries, hundreds of generations have gone by, and it is only now that one can see this — a man’s penis and a woman’s vagina coming together, the sperm — something one could barely take in without dying has become as easy to watch as a handshake. It occurred to me that writing should also aim for that — the impression conveyed by sexual intercourse, a feeling of anxiety and stupefaction, a suspension of moral judgment.</p>
+<p>FROM SEPTEMBER last year, I did nothing else but wait for a man: for him to call me and come round to my place. I would go to the supermarket, the cinema, take my clothes to the dry cleaner’s, read books, and mark essays. I behaved exactly the same way as before but without the long-standing familiarity of these actions I would have found it impossible to do so, except at the cost of a tremendous effort. It was when I spoke that I realized I was acting instinctively. Words, sentences, and even my laugh, formed on my lips without my actually thinking about it or wanting it. In fact I have only vague memories of the things I did, the films I saw, the people I met. I behaved in an artificial manner. The only actions involving willpower, desire, and what I take to be human intelligence (planning, weighing the pros and cons, assessing the consequences) were all related to this man:</p>
+<ul>
+<li>Reading newspaper articles about his country (he was a foreigner)</li>
+<li>Choosing clothes and make-up</li>
+<li>Writing letters to him</li>
+<li>Changing the sheets on the bed and</li>
+<li>Arranging flowers in the bedroom</li>
+<li>Jotting down something that might interest him, to tell him next time we met</li>
+<li>Buying whisky, fruit, and various delicacies for our evening together</li>
+<li>Imagining in which room we would make love when he arrived.</li>
+</ul>
+<p>In the course of conversation, the only subjects that escaped my indifference were those related to this man, his work, the country he came from, and the places he’d been to. The person speaking to me had no idea that my sudden interest in their conversation had nothing to do with their description or even the subject itself, but with the fact that one day, ten years before I met him, A had been sent to Havana on an assignment and may have set foot in that very night club, the “Fiorendito,” which they were describing in minute detail, encouraged by my attentive listening. In the same way, when I was reading, the sentences that made me pause were those concerning a relationship between a man and a woman. I felt that they could teach me something about A and that they lent credibility to the things I wished to believe. For instance, reading in Vassili Grossman’s Life and Fate that “people in love kiss with their eyes closed” led me to believe that A loved me since that was the way he kissed me. After that passage, the rest of the book returned to being what everything else had been to me for a whole year — a means of filling in time between two meetings.</p>
+<p>I had no future other than the telephone call fixing our next appointment. I would try to leave the house as little as possible except for professional reasons (naturally, he knew my working hours), forever fearing that he might call during my absence. I would also avoid using the vacuum cleaner or the hairdryer as they would have prevented me from hearing the sound of the telephone. Every time it rang, I was consumed with hope, which usually only lasted the time it took me slowly to pick up the receiver and say hello. When I realized it wasn’t him, I felt so utterly dejected that I began to loathe the person who was on the line. As soon as I heard A’s voice, my long, painful wait, invariably tinged with jealousy, dissipated so quickly that I felt I had been mad and had suddenly become sane again. I was struck by the insignificance of that voice and the exaggerated importance it had taken in my life. If he told me he was arriving in an hour — “an opportunity,” in other words an excuse to be late without arousing his wife’s suspicions — I would enter a different phase of waiting, devoid of thought or even desire (to the extent of wondering whether I would be able to achieve an orgasm), bursting with frenzied energy, unable to organize the simplest tasks: having a shower, getting out the glasses, painting my nails, mopping the floor. I no longer even knew who I was waiting for. I was entirely at the mercy of that crucial moment when I would hear the car brake, the door slam, and his footsteps on the concrete porch — a moment which I always anticipated with unspeakable terror. When he left me more time between his phone call and his visit, three or four days, I imagined with disgust all the work I would have to do and the social engagements I would have to attend before seeing him again. I would have liked to have done nothing else but wait for him. I lived with the growing obsession that something might happen to stop us from meeting. One afternoon, when I was driving home and expecting him half an hour later, it occurred to me fleetingly that I could have an accident. Immediately: “I’m not sure that I would stop.”</p>
+<p>Once I had dressed, made up, done my hair, and tidied the house, if I still had some time left, I would be incapable of reading or marking essays. In a way, too, I didn’t want my mind to concentrate on anything else but the wait itself, in order not to spoil it. Quite often I would write down on a sheet of paper the date, the time, and “he’s going to come,” along with other sentences, fears — that he might not come, that he might not feel the same desire for me. In the evening I would go back to the sheet of paper, “he came,” jotting down the details of that meeting at random. Then, dazed, I would stare at the scrawls on the paper and the two paragraphs written before and after, which one read in succession without a break. In between there had been words and gestures that made everything else seem trivial, including the very writing destined to capture them. An interval of time squeezed in between two car noises — his Renault 25 braking, then driving off again — when I knew that nothing in my life (having children, passing exams, traveling to faraway countries) had ever meant as much to me as lying in bed with that man in the middle of the afternoon. It would only last for a few hours. I never wore my watch, removing it just before he arrived. He would keep his on and I dreaded the moment when he would glance at it discreetly. When I went into the kitchen to get some ice, I would look up at the clock hanging above the door: “only two more hours,” “only one more hour,” or “in one hour I’ll be here and he’ll be gone.” Astonished, I asked myself: “Where is the present?” He would dress slowly before leaving. I would watch him button up his shirt, put on his socks, his underpants, his trousers, then turn towards the mirror to fasten his tie. After he had put on his jacket, it would all be over. Now I was only time flowing through myself. As soon as he left, I would be overcome by a wave of fatigue. I wouldn’t tidy up straight away: I would sit staring at the glasses, the plates and their leftovers, the overflowing ashtray, the clothes, the lingerie strewn all over the bedroom and the hallway, the sheets spilling over onto the carpet. I would have liked to keep that mess the way it was — a mess in which every object evoked a caress or a particular moment, forming a still-life whose intensity and pain could never, for me, be captured by any painting in a museum. Naturally I would never wash until the next day, to keep his sperm inside me. I would count the number of times we had made love. I felt that each time something new had been added to our relationship but that somehow this very accumulation of touching and pleasure would eventually draw us apart. We were burning up a capital of desire. What we gained in physical intensity we lost in time. I would slip into a semi-slumber which gave me the sensation I was sleeping in his body. The following day I would enter a state of apathy, forever reliving a caress he had given me or repeating a word he had spoken. He didn’t know any coarse words in French or maybe he chose not to use them because they were not suggestive of social taboo; they were innocent words, just like the others. (The same would have applied to me in the case of obscene words belonging to his language.) In the underground, at the supermarket, I would hear his voice whisper to me: “Stroke my penis with your mouth.” Once, lost in a daydream on the platform at the Opera underground station, I let my train go by without even realizing it. This lethargic condition would gradually ease and I would start expecting his phone call again, with all the more suffering and anxiety as the date of our last meeting receded. As in the past, when the longer I waited after taking an exam the more I became convinced I had failed, so now, as the days went by without him ringing, I was certain he had left me.</p>
+<p>In his absence, I was only happy when I was out buying new dresses, earrings, stockings, and trying them on at home in front of the mirror — the ideal, quite impossible, being that he should see me each time in a different outfit. He would only glimpse my new blouse or pumps for a couple of minutes before they were discarded in some corner until he left. Of course, I realized how pointless new clothes were in the event of his feeling desire for another woman. But presenting myself in clothes he had already seen seemed a mistake, a slackening in the quest for perfection for which I strove in my relationship with him. In the same spirit of perfection, I once browsed through Techniques of Lovemaking in a hypermarket. Beneath the title one could read: “700,000 copies sold.” Quite often I felt I was living out this passion in the same way I would have written a book: the same determination to get every single scene right, the same minute attention to detail. I could even accept the thought of dying providing I had lived this passion through to the very end — without actually defining “to the very end” — in the same way I could die in a few months’ time after finishing this book.</p>
+<p>In front of people I knew, I tried not to betray my obsession by words, although to exercise such self-control continually is extremely taxing. At the hairdresser’s one day I saw a talkative woman to whom everyone had been speaking perfectly normally until she announced, her head tilted back over the basin: “I’m being treated for my nerves.” Immediately, the staff stiffened and addressed her with distant reserve, as if this irrepressible confession were proof of her insanity. I feared I would also be considered abnormal if I had said: “I’m having a passionate love affair.” Yet when I was among other women, at the supermarket checkout or at the bank, I wondered whether they too were wrapped up in a man. If they weren’t, how could they go on living this way — that is to say, judging by my previous standards, with nothing else to wait for but the weekend, a meal out, the gym class, or the children’s school results: things for which I now felt aversion or indifference.</p>
+<p>When someone confided in me, a man or a woman who admitted they were having, or had had, “a crazy love affair with a guy” or “a very close relationship with someone,” I occasionally felt like opening up. But once the excitement of sharing our secrets was over, I resented having let myself go, if only a little. Those conversations, when I had continually responded to the other person by saying “me too, it’s the same for me, I did that too,” suddenly seemed futile, removed from the reality of my own passion. Rather, something was lost through these outbursts.</p>
+<p>To my sons — students who come and stay with me once in a while — I had revealed only the barest practicalities that enabled me to conduct my liaison satisfactorily. They had to call me to find out whether they could come and stay and, if they were already at home, agree to leave as soon as A announced his visit. These arrangements — so it seemed — did not cause any problems. However, I would have preferred to have kept my children completely out of this, in the same way I had never mentioned boyfriends or lovers to my parents in the past. Probably because I feared their judgment. Also, parents and children are the last people able to accept freely the sexuality of those who are closest to them and so remain forever inaccessible. Children will always refuse to see the truth reflected in their mother’s absent stare and silent behavior: at times they mean nothing to her, in the same way that grown-up kittens can mean nothing to a mother cat longing to go on the prowl.</p>
+<p>Throughout this period, I didn’t once listen to any classical music; I preferred songs. Sentimental songs, which previously I had ignored, moved me deeply. In a simple, straightforward manner, they spoke of the absolute, universal nature of passion. When I heard Sylvie Vartan sing, “c’est fatal, animal,” I knew I wasn’t the only woman to feel that way. Songs accompanied and legitimized my own experience.</p>
+<p>In women’s magazines I would always start by reading the horoscope. I would feel the sudden urge to go and see such and such a film, convinced that it encapsulated my own story, bitterly disappointed if, as in the case of an early film like Oshima’s Empire of the Senses, it was no longer showing anywhere. I would give money to the men and women sitting in the corridors of the Metro, making the wish that he would call me that evening. I promised to send two hundred francs to UNICEF if he came to see me before a particular date I had chosen. Breaking with my usual lifestyle, I was inclined to be a spendthrift. I felt that wasting money was part of an overall investment, necessary and inseparable from my passion for A; it also included the time spent on waiting and daydreaming and, naturally, the time spent on my body: making love until I dropped with exhaustion; as if it were for the last time. (And who can say that it isn’t for the last time?) One afternoon when he was there, I burned the living-room carpet down to the weft by placing a boiling coffee pot on top of it. I didn’t care. Quite the contrary. I was happy every time I caught sight of the mark as I remembered that afternoon with him. I was unaffected by the inconveniences of daily life. I didn’t worry about a two-month postal strike since A never wrote to me (no doubt the cautious attitude of a married man). I would sit calmly through traffic jams and queue patiently at the bank, and was not annoyed by the surly attitude of the clerk. Nothing could make me lose my temper. I felt pain, sympathy, and compassion for other people. I understood the dropouts lying on benches, the clients of prostitutes, or a passenger engrossed in her Mills &amp; Boon romance (although I was incapable of saying why I resemble them). One day, as I was going naked to the refrigerator to get some beer, I remembered the women, single or married, mothers with children, living in my old neighborhood, who secretly received a man in the afternoon. (Rumor was rife: it was impossible to say whether people reproached them for their improper conduct or for the fact that they devoted the daylight hours to lovemaking instead of cleaning the windows.) I thought of these women with acute satisfaction.</p>
+<p>During all this time, I felt I was living out my passion in the manner of a novel but now I’m not sure in which style I am writing about it: in the style of a testimony, possibly even the sort of confidence one finds in women’s magazines, a manifesto or a statement, or maybe a critical commentary. I am not giving the account of a liaison, I am not telling a story (half of which escapes me) based on a precise — he came on 11 November — or an approximate chronology — weeks went by. As far as I was concerned, that notion did not enter the relationship; I could experience only absence or presence. I am merely listing the signs of a passion, wavering between “one day” and “every day,” as if this inventory could allow me to grasp the reality of my passion. Naturally, in the listing and description of these facts, there is no irony or derision, which are ways of telling things to people or to oneself after the event, and not experiencing them at the time. As for the origins of my passion, I have no intention of searching for them in my early history — which one reconstitutes with the help of a psychoanalyst — or in my recent history, or for that matter in the cultural standards governing emotion which have influenced me since childhood (Gone with the Wind, Phèdre, or the songs of Edith Piaf are just as decisive as the Oedipus complex). I do not wish to explain my passion — that would imply that it was a mistake or some disorder I need to justify — I just want to describe it. Maybe the only criteria to be taken into account should be of a material order: the time and freedom available to me throughout the affair.</p>
+<p>He liked Yves Saint-Laurent suits, Cerruti ties, and powerful cars. He drove fast, flashing his headlights, without a word, as if carried away by the exhilaration of being free, well-dressed, and in a position of authority on a French motorway, he who came from Eastern Europe. He liked being told that he resembled Alain Delon. I suspected — as far as one reasonably can in the case of a foreigner — that although he respected them, he was not drawn to artistic or intellectual matters. When it came to television, he preferred the quizzes and Santa Barbara. I didn’t mind in the least. No doubt because I attributed A’s tastes — those of a foreigner — above all to cultural differences, whereas in the case of a French-man, they would have been seen by me as social differences. Maybe, too, it was because I liked to recognize in A the “parvenu” part of myself: as a teenager I would crave dresses, records, and trips abroad, deprived of these things among friends who had them — just like A himself, “deprived” along with the whole of his country, longing to possess the expensive shirts and video recorders displayed in Western shops.</p>
+<p>He was a heavy drinker, as people often are in Eastern European countries. It worried me because of the possibility of an accident when he drove back on the motorway, but I wasn’t disgusted. Even if he occasionally stumbled, or belched when kissing me. On the contrary, I was happy to be close to him in these moments of incipient abjection. I wasn’t quite sure how to qualify his relationship with me. In the beginning I had deduced from certain signs that he experienced the same passion as me — his radiant expression and his silence when he looked at me, saying “I drove like a madman to get here,” telling me about his childhood. This certainty gradually wavered. He seemed to be more distant, less inclined to open up, but he only had to talk about his father, or the raspberries he went picking in the woods at the age of twelve, for me to change my mind. He stopped giving me presents. When I received flowers or a book from friends, I thought of the attentions he no longer lavished on me. Then immediately: “He gives me his desire.” I would drink in the sentences that I thought betrayed his jealousy, the only proof of his love in my eyes. After a while I realized that “are you going away for Christmas?” was no more than a simple, practical question, to decide whether or not to fix a meeting, and certainly not a roundabout way of finding out if I was going skiing with someone else (maybe he even wanted me to leave so that he could see another woman). I often wondered what these afternoons of lovemaking meant to him. Probably nothing more than just that, making love. There was no point looking for other reasons. I would only ever be certain of one thing: his desire or lack of desire. The only undeniable truth could be glimpsed by looking at his penis.</p>
+<p>The fact that he was a foreigner made it all the more difficult to understand his behavior, molded by a culture that I knew only through folklore and clichés for tourists. At first I was discouraged by the obvious limitations of our exchanges. These were emphasized by the fact that, although he spoke fairly good French, I could not express myself in his language. Later I realized that this situation spared me the illusion that we shared a perfect relationship, or even formed a whole. Because his French strayed slightly from standard use and because I occasionally had doubts about the meaning he gave to words, I was able to appreciate the approximate quality of our conversations. From the very beginning, and throughout the whole of our affair, I had the privilege of knowing what we all find out in the end: the man we love is a complete stranger.</p>
+<p>The constraints dictated by his married condition — not being able to phone him or send him letters, not giving him presents which would prove difficult to justify, being continually dependent on his timetable — did not outrage me. I would give him the letters I had written to him when he was leaving the house. I suspected that once he had read them he probably tore them up on the motorway but this didn’t stop me writing. I was careful not to leave evidence of myself on his clothes and made no marks on his body. Naturally, I wanted to spare him a scene with his wife but I also feared arousing resentment on his behalf, which might have led him to stop seeing me. For precisely this reason, I avoided meeting him in places where she accompanied him. I was afraid that in front of her I would betray the bond between us by a familiar gesture — stroking the nape of A’s neck, adjusting his clothes, and so on. (Also, I didn’t want to suffer unnecessarily by imagining A making love to her, which happened every time I saw her. The fact that I considered her to be plain, or that he did it simply because he had her “close at hand” did nothing to lessen the torment of this vision.)</p>
+<p>Strangely enough, these very constraints bred waiting and desire. As he always called me from telephone boxes, whose functioning could prove erratic, quite often when I picked up the receiver there was no one on the line. After some time I realized that this “fake” phone call would be followed by the real one, fifteen minutes later at the most, the time it took to find a phone booth in working order. That first silent call was a prelude to his voice, a (rare) promise of happiness, and the interval separating it from the second call — when he would say my name and “can we meet?” — one of the most glorious moments ever.</p>
+<p>In front of my television set in the evening, I wondered if he was watching the same program or film, especially if the subject was love or sex, or if the script bore a resemblance to our situation. I imagined he was watching La femme d’à côté, substituting us for the characters in the movie. If he told me that he had indeed seen the film, I was inclined to believe that he had chosen it that evening because of us and that, acted out on the screen, our story must have seemed more intense, or at least more legitimate. (Naturally, I soon dismissed the idea that our liaison might appear dangerous to him — in films, any passion existing outside marriage invariably ends in disaster.)</p>
+<p>Sometimes I told myself that he might spend a whole day without even thinking about me. I imagined him getting up, drinking his coffee, talking, and laughing, as if I didn’t exist. Compared to my own obsession, such indifference filled me with wonder. How could this be? He himself would have been astonished to find out that I never stopped thinking about him from morning to night. There was nothing to suggest that my attitude was more justifiable than his. In a way, I was luckier than him.</p>
+<p>Walking around Paris, when I saw large cars zooming along the avenues, driven by men on their own resembling high-powered executives, I realized that A was no different from these men, concerned primarily with his career, with bouts of eroticism, possibly love, for a new woman every two or three years. This discovery came as a release. I would decide to stop seeing him. I was certain that he had become as anonymous and insignificant as those yuppies in their BMWs and Renault 25s. But while I was walking, I would look at the dresses and the lingerie in the shop windows, as if anticipating our next meeting.</p>
+<p>These fleeting moments of detachment were prompted by external factors; I did not wish for them. On the contrary, I avoided every opportunity that might tear me away from my obsession — books, social engagements, and the other activities I used to enjoy. I longed for total idleness. I angrily turned down some extra work my boss had asked me to do, almost insulting him over the phone. I felt I had every right to reject the things that prevented me from luxuriating in the sensations and fantasies of my own passion.</p>
+<p>On railway platforms, in the Metro, in waiting rooms, places where you are allowed to do nothing at all, as soon as I sat down, I would start daydreaming about A. A shudder of happiness would course through me the very second I entered that state. I felt I was giving in to physical pleasure, as if the brain, exposed to a repeated flow of the same images and memories, could achieve an orgasm, becoming a sexual organ like the others.</p>
+<p>Naturally, I feel no shame in writing these things because of the time which separates the moment when they are written — when only I can see them — from the moment when they will be read by other people, a moment which I feel will never come. By then I could have had an accident or died; a war or a revolution could have broken out. This delay makes it possible for me to write today, in the same way I used to lie in the scorching sun for a whole day at sixteen, or make love without contraceptives at twenty: without thinking about the consequences. (It is a mistake therefore to compare someone writing about his own life to an exhibitionist, since the latter has only one desire: to show himself and to be seen at the same time.)</p>
+<p>IN THE SPRING my waiting became continual. An early heat wave had set in since the first days of May. Summer dresses appeared on the streets; café terraces were crowded. All over town one heard the strains of an exotic dance, murmured by a woman with a rasping voice, the Lambada. Everything conspired to evoke new forms of pleasure which I was sure A planned to enjoy outside my company. His position and professional responsibilities in France seemed important to me, and likely to arouse the admiration of all women. Conversely, I would belittle myself, failing to find any reason that might hold him back. Whenever I went to Paris, I would expect to see him drive past with a woman by his side. I would walk very straight, affecting an attitude of proud indifference in anticipation of our meeting. The fact that this meeting, understandably, never took place, succeeded only in frustrating me: I would stride down the Boulevard des Italiens, bathed in sweat, under his imaginary gaze while he was in fact somewhere else, inaccessible. The sight of him driving towards the park in Sceaux or the wood in Vincennes, with the windows down and the radio at full volume, haunted me.</p>
+<p>One day, in a television weekly, I began reading about a troupe of Cuban dancers who were on tour in Paris. The author of the article stressed the sensuality and permissiveness of Cuban women. A photograph showed the dancer who had been interviewed, tall, with dark hair, her long legs exposed. As I read on, my intuition grew stronger and stronger. By the time I had finished the article, I was convinced that A, who had been to Cuba, had met the girl in the photograph. I imagined them together in a hotel room and nothing at that point could have persuaded me that this scene was improbable. On the contrary, the very idea that it had not taken place seemed to me absurd, inconceivable.</p>
+<p>When he rang to arrange a meeting, his long-awaited call had no effect on me and I remained locked in the same state of anxiety as before. My condition was such that not even the sound of his voice could make me happy. It was all infinite emptiness, except when we were together making love. And even then I dreaded the moments to come, when he would be gone. I experienced pleasure like a future pain.</p>
+<p>I longed to end the affair, so as not to be at the mercy of a phone call, so as not to suffer, realizing at once what this would entail, seconds after the separation: a series of days with nothing to wait for. I preferred to carry on at any cost—let him have another woman, or even several. (In other words, accepting a torment far greater than the one that made me want to leave him.) Compared to such emptiness, my present situation seemed enviable and my jealousy a sort of frail privilege which I would have been mad to want to end since one day it would end anyway, outside my control, when he would leave the country or would decide to stop seeing me.</p>
+<p>I avoided opportunities of meeting him in public, in the company of other people, as I couldn’t bear the thought of seeing him just for the sake of it. Therefore I didn’t go to an inauguration to which he had been invited, obsessed by his image throughout the evening: smiling, showering a woman with attentions, the same way he had behaved with me when we first met. Afterwards I was told that only a handful of people had turned up. I was relieved and took pleasure in repeating the expression, as if there existed a link between the atmosphere of a party, the number of women invited, and what could only be dictated by chance circumstances, in other words, his desire or not to flirt, in which case a single woman was enough.</p>
+<p>I tried to find out what he did in his spare time and where he went away for the weekend. I would say to myself, “right now he’s in Fontainebleau forest, he’s out running,” “he’s driving towards Deauville,” “he’s sitting on the beach next to his wife,” and so on. This knowledge comforted me. I felt that if I could locate him in a particular place at a particular time, I would be immune to an infidelity on his part. (A similar belief, equally deep-rooted, leads me to believe that knowing where my sons are—at a party or on holiday—is enough to save them from an accident, drugs, or drowning.)</p>
+<p>I didn’t want to go away on holiday that summer and wake up in the morning with the prospect of having to spend a whole day without waiting for his phone call. But giving up my holiday would have meant spelling out my passion to him more eloquently than by saying, “I am crazy about you.” One day, seized by the desire to break up, I decided instead to book a train ticket and a hotel room in Florence for a date two months ahead. This type of separation suited me perfectly as it meant I didn’t have to leave him. I anticipated the moment of my departure the way I would have anticipated an exam for which I had enrolled long in advance and failed to study: with despondency and a feeling of hopelessness. Lying on my bunk in the sleeping car, I kept seeing myself in that same train, this time heading back towards Paris, eight days later: the promise of supreme happiness, almost too good to be true (I might die in Florence, I might never see him again), increased my horror at moving further and further away from Paris, turning the interval of time between the two train journeys into an unbearable, interminable wait.</p>
+<p>The worst part was not being able to stay in my room all day, waiting for the train that would take me back to Paris. I had to justify my trip by visiting places of cultural interest and by going for walks, which I often do on holiday. I walked for hours, in the Oltrarno, the Boboli Gardens, up to the Piazza San Michelangelo and San Miniato. I went into each of the churches that was open and made three wishes, sustained by the belief that one of the three would come true (naturally, all three were related to A). There, I sat in the cool and the silence, indulging in one of the many scenarios which occurred to me continually, wherever I was, from morning to night (a trip together to Florence, meeting him at an airport ten years later, and so on).</p>
+<p>I couldn’t understand why people looked up the date and the history of each painting in their guidebook. Such things had nothing to do with their own lives. My approach to works of art was purely emotional. I went back to La Badia because it was there that Dante had met Beatrice. The partly erased frescoes in Santa Croce moved me because of my story, which would come to resemble them one day—fading fragments in his memory and in mine. In museums I saw only the works representing love. I was drawn to statues of naked men. In them I recognized the shape of A’s shoulders, his loins, his penis, and especially the slight hollow following the inner curve of the thigh up to the groin. I was unable to tear myself away from Michelangelo’s David, filled with wonder that a man, and not a woman, had portrayed the beauty of a male body so sublimely. Even if this could be explained by the oppressed condition of women, it seemed to me that something had been irretrievably lost.</p>
+<p>On the train, on the way back, I felt that I had literally written out my passion in Florence by walking through the streets, visiting the museums, obsessed by A, sharing everything with him, eating and sleeping with him in that noisy hotel on the banks of the River Arno. I need only go back to read this story of a woman in love with a man, which was my story. Those eight days on my own, without speaking, except to waiters in restaurants, haunted by the image of A—I was astonished to be accosted by men, could they not see him silhouetted inside my own body?—were seen by me as an ordeal for the betterment of love. A sort of further investment, this time in imagination and craving through absence.</p>
+<p>HE LEFT FRANCE and went back to his own country six months ago. I shall probably never see him again. At first, when I woke up at two o’clock in the morning, I didn’t care whether I lived or died. My whole body ached. I would have liked to tear out the pain but it was everywhere. I longed for a burglar to come into my bedroom and kill me. During the day I tried desperately to find things to do, so as not to remain idle, otherwise I felt I would be lost (the meaning of the word was vague: to have a nervous breakdown, to start drinking, and so on). For the same reason, I made efforts to dress and make up properly, and to wear my contact lenses instead of my spectacles, although this required considerable courage. I couldn’t watch television or leaf through magazines; all the advertisements, whether they are for perfume or microwaves, show the same thing: a woman waiting for a man. I averted my gaze when I walked past shops selling lingerie.</p>
+<p>When I was feeling really bad, I had a strong urge to consult a fortune-teller; it seemed the only decisive thing I could do. One day I looked up the names of clairvoyants in the electronic directory. The list was long. One of them mentioned that she had predicted the earthquake in San Francisco and the death of the singer Dalida. While I was jotting down their names and phone numbers, I felt the same excitement as the month before, when I was trying on a new dress for A, as if I were still doing something for him. I didn’t call any of the fortune-tellers; I was afraid they would predict he would never return. I thought to myself with surprise, “I’ve come round to this too.” After all, there was no reason why I shouldn’t have.</p>
+<p>One night the thought of getting myself screened for AIDS occurred to me: “At least he would have left me that.” I wanted to remember his body with all my being—from his hair down to the tips of his toes. I could conjure up, vividly, his green eyes, the lock of hair falling over his forehead, the curve of his shoulders. I could feel his teeth, the inside of his mouth, the shape of his thighs, the texture of his skin. I reflected that there was very little difference between this reconstruction and a hallucination, between memory and madness.</p>
+<p>One day, lying on my stomach, I gave myself an orgasm; somehow I felt that it was his orgasm.</p>
+<p>For many weeks:</p>
+<ul>
+<li><p>I would wake up in the middle of the night, and remain in a confused state until morning, awake, incapable of thinking. I wanted to lose myself in a deep sleep but he continued to hover above me.</p>
+</li>
+<li><p>I didn’t want to get up. I would see the day stretch ahead of me, with no plans. I felt that time was no longer taking me anywhere, it only made me grow old.</p>
+</li>
+<li><p>At the supermarket I would say to myself, “I don’t need to buy that anymore” (whisky, salted almonds, and so on).</p>
+</li>
+<li><p>I would look at the blouses and the pairs of shoes I had bought to please a man, now meaningless clothes, existing solely for the sake of fashion. Was it possible to long for these things, or for anything else, other than in connection with a man, other than to serve the cause of love? I had to buy a shawl because of the bitter cold: “He will never see it.”</p>
+</li>
+<li><p>I could no longer stand the company of others. The only people I saw were those I had met during my relationship with A. They featured in my passion. Even if they failed to arouse my interest or sympathy, somehow I was fond of them. But I could not watch a television presenter, an actor whose eyes, appearance, and comic expressions used to remind me of A. These signs of him in a person I didn’t care about were something of an imposture. I hated these men for continuing to look like A.</p>
+</li>
+<li><p>I would make wishes: if he calls me before the end of the month, I’ll give five hundred francs to a charity. I imagined that we had met in a hotel, at an airport, or that he had sent me a letter. I replied to words he had never spoken, sentences he would never write.</p>
+</li>
+<li><p>If I went to the same place I had been to last year, when he was here, I would wear the same suit as before, trying to convince myself that identical circumstances produce identical effects and that he would call me that evening.</p>
+</li>
+<li><p>When I went to bed around midnight, thoroughly demoralized, I realized that I had really believed in that phone call all day.</p>
+</li>
+</ul>
+<p>During my spells of insomnia, I would take myself back to Venice, where I had spent a week’s holiday just before meeting A. I tried to recall my timetable and the places I had visited; I imagined myself walking along the Zattere and the alleys of Giudecca Island. I would reconstitute my room in the annex of La Calcina Hotel, straining to remember every detail: the narrow bed, the blocked window giving on to the back of the Café Cucciolo, the table and its cloth on which I had placed some books. I would reel off the titles of the books. I would enumerate the things that were there, one after the other, attempting to chronicle the contents of a place where I had stayed before my story with A had started, as if an exhaustive inventory would enable me to relive the events. Driven by the same belief, I sometimes felt the urge actually to return to Venice, to the same hotel, the same room.</p>
+<p>Throughout this period, all my thoughts and all my actions involved the repetition of history. I wanted to turn the present back into the past, opening on to happiness. I was always calculating, “it’s two weeks, five weeks since he left” or “last year, around this time, I was there, I was doing that.” Whatever the occasion—the opening of a shopping mall, Gorbachev’s visit to Paris, Chang’s victory at Roland-Garros—I immediately thought: “That was when he was here.” I would relive moments of that period, insignificant in themselves—I am standing in the archive room at La Sorbonne, I am walking along Boulevard Voltaire, I am trying on a skirt in a Benetton shop—with such vivid detail that I wondered why it wasn’t possible to slip into that particular day or moment as easily as one slips into another room.</p>
+<p>In my dreams too was the desire to reverse time. I spoke and argued with my deceased mother, alive once more, although in my dream both of us knew that she was dead. There was nothing extraordinary about this, her death was behind her now; somehow it was “out of the way.” (I believe this dream recurred several times.) On another occasion, it was about a little girl in a swimsuit who had disappeared during an outing. The reconstruction of the murder took place immediately afterwards. The child revived to retrace the events that had led to her death. For the judge, however, knowing the truth made the reconstruction even more complicated. In the other dreams, I lost my way, mislaid my handbag, found myself unable to pack my suitcase in time to catch a train leaving minutes later. I caught sight of A, surrounded by other people. He wasn’t looking at me. We were together in a taxi; I was stroking him, his penis remained limp. Later, he appeared again in front of me with his desire evident. We met in the lavatory of a café, in the street, by a wall. He took me without a word.</p>
+<p>At weekends I would make myself do heavy physical work, gardening or cleaning the house. In the evening I was exhausted, my limbs aching, as they had been when A had spent the afternoon at my place. But in this case the fatigue I experienced was hollow, without the memory of another body, and it repelled me. I began writing “From September last year, I did nothing else but wait for a man . . . ,” approximately two months after A’s departure; I don’t remember the exact day. Although I can clearly recall everything that happened during my relationship with A—the October riots in Algeria, the heat and the hazy sky on 14 July 1989, even the most trivial details such as the acquisition of a blender in June the day before we were due to meet—I find it quite impossible to associate the writing of a particular page with a rainstorm or any one of the events that have occurred in the world over the past five months: the fall of the Berlin wall or the execution of the Ceausescus. Living in passion or writing: in each case one’s perception of time is fundamentally different.</p>
+<p>Yet, when I began to write, I wanted to stay in that age of passion, when all my actions—from the choice of a film to the selection of a lipstick—were channeled towards one person. The past tense used in the first part of the book suggests endless repetition and conveys the belief that “life was better in those days.” It also generated a pain that was to replace the past trauma of waiting for his phone calls and visits. (Even now, rereading those first pages has the same distressing nature as seeing and touching the toweling bathrobe he used to slip on at my place, and take off just before he got dressed to leave. There is one difference, though: these pages will always mean something to me, to others too maybe, whereas the bathrobe—which matters only to me—will lose all significance one day and will be added to a bundle of rags. By writing this, I may also be wanting to save the bathrobe from oblivion.)</p>
+<p>Yet I went on living. In other words, the act of writing didn’t lessen my grief. As soon as I had set down my pen, I felt pangs for the man whose voice and foreign accent I could no longer hear, whose skin I could no longer touch, living an unknown life in some cold city—the real man, far more inaccessible than the written man designated by the letter A. And so I went on doing the things that help alleviate sorrow, offering hope when, theoretically, there is no longer cause for any: playing patience, slipping a ten-franc coin into a beggar’s paper cup at Auber Metro station, making the wish that “he’ll call, he’ll come back.” (Perhaps, after all, writing is one of these things.)</p>
+<p>Despite my aversion to meeting people, I agreed to attend a seminar in Copenhagen because it was an opportunity to send him news of me discreetly: a postcard I felt he would have to answer. As soon as I arrived in Copenhagen, I thought of nothing else: buying a card, copying out the few sentences I had carefully written before leaving, finding a letter box. On the plane, on the way back, I reflected that I had traveled to Denmark simply to send a postcard to a man.</p>
+<p>I felt like rereading one or the other of the books I had skimmed through when A was there. I felt that the waiting and the dreams of that period had crystallized within the pages and that I would rediscover my passion, intact. Yet I was reluctant to do so, postponing the moment when I would open the first page, almost out of superstition, as if Anna Karenina were some esoteric work in which it would be forbidden to turn a particular page on pain of ill fortune.</p>
+<p>One day I felt an overriding urge to go to the Passage Cardinet, in the 17th arrondissement, to the place where I had a clandestine abortion twenty years ago. I felt it was imperative that I return to see the street, the building, and go up to the flat where the events had taken place. Vaguely hoping that this past trauma would cancel my present grief. I got out at Malesherbes Metro station, on a square whose name, recently changed, meant nothing to me. I had to stop at a grocer’s shop to ask the way. The lettering on the plaque bearing the name of the Passage Cardinet is partly erased. The façades are newly restored, white. I went to the street number I remembered and pushed open the door, one of the few remaining ones not be protected by a digital code. On the wall hung the list of tenants. The old woman, an auxiliary nurse, had died or been moved to an old people’s home in the suburbs; the residents living in the street now belong to the high income bracket. As I was heading towards Pont-Cardinet, I saw myself walking beside the old woman, who had insisted on accompanying me to the nearest station, no doubt to make sure that I wouldn’t collapse on her doorstep with a tube up my belly. I thought: “I was here one day.” I wondered what the difference was between this past reality and literature, perhaps just a feeling of disbelief that I had actually been there one day, something I wouldn’t have felt in the case of a fictional character.</p>
+<p>I went back to Malesherbes station and took the Metro. This episode had altered nothing, yet I was glad to have taken the initiative and revived an act of despoilment, also caused by a man.</p>
+<p>(Am I the only woman to return to the scene of an abortion? Sometimes I wonder if the purpose of my writing is to find out whether other people have done or felt the same things or, if not, for them to consider experiencing such things as normal. Maybe I would also like them to live out these very emotions in turn, forgetting that they had once read about them somewhere.)</p>
+<p>Now it’s April. Sometimes I wake up in the morning without immediately thinking of A. The prospect of rediscovering “life’s little pleasures”—meeting friends, going to the cinema, enjoying a good meal—has become less horrific. I am still in the age of passion (one day I will no longer be aware that I wasn’t thinking of A when I woke up) but it has changed, it has ceased to be continuous.</p>
+<p>Suddenly I remember details about him, things he said to me. For instance, that he had gone to the Moscow Circus and that the cat trainer was “incredible.” For a brief moment I feel supremely calm, as I am when I emerge from a dream in which I have seen him, but don’t yet know that I was dreaming. The feeling that everything is back to normal and that “now it’s all right.” Then I realize that these words refer to some remote past: another winter has gone by, the cat trainer may have left the circus, the expression “he’s incredible” belongs to a reality which is long outdated.</p>
+<p>In the course of conversation, I occasionally glimpse one of A’s attitudes or discover an aspect of our relationship that had previously escaped me. A colleague with whom I was having coffee once told me that he’d had an extremely physical relationship with a married woman older than himself: “On leaving her place, I would brace myself and sniff the evening air, swept by a glorious feeling of masculinity.” It occurred to me that A may have experienced the same sensation. I was pleased by this discovery, although it was impossible to check, as if I had captured something imperishable that cannot be conveyed by memories.</p>
+<p>In the Metro tonight, two girls sitting opposite me were chatting. I heard one of them say, “They’ve got a house in Barbizon.” I wondered why the name was familiar and, after a few minutes, remembered that A had told me he had spent one Sunday there with his wife. It was a memory like any other, that, for instance, suggested by the name Brunoy, where an old friend I had lost touch with was living. So the world is beginning to mean something again outside A? The cat trainer from the Moscow Circus, toweling bathrobe, Barbizon, the entire text assembled in my head day after day since the first night with words, images, and gestures, all the signs forming the unwritten novel of a passion are beginning to fall apart. Of the living text, this book is only the remainder, a minor trace. One day it will mean nothing to me, just like its living counterpart.</p>
+<p>Yet I cannot resolve to part with it, just as I was unable to leave A last spring, when my waiting and desire for him were continual. I know full well that I can expect nothing from writing, which, unlike real life, rules out the unexpected. To go on writing is also a means of delaying the trauma of giving this to others to read. I hadn’t considered this eventuality while I still felt the need to write. But now that I have satisfied this need, I stare at the written pages with astonishment and something resembling shame, feelings I certainly never felt when I was living out my passion and writing about it. The prospect of publication brings me closer to people’s judgment and the “normal” values of society. (Having to answer questions such as “Is it an autobiography?” and having to justify this or that may have stopped many books from seeing the light of day, except in the form of a novel, which succeeds in saving appearances.)</p>
+<p>At this point, sitting in front of the pages covered in my indecipherable scrawlings, which only I can interpret, I can still believe this is something private, almost childish, of no consequence whatsoever—like the declarations of love and the obscene expressions I used to write on the back of my exercise books in class, or anything else one may write calmly, in all impunity, when there is no risk of it being read. Once I start typing out the text, once it appears before me in public characters, I shall be through with innocence.</p>
+<p>FEBRUARY 1991</p>
+<p>I could end the book here and pretend that nothing that goes on in the world or in my life could affect this text. In other words, I could consider it removed from time and ready for publication. However, so long as these pages remain personal and within my reach, as they are today, the act of writing will be open. I feel it is more important to mention certain recent developments than to alter the position of an adjective.</p>
+<p>Between last May, when I stopped writing, and today, 6 February 1991, the expected conflict between Iraq and the Western coalition has finally broken out. A “clean” war according to the propagandists, although Iraq has already received “more bombs than the whole of Germany during the Second World War” (this evening’s edition of Le Monde) and eyewitnesses claim to have seen children stumbling through the streets of Baghdad like drunkards, deafened by the explosions. Here we can only wait for disasters which have been forecast but do not in fact happen: a land offensive led by the “Allies,” a chemical warfare attack by Saddam Hussein, a bomb outrage perhaps at the Galeries Lafayette department store. I experience the same feeling of anxiety, the same frustrated desire to know the truth as I did when I was living out my passion. The resemblance ends there. For in this case there is no room for fantasy or imagination.</p>
+<p>On the first Sunday of the war, in the evening, the phone rang. A’s voice. For a split second, I was seized with panic. I kept repeating his name, crying. He said, “It’s me, it’s me,” slowly. He wanted to see me now, at once; he would take a taxi. In the half-hour I had left before he arrived, I dressed and made up in a frenzy. Then I waited in the hallway, wrapped in the shawl he had never seen. I stared at the door in disbelief. He came in without knocking, the way he used to. He must have been drinking; he was swaying when he embraced me and he stumbled on his way upstairs to the bedroom.</p>
+<p>Afterwards, all he wanted was coffee. It seems that his life in the East is no different: the same job as in France, and still no child, although his wife would like to have one. At thirty-eight he still has a youthful appearance although now he looks wearier. His nails are less tidy, his hands less smooth, probably because of the cold climate in his country. He was greatly amused when I told him off for not having kept in touch since he left: “So I would have called you up; hello, how are things? And then what?” He hadn’t received the postcard I sent him from Denmark, addressed to his former workplace in Paris. We dressed again, picking up our clothes tangled on the tiled floor, and I drove him back to his hotel near the Etoile. We kissed and touched each other at the traffic lights between Nanterre and Pont-de-Neuilly.</p>
+<p>In the tunnel at La Défense, on my way back, I thought, “Where is my story?” Then, “Now I can hope for nothing more.”</p>
+<p>He left three days later without us meeting again. Before leaving, over the phone, he said, “I’ll call you.” I don’t know if this means he will call me from his country, or from Paris, when he gets an opportunity to come back. I didn’t ask him.</p>
+<p>I have the impression that this last visit never took place. It doesn’t belong to our story, it’s just a date, 20 January. The man who returned that evening wasn’t the man I was carrying inside me throughout the year when he was here, and when I was writing about him. I shall never see that man again. Yet it is that surreal, almost non-existent last visit that gives my passion its true meaning, which is precisely to be meaningless, and to have been for two years the most violent and unaccountable reality ever.</p>
+<p>In this photograph, the only one I have of him, I can see a tall, fair man, bearing a slight resemblance to Alain Delon. Everything about him was precious to me—his eyes, his mouth, his penis, his childhood memories, his voice, and the decisive way he took hold of things.</p>
+<p>I had decided to learn his language. I kept, without washing it, a glass from which he had drunk.</p>
+<p>I had wished that the plane flying back from Copenhagen would crash if I were never to see him again.</p>
+<p>Last summer in Padua I pressed this photogaph to the wall of St. Anthony’s tomb—along with people pressing a handkerchief or a folded slip of paper bearing their prayers—so that he would come back.</p>
+<p>Whether or not he was “worth it” is of no consequence. And the fact that all this is gradually slipping away from me, as if it concerned another woman, does not change this one truth: thanks to him, I was able to approach the frontier separating me from others, to the extent of actually believing that I could sometimes cross over it.</p>
+<p>I measured time differently, with all my body.</p>
+<p>I discovered what people are capable of, in other words, anything: sublime or deadly desires, lack of dignity, attitudes and beliefs I had found absurd in others until I myself turned to them. Without knowing it, he brought me closer to the world.</p>
+<p>He had said, “You won’t write a book about me.” But I haven’t written a book about him, neither have I written a book about myself. All I have done is translate into words—words he will probably never read; they are not intended for him—the way in which his existence has affected my life. An offering of a sort, bequeathed to others.</p>
+<p>When I was a child, luxury was fur coats, evening dresses, and villas by the sea. Later on, I thought it meant leading the life of an intellectual. Now I feel that it is also being able to live out a passion for a man or a woman.</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>什么是端到端</title>
+    <url>/2023/11/23/test/%E4%BB%80%E4%B9%88%E5%8F%AB%E7%AB%AF%E5%88%B0%E7%AB%AF/</url>
+    <content><![CDATA[<p>端到端是深度学习中一个简单的概念。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+
+
+<p>我们可以将中文语音转英文文字的任务拆解成，语音转文字和中文翻译成英文两个任务。</p>
+<p>而端到端的学习则是直接将这个任务放到神经网络中学习。</p>
+<p>形成：输入-模型-目标，输入和目标就是两个端，直接通过一个模型便是端到端。</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从0开始的pytorch环境配置</title>
     <url>/2023/10/15/test/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84pytorch%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="从0开始的pytorch环境配置"><a href="#从0开始的pytorch环境配置" class="headerlink" title="从0开始的pytorch环境配置"></a>从0开始的pytorch环境配置</h1><p>前言：对电脑刷机了，装好了anaconda，但是环境还没配。炼丹必备<span id="more"></span></p>
@@ -420,6 +708,162 @@
       </tags>
   </entry>
   <entry>
+    <title>关于语音识别的科普</title>
+    <url>/2023/11/23/test/%E5%85%B3%E4%BA%8E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%E7%9A%84%E7%A7%91%E6%99%AE/</url>
+    <content><![CDATA[<p>关于语音识别的一些入门理解</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<p>原视频指路：<a href="https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&vd_source=065dbebb8f309dd36ff6dbc4c04cbd15">https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&amp;vd_source=065dbebb8f309dd36ff6dbc4c04cbd15</a></p>
+<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><blockquote>
+<p>1969年, 贝尔实验室的john peers在一封公开信中, 做出了一个悲观到刻薄的评论, 他将语音识别技术比作把水转化为汽油, 而他认为, 当时人们研究这项技术唯一的动机就是搞钱, 但现在我们知道已经不必再讨论能不能做, 而是怎么做的。 </p>
+</blockquote>
+<p>想要知道机器如何识别语音, 首先我们要理解<strong>什么是声音</strong>？ </p>
+<p>声源振动挤压空气产生声波进入<strong>耳朵,</strong> 带动耳膜震动, 感知到声音。</p>
+<p>机器的耳朵是麦克风, 声波带动麦克风上的膜片振动, 膜片带动套在磁铁上的线圈震动, 产生的声音的<strong>模拟信号</strong>。</p>
+<p>而计算机是<strong>数字系统</strong>, 需要对模拟信号进行采样。 </p>
+<p>人耳能听到的频率范围, 在20HZ到20KHZ。</p>
+<p>根据<strong>香农奈奎斯特采样定理</strong>, 采样频率大于等于最大频率的两倍即可, 一般是44.1KHZ。</p>
+<p>这样我们就得到了一段声音, 在计算机中的数字化格式，也就是我们经常看见的声波图。</p>
+<p>语音识别就是<strong>把一段声波识别为对应的文字</strong>。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231124105103443.png" alt="image-20231124105103443"></p>
+<h2 id="频率、频谱图和特征提取"><a href="#频率、频谱图和特征提取" class="headerlink" title="频率、频谱图和特征提取"></a>频率、频谱图和特征提取</h2><p>这是一个频率为261.625Hz的正弦波，发出的声音是1。</p>
+<p>而这是一个频率为293.6648Hz的正弦波，发出的声音是2。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201185537834.png" alt="image-20231201185537834"></p>
+<p>当我们在听声音，我们在听什么呢？</p>
+<p>我们可以把振幅变大或变小，声音的大小发生了变化，但do还是do re还是re。</p>
+<p>所以我们在听声音时，实际上在听其中的频率。</p>
+<p>换句话说，<strong>声音的信息蕴含在频率之中</strong>。</p>
+<p>但问题是从波形图中很难看出频率的信息，这是哆来咪发唆拉西七个音的波形，或许还能区分得开。</p>
+<p>同时发出哆咪嗦的音，也就是C和弦。同时发出嗦发拉的是DM和弦。从波形图中看频率的事情就变得困难起来。</p>
+<p>但我们可以换一种描述声音的方式，横坐标表示频率值，纵坐标表示频率的强度。那么这些声音信号所蕴含的频率信息，便可以一眼看出，即使是同时包含三个频率的和弦音，也能一眼看出。这样表示声音的图像成为频谱图。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201190041090.png" alt="image-20231201190041090"></p>
+<p>而完成这种转换的就是信号处理领域，非常常用的傅立叶变换，工程实践中一般使用快速傅立叶变换FFT。</p>
+<p>反过来说，傅立叶变换告诉了我们这样一个事实：一个信号可以表示为许多不同频率和强度信号的叠加，即使是这样一个非周期不规则的信号。</p>
+<p>所以在做语音识别之前，为了更好地分析一段语音的信息，需要把波形图转化为频率相关的频谱图。</p>
+<p>当然，一般不会直接对整段语音做傅立叶变换，而是把它截成小段，以确保不会错过其中的细节信息（语音是短时平稳信号）。一般用一个长度为25ms的窗口，从头开始截取25ms的语音信息，成为第一帧，然后向后滑动10ms，再截取第二帧，再向后滑动10ms，截取第三帧，以此类推，这样一个一秒的语音就被截成了100帧。</p>
+<p>截取出所有帧后，接下来就是对每一帧的波形信号进行FFT变为频谱图。</p>
+<p>当然人们向来是好奇的，他们想要看看把所有真的频谱放在一起，诊断语音在转换后是什么样子。方法也很简单，比如第一帧横坐标表示频率，纵坐标表示该频率信号分量的强度，那强度除了用纵坐标的值来表示，用不同的颜色似乎也可以。比如我们用从黑到黄表示不同大小的值，对应到一个颜色，这样就可以把曲线上每个频率对应的强度都转化成一个颜色，得到一个色条。其他帧也是如此。</p>
+<p>我们再建立一个坐标系，把第一帧的色条放在第一帧的位置，把第二帧的色条放在第二帧的位置，以此类推。</p>
+<p>最后就形成了一个叫做语谱图的东西，横坐标表示第几帧，纵坐标表示这一帧中蕴含哪些频率，而颜色则表示这些频率信号的强度。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201191836345.png" alt="image-20231201191836345"></p>
+<p>不过到此还未结束，根据人类发声和听觉的特性，还需要对原始频谱进行三角滤波，然后取对数，再经过DCT变换，这个过程被称之为MFCC特征提取。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201192224800.png" alt="image-20231201192224800"></p>
+<p>最终的效果就是，把每一帧的频谱转化为一个39维的特征向量。<img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201192318975.png" alt="image-20231201192318975"> </p>
+<p>一段语音信号最终也就被转化成了一个特征向量序列，最后的特征向量序列才是要识别的数据。</p>
+<h2 id="语音识别的思想"><a href="#语音识别的思想" class="headerlink" title="语音识别的思想"></a>语音识别的思想</h2><p>当我们设计一个只能识别”hi”、”hello”和”world”的系统时，首先录制了一些这些单词的语音。经过MFCC提取出特征向量序列，作为模板放进这个系统中。这样，对一个新的信号做预测时，就和模板做对比。也就是求解带预测语音的特征向量序列和这些模板中的向量序列的距离，从而得到相似度。相似度最大的便是识别的结果。</p>
+<p>但直接和模板进行比较，一看就很不高级啊，不是主要是效果不好。不过这个想法的意义在于，虽然那些真正可用的识别模型和算法很复杂，但基本思路与此并无区别。而把这个想法用一个精简的数学公式来表达，就是给定一个X出现W的概率。X表示声音的特征，W表示某个词，P表示概率。</p>
+<p>$W^{*}&#x3D;argmax P(W|X)$</p>
+<p>利用概率统计学中的贝叶斯公式。因为我们要找W和X无关，所以分母P(X)的可以直接忽略。就可以把这个问题转化为两个子问题：</p>
+<p>P(X|W)表示一个单词发出某段语音信号的概率，称为声学模型。P(W)表示一个词出现的概率，称之为语言模型。这两个模型就构成了一个语音识别系统。</p>
+<h3 id="声学模型"><a href="#声学模型" class="headerlink" title="声学模型"></a>声学模型</h3><p>从上个世纪80年代开始，一直到本世纪初，一种被称之为Gmm-Hmm的方案始终占领着升学模型的主导地位。以识别”hi”、”hello”和”world”这三个词为例。首先我们采集这些词大量的语音数据，但不再作为比较的模板，而是把它们作为训练数据。给每个词训练一个p of x given w模型（P(X|W)）。训练完成后，当我们将这三个模型中输入一段新的语音信号，每个模型就会给出一个概率值。</p>
+<p>以”hi”这个词举例，我们来详细地研究这些特征向量。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201194411380.png" alt="image-20231201194411380"></p>
+<p>39维的向量并不便于作图和理解，所以从现在开始到最后，我们都假设这些向量是二维的。如果我们把这些特征向量都绘制在一张平面直角坐标系上，你会发现有的地方密集，有的地方稀疏。这样我们就可以使用一个高斯模型，去拟合这些数据的分布，得到一个概率密度函数。第三个维度就表示这段语音是”hi”这个词产生的概率高低。</p>
+<p>在由”hi”的训练数据形成的模型中，如果一段带预测语音的特征向量，在这些密集的区域，则大概率是”hi”，如果在稀疏的区域，则小概率是”hi”。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201194715318.png" alt="image-20231201194715318"></p>
+<p>但事情往往不会这样简单，比如”hello”，这个词在训练数据上的分布是这样的，肉眼可见的是有两个密集区域。一个高斯分布可能不太合适，那就再加一个高斯，做出两个鼓包的模型，这就是高斯混合模型。当然也有可能是三个、四个或者五个等等。这个模型的训练方法，在训练数据上使用聚类算法就好。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201194655368.png" alt="image-20231201194655368"></p>
+<p>在利用训练数据得到每个词的GMM模型之后，现在要识别一段新的语音。首先通过MFCC把这段语音转成特征向量序列，然后再把特征向量丢进每个词的GMM模型中，计算出每个词发出这段语音的概率，找到概率最大的即可。</p>
+<p>不过你可能已经发觉得蹊跷，每门语言中的字词数量太多了。</p>
+<p>以英文举例，现代英语的词汇量已经达到了几十万，给每个词都建立模型显然不现实，而且一个词的发音时间很长，发出的音也很多变，所以直接对词建立GMM模型往往效果很差。</p>
+<p>但我们在英语课上学过一种叫做音标的东西。虽然英语词汇的数量几十万，但发音音素的数量却是固定的48个。</p>
+<p>所以我们可以把单词”hi”拆分为”h”和”i”；”hello”拆分为&#x2F;h&#x2F;,&#x2F;ə&#x2F;,&#x2F;l&#x2F;,&#x2F;əʊ&#x2F;。</p>
+<p>这样我们只需要给这些因素建立GMM模型，来识别一段语音中有哪些因素就好。</p>
+<p>不过人们往往把音素分为更小的单位，因为人们发现，不同音素后面接其他不同的音素时有一点不同。同样前面结合也会影响它的发音。所以把它前后的因素都考虑进去，形成一个更小的识别单位称为三音素。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201200236680.png" alt="image-20231201200236680"></p>
+<p>不过实际上在做识别时，每个三音素还是被拆成了若干个更小的单位，这个单位称之为状态。</p>
+<p>下面的例子是三个状态，我们给每个状态建立GMM模型。</p>
+<p>然后用识别出来的状态拼接成三音素，用三音素拼接成音素，再把音素拼接成词的音标。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201205329036.png" alt="image-20231201205329036"></p>
+<p>而对于中文，汉语拼音的23个声母和24个韵母，相当于音素的角色。</p>
+<p>到此似乎万事俱备，但思考一个问题，每个状态之间真的就像图像画的那样毫无关系吗？</p>
+<p>声音作为一个序列信息，前后之间必然会有某种联系，也就是说一个三音素中，每个状态之间也会有一定的转移概率，当然也有可能转移到自己，而原地打转。</p>
+<p>那这些概率值是多少呢，不知道需要通过大量的语音数据训练出来，这实际上就是模型中的隐马尔可夫模型。</p>
+<p>HMM的细节以及在连续语音识别中的过程，这里用单个因素为例，简单的描述一下大致的流程。</p>
+<p>这些是隐藏状态，它们之间存在转移概率，而下面的GMM仍旧在计算，每个状态产生某阵语音信号特征向量的概率。不过不再直接用来预测，而是作为HMM模型需要的发射概率，用大量的语音数据完成。</p>
+<p>以马尔可夫模型和高斯混合模型的训练之后，预测时搜索语音的特征向量序列，经过高斯混合模型，计算出以马尔可夫模型的发射概率。</p>
+<p>而后以马尔可夫模型，利用状态转移概率和发射概率，搜索出概率值最大的因素。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201205919469.png" alt="image-20231201205919469"></p>
+<p>所以以马尔可夫模型为何适合语音识别问题呢，我们举个例子。</p>
+<p>比如有人语速快，有人语速慢。在引入隐马尔可夫模型之后，因为状态转移概率可以原地打转，所以即使是拖长音状态，多驻留一会儿就可以应对，也就增强了不同发音风格的解析能力。</p>
+<p>这就是流传许久的GMM-HMM模型。</p>
+<p>当然这只是一个声学模型，最后识别出来的结果只是音标或者中文的拼音，但一个拼音可能对应很多个字。</p>
+<h3 id="语言模型"><a href="#语言模型" class="headerlink" title="语言模型"></a>语言模型</h3><p>比如一段语音经过GMM-HMM声学模型之后，识别结果是”LAO YUE HAN NIU BI”。</p>
+<p>那如何得到最终的文字呢，这就要利用语言模型部分。所谓语言模型就是分析一句话像不像话。</p>
+<p>比如把它识别为”捞月汉扭臂”，这就不像人话，语言模型可能给出0.001的概率值。</p>
+<p>而”老约翰牛逼”则很像人话模型，可能给出0.99的概率值。</p>
+<p>结合语言模型最后得到识别的结果。</p>
+<p>这就是从上个世纪80年代开始到本世纪初，语音识别主流的技术线路。</p>
+<h2 id="深度学习带来的改变"><a href="#深度学习带来的改变" class="headerlink" title="深度学习带来的改变"></a>深度学习带来的改变</h2><p>但随着深度学习的兴起，逐渐出现了只要能用上深度学习的最后就一定会用上深度学习这个现象。</p>
+<p>这件事情在语音识别领域中发挥的淋漓尽致。</p>
+<p>一开始深度学习还很保守，只想取代前面的部分，也就是MFCC。</p>
+<p>既然MFCC是在把一段声音信号转化成特征向量，而且MFCC里的手段都是人们手工建立的，那训练一个深度神经网络，让它自己提取出特征向量不香吗？</p>
+<p>再然后深度学习的触角又升到了GMM。既然GMM是一个因素发出某个语音的概率模型，那么训练一个深度神经网络，让它自己拟合出概率值不香吗？这样原来的GMM-HMM模型就变成了DNN-HMM模型。</p>
+<p>另一方面，除了声学模型、语言模型这边，像n-gram这样传统的语言模型也在被取代。</p>
+<p>以循环神经网络为代表的深度学习模型正在飞速的取代传统方式。</p>
+<p>最后深度学习彻底摊牌，不装了。</p>
+<p>隐马尔可夫模型也别留着了，直接all in deep learning。</p>
+<p>这样整个语音识别系统，就变成了深度学习的天下，比如基于循环神经网络的LAS模型，以及CTC，RNN-T等等。</p>
+<p>我们说基于GMM-HMM模型的传统语音识别系统中有声学模型、语言模型。</p>
+<p>实际上在因素拆解时还要有语言学的音素词典，这些部分各自独立训练，优化目标各不相同，所以把它们连接在一起，必然会导致识别精度的损失。而深度学习可以直接在神经网络上训练P of W given X这个模型，最终的输出不再需要先划分为音素，再组成拼音，再转化成文字，而是直接输出文字结果。</p>
+<p>这就是所谓的端到端的识别框架，输入语音经过模型直接识别出文字，甚至不局限于识别。</p>
+<p>比如输入一段英文直接输出中文的翻译结果，也就是说，把翻译功能也在深度神经网络中给训练出来。</p>
+<p>端到端的框架，直接针对最终的目标优化模型，省略了中间的转换和连接，有更好的表现。</p>
+<p>而深度学习作为一种强大的方法论，使用起来也极具想象力。这里有一个比较有意思的想法，把语音识别问题转化为图像识别问题。</p>
+<p>我们再来看看语谱图，这些是理解万岁的语谱图，而这些是你好世界的语谱图。</p>
+<p>而这是图像识别中经典的猫狗识别问题。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201211301800.png" alt="image-20231201211301800"></p>
+<p>想必你已经看出了端倪所在。既然语谱图已经很好地体现了一段语音的特征，有经验的语言学家甚至能直接从其中看出说话的内容，那么为什么不能像识别一只猫或者一只狗那样，直接去识别这些语谱图呢？</p>
+<p>细细说来，它们之间相似的地方非常多。比如这是一只中华田园猫，这是一只加菲猫，这是一段男性产生的理解万岁的离谱图，而这是女性产生的同一类识别对象，都可能有不同的个体特征。这是在草地上的猫，这是在室内的猫，而这是在商场噪音下的理解万岁，这是在火车站环境噪音下的理解万岁，同一类识别对象都可能有不同的噪音背景。</p>
+<p>所以把语音识别问题转化为图像识别问题是一个很妙的想法。比如科大讯飞在2010年提出的DFCNN，利用了图像识别领域中非常流行的卷积神经网络，并借鉴了在图像识别中表现最好的网络配置，搭建了一个很深的全序列卷积神经网络，直接对语音的语谱图发起识别。</p>
+<p>实验证明，DFCNN比当时在学术界和工业界最好的BLSTM的识别率提升了15%以上。</p>
+<p>那么最后语音识别技术究竟走到了哪一步呢？听说已经超越了人，因为近些年总有媒体这么说，是也不是。</p>
+<p>这些对语音识别成果的震撼报道似乎不太喜欢提及一个事实，训练和测试数据中的声音多是在理想环境下录制，比如在安静的办公室，甚至是专业的录音室。</p>
+<p>但在被称为史上最难语音识别任务的CHIME6比赛中，数据集中的语音是充满环境噪音的。</p>
+<p>这看起来就不像是现在的AI能搞定的问题。</p>
+<p>科大讯飞采用了一种基于空间，说话人同步感知的迭代掩码估计算法，简单来说就是使用麦克风阵列，在复杂环境中综合考虑空间和说话人的信息，对声音做进一步的处理，最后把错误率从46.1%降低到了30.5%，在这项国际赛事上完成了三连冠。</p>
+<h2 id="对于语音人工智能的思考"><a href="#对于语音人工智能的思考" class="headerlink" title="对于语音人工智能的思考"></a>对于语音人工智能的思考</h2><p>不过领先归领先，30.5%的错误率却远远达不到好用的程度。所以我们到底该不该报以理解万岁的态度呢？可以但不完全的可以。</p>
+<p>人们一般把人工智能的能力分为三个层次， <strong>运算智能, 感知智能和认知智能</strong>。</p>
+<p>运算智能人类已经一败涂地，而感知智能近些年已经开始追求，甚至超越了人类，比如特定场景下的图像识别和语音识别，机器越来越聪明。</p>
+<p>然而对于认知智能，也就是像人一样，能够自主应对复杂多变的现实场景，我们到现在甚至没有找到正确的方向，这种尴尬是语音识别乃至整个人工智能领域，从感知智能进入到认知智能之前的常态。所以可以理解，但不完全可以理解的是，那些试图超越技术发展阶段的产品逻辑。</p>
+<p>找对语音识别的应用场景往往很重要。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201211848798.png" alt="image-20231201211848798"></p>
+<h2 id="评论区大神补充"><a href="#评论区大神补充" class="headerlink" title="评论区大神补充"></a>评论区大神补充</h2><ol>
+<li><p>最近开源了一个端到端框架，speechbrain。他们的目标是打造最牛批语音框架。我自己用过，还挺灵活，有兴趣的可以试试。</p>
+</li>
+<li><p>cnn的前身是tdnn，对于dnn hmm来说效果确实不错，单手源代码使用c++写的，网上有来源的pytorch版本。</p>
+</li>
+<li><p>流行的Transformer也可以用在语音识别里面，配合ctc解码，效果相当不错。不过google又搞出来了conformer，又进一步提高了正确率。</p>
+</li>
+<li><p>我写论文用的是Tedlium，就是ted演讲的内容。语音和文本都是现成的，后期校对一下就好。还有中文的aishell数据库是中文语音库，国内的一家公司特地值作然后开源出来的。更多开源的库，可以去看看openasr</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>语音识别</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>参数与超参数</title>
+    <url>/2023/11/17/test/%E5%8F%82%E6%95%B0%E4%B8%8E%E8%B6%85%E5%8F%82%E6%95%B0/</url>
+    <content><![CDATA[<p>参数与超参数的一些介绍，哪些是参数哪些是超参数</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<p>参数是可学习的，超参数需要自己设定的。</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于乒乓球</title>
     <url>/2023/03/02/test/%E4%B9%92%E4%B9%93%E7%90%83%E8%AE%AD%E7%BB%83%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>本文为博主自己练习乒乓球时的碎碎念，博主十分高兴能够找到一个能够坚持的体育爱好。</p>
@@ -444,10 +888,200 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/12/29/test/hello-world/</url>
-    <content><![CDATA[<p>Hello World！</p>
-<p>这里是老约翰的世界。欢迎。</p>
+    <title>博客搭建的图床配置问题</title>
+    <url>/2023/11/15/test/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<p>因为我之前就有写一些md文件，并且有本地的图片存放处，所以要移植到博客中图片的位置要重新更改，比较麻烦。所以可以采用网络图床的方法，而gitee图床会有防盗链的问题。文末也给出了解决办法。</p>
+<span id="more"></span>   
+
+<meta name="referrer" content="no-referrer" />
+
+<p>本文参考：<a href="https://zhuanlan.zhihu.com/p/583732805">https://zhuanlan.zhihu.com/p/583732805</a></p>
+<h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3><p>Typora的下载安装和激活可以参考<a href="https://link.zhihu.com/?target=https://www.cnblogs.com/wjdzh/p/16522182.html">这篇文章</a>或者其他博客，这里主要介绍PicGo的安装过程。</p>
+<p>打开Typora，依次单击菜单栏【文件】&#x3D;&gt;【偏好设置】&#x3D;&gt;【图像】，会在页面上展示【下载PicGo】按钮，单击即可跳转下载页面。因为这里笔者做了主题颜色的修改，所以软件的背景是深色的，这个基本不影响本文的阅读。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-fea0257eb4c729201fc5e26266a8b474_1440w.webp" alt="img"></p>
+<p>从Typora进入PicGo软件下载界面</p>
+<p>在下载页面中单击【免费下载】，会跳转到github相应网站，下拉可以看到下载链接：例如笔者选择【PicGo-Setup-2.3.1.exe】这一项。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-b5fac8e771ae60e3bc084a58e324e007_1440w.webp" alt="img"></p>
+<p>单击免费下载</p>
+<p><img src="https://pic4.zhimg.com/80/v2-40abd45ed1da8e980435daad3765323f_1440w.webp" alt="img"></p>
+<p>转向github主页</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-1d821f5ae80ccd249ba68aa8089eda91_1440w.webp" alt="img"></p>
+<p>选择合适的文件进行下载</p>
+<p>接下来就是程序安装过程，可以自定义程序的安装路径，这些操作比较简单。</p>
+<p>注意如果想要正常使用PicGo，可能还需要安装<a href="https://link.zhihu.com/?target=https://nodejs.org/en/">NodeJS</a>环境，可以下载左侧稳定板，这个过程也是按部就班，按照提示进行安装即可。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-e376d26a38218d47abc3df7877c5337d_1440w.webp" alt="img"></p>
+<p>nodeJS下载</p>
+<p>以上软件安装完毕后，就可以进行仓库的创建。</p>
+<h3 id="GiTee账户令牌与仓库创建"><a href="#GiTee账户令牌与仓库创建" class="headerlink" title="GiTee账户令牌与仓库创建"></a>GiTee账户令牌与仓库创建</h3><p>Gitee账户的准备工作有以下几项工作需要做：</p>
+<ol>
+<li>创建账户</li>
+<li>创建项目（也就是仓库）</li>
+<li>修改仓库权限为公开</li>
+<li>生成私人令牌</li>
+</ol>
+<p>如果读者还没有Gitee账户，需要先创建<a href="https://link.zhihu.com/?target=https://gitee.com/login">Gitee</a>账户，如果已有账号，可以直接登录。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-019866556acd3ccb1068ee7b969faff9_1440w.webp" alt="img"></p>
+<p>Gitee登陆注册页面</p>
+<p>然后需要创建一个公开仓库，按照以下操作进行配置。</p>
+<p>首先新建仓库</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-fa36c8dba361449a427f840933dd8dc7_1440w.webp" alt="img"></p>
+<p>Gitee个人主页</p>
+<p>配置仓库相关参数，这里暂时还不能修改仓库权限。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-a01dffb661f597f1b4fabc913624584d_1440w.webp" alt="img"></p>
+<p>创建仓库</p>
+<p>新版Gitee无法再创建时选择权限，需要创建后在仓库设置中选择公开。在仓库界面单击选择【管理】，并且勾选相关单击【确定】。</p>
+<p>进入仓库主页。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-f17051a2605b4e6d4cda1237987a4ef1_1440w.webp" alt="img"></p>
+<p>从个人主页进到仓库主页</p>
+<p>进入仓库设置页面。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-885b8e694a36000b81964b455c797189_1440w.webp" alt="img"></p>
+<p>单击右上角管理按钮</p>
+<p>设置仓库权限为开源。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-21be13aa6bf02c6d34a52cf97b53f9b5_1440w.webp" alt="img"></p>
+<p>设置为开源</p>
+<p>接下来需要设置私人令牌，这个令牌相当于暗号或者密码，外部可以通过这个另外访问到当前账户下的数据，注意明文令牌只展示一次，需要及时保存在粘贴板中，后续要用到。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-34b0d953ec603e3c9a600e79f6a41ac7_1440w.webp" alt="img"></p>
+<p>进入个人主页</p>
+<p>进入个人主页设置。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-73675bf4d9e879015b287da80bf12485_1440w.webp" alt="img"></p>
+<p>单击个人设置</p>
+<p>在设置页面左侧找到【私人令牌】。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-45cc87ed7075951b3ff1d7859cb9e7d3_1440w.webp" alt="img"></p>
+<p>左侧单击私人令牌</p>
+<p>添加私人令牌。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-e9f889cecda53684ebe557168b6ce153_1440w.webp" alt="img"></p>
+<p>单击生成新令牌，这里笔者已经有了，所以页面上不是空的</p>
+<p>配置私人令牌参数。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-14b41344f2a58fba70d35aaaae829c40_1440w.webp" alt="img"></p>
+<p>创建私人令牌</p>
+<p>注意令牌明文只展示一次，需要记录下来，后面要用。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-746fa20c3f5d4e4ba6b4a5dedafe75ea_1440w.webp" alt="img"></p>
+<p>私人令牌只出现一次，需要及时记录下来</p>
+<p>到此为止，Gitee仓库创建完成，个人的令牌也已经生成，接下来就是要把账户（Gitee用户名和仓库名）和密码（私人令牌）写在PicGo中。</p>
+<h3 id="PicGo配置工作"><a href="#PicGo配置工作" class="headerlink" title="PicGo配置工作"></a>PicGo配置工作</h3><p>打开PicGo软件，做必要的安装配置。</p>
+<ol>
+<li>安装gitee－uploader插件</li>
+<li>设置gitee相关账户、仓库和令牌</li>
+<li>设置PicGo软件</li>
+</ol>
+<p>首先需要在【插件设置】中安装gitee插件，搜索gitee-uploader并单击安装，等待几分钟安装完毕。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-8670fa2005cceff4f72fffdae7a59ed0_1440w.webp" alt="img"></p>
+<p>在PicGo中设置GiteeUploader插件</p>
+<p>安装后重启PicGo，可以在【图床设置】选项中看到下拉选项【Gitee】，单击并进行配置。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-953d6af335644b7112ba894967e51a59_1440w.webp" alt="img"></p>
+<p>PicGo中Gitee配置</p>
+<p>有以下几项：</p>
+<ul>
+<li>repo：在自己的Gitee账户下，单击刚刚创建的根目录，在浏览器的当前页面链接中复制最后的账户名和仓库名部分，例如笔者的这一栏填“softargmax&#x2F;blog-pic”。</li>
+<li>branch：一般选择master</li>
+<li>token：刚才在剪贴板中粘贴的私人令牌，直接复制过来</li>
+<li>其他：保持默认即可</li>
+</ul>
+<p>注意账户名和仓库名要粘贴红色框里面的。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-de04541b1a3730d9b4a27657aa2a92f0_1440w.webp" alt="img"></p>
+<p>配置完毕后，单击【设为默认图床】和【确定】</p>
+<p>对PicGo进行一些其他的设置，正常情况下，【设置Server】中的监听网址保持默认就好。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-a51cd449691b8fd8f47291088499c874_1440w.webp" alt="img"></p>
+<p>一些配置</p>
+<p><img src="https://pic1.zhimg.com/80/v2-a6f4d86a2a8faa7b1ec43ece1446a10c_1440w.webp" alt="img"></p>
+<p>一些配置</p>
+<p>在设置server中，默认应该是这样的IP配置，如果不是就修改成这样。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-cd0c79c97d5a299e33bb948aaca894e7_1440w.webp" alt="img"></p>
+<p>PicGo的一些设置</p>
+<p><img src="https://pic2.zhimg.com/80/v2-8c42a46a26854b305e675751e12c8585_1440w.webp" alt="img"></p>
+<p>配置服务器</p>
+<h3 id="Typora配置工作"><a href="#Typora配置工作" class="headerlink" title="Typora配置工作"></a>Typora配置工作</h3><p>这是最后一步，配置Typora，主要有以下工作：</p>
+<ol>
+<li>设置插入图片的时执行的操作为【上传图片】，并设置相应动作</li>
+<li>配置上传服务为PicGoAPP，并且选择程序所在的安装路径</li>
+<li>单击相应按钮进行验证测试</li>
+</ol>
+<p>返回刚才打开的PicGo的偏好设置，在【图像】界面进行设置：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-9f6b35fab118e7c6d6aad17aa428e290_1440w.webp" alt="img"></p>
+<p>配置Typora</p>
+<p>设置完成后，可以单击【验证图片上传选项】按钮，证实自己的操作是正确的。</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-436692777d410ff135402d1b0e75f565_1440w.webp" alt="img"></p>
+<p>验证图片上传功能</p>
+<p>如果出现红色的faild字样，说明以上配置存在错误，可以从以下几个方面排查：</p>
+<ul>
+<li>检查仓库的权限是否被修改为公有</li>
+<li>检查PicGo中的Gitee配置是否和账户中的情况一致，尤其是账户名和仓库名要选择从链接中粘出来的而不是别的</li>
+<li>重启各个软件再次尝试。</li>
+</ul>
+<p>如果提示出现successful字样，则说明上述配置成功。具体使用时，有以下现象：</p>
+<ul>
+<li>在使用Typora编写markdown文档时，不论以何种方式（例如选择本地文件或者其他网页的url文件）添加图片，图片都会自动上传到自己Gitee账户下的仓库中，并且在markdown中将链接地址修改为该图片的Gitee外往访问链接，这些链接是可以通过python或其他方式进行自动爬虫同步本地的，当然也可以自己登录仓库下载，也就意味着本地不需要再保存markdown中用到的图片了。</li>
+<li>打开仓库，可以看到按照时间戳排序的各个图片文件，可以供用户批量下载备份。</li>
+<li>在PicGo的【相册】栏目中也会出现通过该软件上传过的图片。</li>
+</ul>
+<h3 id="解决博客上传不显示的问题"><a href="#解决博客上传不显示的问题" class="headerlink" title="解决博客上传不显示的问题"></a>解决博客上传不显示的问题</h3><p>解决的办法很简单，就是在博客md首段添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如图所下：</p>
+<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231115223016431.png" alt="image-20231115223016431"></p>
+<h3 id="本地图片"><a href="#本地图片" class="headerlink" title="本地图片"></a>本地图片</h3><p>其实typora也在本地帮我们备份了一份本地图片，地址在：C:\Users\Lu\AppData\Roaming\Typora\typora-user-images</p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>图床</tag>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些常用软件的安装教程</title>
+    <url>/2023/02/25/test/%E5%A6%82%E4%BD%95%E7%99%BD%E5%AB%96office%E7%B3%BB%E5%88%97/</url>
+    <content><![CDATA[<p>支持正版！</p>
+<span id="more"></span>
+
+<h1 id="1-office系列"><a href="#1-office系列" class="headerlink" title="1. office系列"></a>1. office系列</h1><ol>
+<li>参考视频：<a href="https://www.bilibili.com/video/BV1g64y1d7az?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1g64y1d7az?spm_id_from=333.999.0.0</a></li>
+<li>下载office tool plus</li>
+<li>部署完毕</li>
+<li>输入命令&#x2F;osppilbyid ProPlus2021Volume &#x2F;osppsethst:kms.loli.beer &#x2F;osppsetprt:1688 &#x2F;osppact</li>
+</ol>
+<p>kms.cangshui.net（这个命令经常会变，请上网找到最新的命令）</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>练习英语口语</title>
+    <url>/2023/12/15/test/%E5%A6%82%E4%BD%95%E7%BB%83%E4%B9%A0%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD/</url>
+    <content><![CDATA[<p>老实说，我一直是一个不善言辞的人，我很难在公开场合说出自己的想法，因为我知道我的想法是幼稚的。</p>
+<p>有人说表达能力的底层能力还是思维思辨，但其实如果让我写下一些内容我也可以“下笔如有神”，但如果让我去发表观点，那是极其困难的。</p>
+<p>在雅思口语测试中，不光需要你的口语说的能力，更要求你有表达的能力。</p>
+<p>选择你喜欢的话题（30+），然后设想在生活中别人可能会问到的问题（6个问题）。</p>
+<p>每个问题找到答案（2个长句），要求满足：</p>
+<ol>
+<li>表述完整观点或事件</li>
+<li>出自母语者之手</li>
+</ol>
+<p>分析价值点，灵活拼接。长句生态环境：多话题协作，触类旁通，句模之间拼贴互补，跨话题糅杂</p>
+<p>价值点：词伙，观点</p>
+<p>相同的方法也可以用到结构化面试，工作面试，临时发言之中，找到合适的句模，养成肌肉记忆和思维记忆，便能轻松面对。</p>
+<p>去哪里找输入资料？</p>
+<p><a href="https://www.ted.com/?st_test_bottom_bar_15s_tr_home">https://www.ted.com/?st_test_bottom_bar_15s_tr_home</a></p>
+<p><a href="https://www.wikihow.com/Main-Page">https://www.wikihow.com/Main-Page</a></p>
+<p><a href="https://www.britannica.com/">https://www.britannica.com/</a></p>
+<p>词典里的例句</p>
+<p>零散的知识要拼凑成知识体系。</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/11/30/test/%E6%89%98%E7%A6%8F%E5%8F%A3%E8%AF%AD%E7%AD%94%E9%A2%98%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<p>学习视频为：</p>
+<p>part1:<a href="https://youtu.be/i_tuHAUyB4w">https://youtu.be/i_tuHAUyB4w</a></p>
+<p>part2:<a href="https://www.youtube.com/watch?v=RfhBj0HzQYo">https://www.youtube.com/watch?v=RfhBj0HzQYo</a></p>
+<p>part3:<a href="https://www.youtube.com/watch?v=Fe7edpBpRhI">https://www.youtube.com/watch?v=Fe7edpBpRhI</a></p>
+<p>part4:<a href="https://youtu.be/baONhoO9c7Q">https://youtu.be/baONhoO9c7Q</a></p>
+<p>整理了托福四个Part的答题模板</p>
 ]]></content>
   </entry>
   <entry>
@@ -1031,21 +1665,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一些常用软件的安装教程</title>
-    <url>/2023/02/25/test/%E5%A6%82%E4%BD%95%E7%99%BD%E5%AB%96office%E7%B3%BB%E5%88%97/</url>
-    <content><![CDATA[<p>支持正版！</p>
-<span id="more"></span>
-
-<h1 id="1-office系列"><a href="#1-office系列" class="headerlink" title="1. office系列"></a>1. office系列</h1><ol>
-<li>参考视频：<a href="https://www.bilibili.com/video/BV1g64y1d7az?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1g64y1d7az?spm_id_from=333.999.0.0</a></li>
-<li>下载office tool plus</li>
-<li>部署完毕</li>
-<li>输入命令&#x2F;osppilbyid ProPlus2021Volume &#x2F;osppsethst:kms.loli.beer &#x2F;osppsetprt:1688 &#x2F;osppact</li>
-</ol>
-<p>kms.cangshui.net（这个命令经常会变，请上网找到最新的命令）</p>
-]]></content>
-  </entry>
-  <entry>
     <title>动手学深度学习v2补充解释</title>
     <url>/2023/11/13/test/%E6%9D%8E%E6%B2%90/</url>
     <content><![CDATA[<h1 id="动手学深度学习v2"><a href="#动手学深度学习v2" class="headerlink" title="动手学深度学习v2"></a>动手学深度学习v2</h1><p>个人不理解的地方，进行一些原理的证明或是详细解释。</p>
@@ -1063,249 +1682,17 @@
       </tags>
   </entry>
   <entry>
-    <title>K-means讲解</title>
-    <url>/2023/11/15/test/k-means/</url>
-    <content><![CDATA[<p>K-means的一些讲解</p>
+    <title>概率论通识</title>
+    <url>/2023/12/04/test/%E6%A6%82%E7%8E%87%E8%AE%BA%E9%80%9A%E8%AF%86/</url>
+    <content><![CDATA[<p>介绍一些概率论思想</p>
 <span id="more"></span>   
 
 <meta name="referrer" content="no-referrer" />
 
-
-<h1 id="k-均值算法"><a href="#k-均值算法" class="headerlink" title="k 均值算法"></a>k 均值算法</h1><p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/1234333422.gif"></p>
-<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20201018202041.png"></p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a><strong>步骤</strong></h2><ul>
-<li>随机选取样本作为初始均值向量（初始值：k 的值【即几个簇】）（也可以不用样本点）</li>
-<li>分别计算每个样本点到初始均值向量的<strong>距离</strong>（数据做了标准化），距离哪个点最近就属于哪个簇</li>
-<li>每个簇重新计算中心点，重复第二步直到<strong>收敛</strong></li>
-<li>找到质心和离某个质心距离最近的点就分为一类。</li>
-</ul>
-<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021340.png"></p>
-<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021518.png"></p>
-<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20210210021531.png"></p>
-<blockquote>
-<p>问题：需要指定k值，难以确定k值。</p>
-</blockquote>
-<h2 id="确定k值"><a href="#确定k值" class="headerlink" title="确定k值"></a>确定k值</h2><h3 id="1-手肘法"><a href="#1-手肘法" class="headerlink" title="1.手肘法"></a>1.手肘法</h3><p>手肘法的核心指标是SSE(sum of the squared errors，误差平方和)，</p>
-<p>$$S S E &#x3D; \sum _ { i &#x3D; 1 } ^ { k } \sum _ {  p∈m_i }| p - m _ {i } | ^ { 2 }$$</p>
-<p>其中，Ci是第i个簇，p是Ci中的样本点，mi是Ci的质心（Ci中所有样本的均值），SSE是所有样本的聚类误差，代表了聚类效果的好坏。</p>
-<p>手肘法的核心思想是：随着聚类数k的增大，样本划分会更加精细，每个簇的聚合程度会逐渐提高，那么误差平方和SSE自然会逐渐变小。并且，当k小于真实聚类数时，由于k的增大会大幅增加每个簇的聚合程度，故SSE的下降幅度会很大，而当k到达真实聚类数时，再增加k所得到的聚合程度回报会迅速变小，所以SSE的下降幅度会骤减，然后随着k值的继续增大而趋于平缓，也就是说SSE和k的关系图是一个手肘的形状，而这个肘部对应的k值就是数据的真实聚类数。当然，这也是该方法被称为手肘法的原因。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231115213147472.png"></p>
-<h3 id="2-轮廓系数法"><a href="#2-轮廓系数法" class="headerlink" title="2. 轮廓系数法"></a>2. 轮廓系数法</h3><p>思想：簇内样本的距离越近，簇间样本距离越远，平均轮廓系数越大，聚类效果越好。</p>
-<p>该方法的核心指标是轮廓系数（Silhouette Coefficient），某个样本点Xi的轮廓系数定义如下：</p>
-<p>$$S &#x3D; \frac { b - a } { m a x ( a , b ) }$$</p>
-<p>其中</p>
-<p>a是Xi与同簇的其他样本的平均距离，称为凝聚度</p>
-<p>b是Xi与最近簇中所有样本的平均距离，称为分离度。</p>
-<p>最近簇的定义是，簇间不相似，最近的不相似</p>
-<p>$$C _ { j } &#x3D;{ a r g } m i n \frac { 1 } { n } \sum _ { p ∈c _ { s } } | p - X _ { i }| ^ { 2 }$$</p>
-<p>其中p是某个簇Ck中的样本。事实上，简单点讲，就是用Xi到某个簇所有样本平均距离作为衡量该点到该簇的距离后，选择离Xi最近的一个簇作为最近簇。</p>
-<p>求出所有样本的轮廓系数后再求平均值就得到了<strong>平均轮廓系数</strong>。</p>
-<p>平均轮廓系数的取值范围为[-1,1]。</p>
-<p>那么，很自然地，平均轮廓系数最大的k便是最佳聚类数。</p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>聚类算法</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建的图床配置问题</title>
-    <url>/2023/11/15/test/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<p>因为我之前就有写一些md文件，并且有本地的图片存放处，所以要移植到博客中图片的位置要重新更改，比较麻烦。所以可以采用网络图床的方法，而gitee图床会有防盗链的问题。文末也给出了解决办法。</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-<p>本文参考：<a href="https://zhuanlan.zhihu.com/p/583732805">https://zhuanlan.zhihu.com/p/583732805</a></p>
-<h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3><p>Typora的下载安装和激活可以参考<a href="https://link.zhihu.com/?target=https://www.cnblogs.com/wjdzh/p/16522182.html">这篇文章</a>或者其他博客，这里主要介绍PicGo的安装过程。</p>
-<p>打开Typora，依次单击菜单栏【文件】&#x3D;&gt;【偏好设置】&#x3D;&gt;【图像】，会在页面上展示【下载PicGo】按钮，单击即可跳转下载页面。因为这里笔者做了主题颜色的修改，所以软件的背景是深色的，这个基本不影响本文的阅读。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-fea0257eb4c729201fc5e26266a8b474_1440w.webp" alt="img"></p>
-<p>从Typora进入PicGo软件下载界面</p>
-<p>在下载页面中单击【免费下载】，会跳转到github相应网站，下拉可以看到下载链接：例如笔者选择【PicGo-Setup-2.3.1.exe】这一项。</p>
-<p><img src="https://pic4.zhimg.com/80/v2-b5fac8e771ae60e3bc084a58e324e007_1440w.webp" alt="img"></p>
-<p>单击免费下载</p>
-<p><img src="https://pic4.zhimg.com/80/v2-40abd45ed1da8e980435daad3765323f_1440w.webp" alt="img"></p>
-<p>转向github主页</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-1d821f5ae80ccd249ba68aa8089eda91_1440w.webp" alt="img"></p>
-<p>选择合适的文件进行下载</p>
-<p>接下来就是程序安装过程，可以自定义程序的安装路径，这些操作比较简单。</p>
-<p>注意如果想要正常使用PicGo，可能还需要安装<a href="https://link.zhihu.com/?target=https://nodejs.org/en/">NodeJS</a>环境，可以下载左侧稳定板，这个过程也是按部就班，按照提示进行安装即可。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-e376d26a38218d47abc3df7877c5337d_1440w.webp" alt="img"></p>
-<p>nodeJS下载</p>
-<p>以上软件安装完毕后，就可以进行仓库的创建。</p>
-<h3 id="GiTee账户令牌与仓库创建"><a href="#GiTee账户令牌与仓库创建" class="headerlink" title="GiTee账户令牌与仓库创建"></a>GiTee账户令牌与仓库创建</h3><p>Gitee账户的准备工作有以下几项工作需要做：</p>
-<ol>
-<li>创建账户</li>
-<li>创建项目（也就是仓库）</li>
-<li>修改仓库权限为公开</li>
-<li>生成私人令牌</li>
-</ol>
-<p>如果读者还没有Gitee账户，需要先创建<a href="https://link.zhihu.com/?target=https://gitee.com/login">Gitee</a>账户，如果已有账号，可以直接登录。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-019866556acd3ccb1068ee7b969faff9_1440w.webp" alt="img"></p>
-<p>Gitee登陆注册页面</p>
-<p>然后需要创建一个公开仓库，按照以下操作进行配置。</p>
-<p>首先新建仓库</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-fa36c8dba361449a427f840933dd8dc7_1440w.webp" alt="img"></p>
-<p>Gitee个人主页</p>
-<p>配置仓库相关参数，这里暂时还不能修改仓库权限。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-a01dffb661f597f1b4fabc913624584d_1440w.webp" alt="img"></p>
-<p>创建仓库</p>
-<p>新版Gitee无法再创建时选择权限，需要创建后在仓库设置中选择公开。在仓库界面单击选择【管理】，并且勾选相关单击【确定】。</p>
-<p>进入仓库主页。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-f17051a2605b4e6d4cda1237987a4ef1_1440w.webp" alt="img"></p>
-<p>从个人主页进到仓库主页</p>
-<p>进入仓库设置页面。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-885b8e694a36000b81964b455c797189_1440w.webp" alt="img"></p>
-<p>单击右上角管理按钮</p>
-<p>设置仓库权限为开源。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-21be13aa6bf02c6d34a52cf97b53f9b5_1440w.webp" alt="img"></p>
-<p>设置为开源</p>
-<p>接下来需要设置私人令牌，这个令牌相当于暗号或者密码，外部可以通过这个另外访问到当前账户下的数据，注意明文令牌只展示一次，需要及时保存在粘贴板中，后续要用到。</p>
-<p><img src="https://pic4.zhimg.com/80/v2-34b0d953ec603e3c9a600e79f6a41ac7_1440w.webp" alt="img"></p>
-<p>进入个人主页</p>
-<p>进入个人主页设置。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-73675bf4d9e879015b287da80bf12485_1440w.webp" alt="img"></p>
-<p>单击个人设置</p>
-<p>在设置页面左侧找到【私人令牌】。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-45cc87ed7075951b3ff1d7859cb9e7d3_1440w.webp" alt="img"></p>
-<p>左侧单击私人令牌</p>
-<p>添加私人令牌。</p>
-<p><img src="https://pic4.zhimg.com/80/v2-e9f889cecda53684ebe557168b6ce153_1440w.webp" alt="img"></p>
-<p>单击生成新令牌，这里笔者已经有了，所以页面上不是空的</p>
-<p>配置私人令牌参数。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-14b41344f2a58fba70d35aaaae829c40_1440w.webp" alt="img"></p>
-<p>创建私人令牌</p>
-<p>注意令牌明文只展示一次，需要记录下来，后面要用。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-746fa20c3f5d4e4ba6b4a5dedafe75ea_1440w.webp" alt="img"></p>
-<p>私人令牌只出现一次，需要及时记录下来</p>
-<p>到此为止，Gitee仓库创建完成，个人的令牌也已经生成，接下来就是要把账户（Gitee用户名和仓库名）和密码（私人令牌）写在PicGo中。</p>
-<h3 id="PicGo配置工作"><a href="#PicGo配置工作" class="headerlink" title="PicGo配置工作"></a>PicGo配置工作</h3><p>打开PicGo软件，做必要的安装配置。</p>
-<ol>
-<li>安装gitee－uploader插件</li>
-<li>设置gitee相关账户、仓库和令牌</li>
-<li>设置PicGo软件</li>
-</ol>
-<p>首先需要在【插件设置】中安装gitee插件，搜索gitee-uploader并单击安装，等待几分钟安装完毕。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-8670fa2005cceff4f72fffdae7a59ed0_1440w.webp" alt="img"></p>
-<p>在PicGo中设置GiteeUploader插件</p>
-<p>安装后重启PicGo，可以在【图床设置】选项中看到下拉选项【Gitee】，单击并进行配置。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-953d6af335644b7112ba894967e51a59_1440w.webp" alt="img"></p>
-<p>PicGo中Gitee配置</p>
-<p>有以下几项：</p>
-<ul>
-<li>repo：在自己的Gitee账户下，单击刚刚创建的根目录，在浏览器的当前页面链接中复制最后的账户名和仓库名部分，例如笔者的这一栏填“softargmax&#x2F;blog-pic”。</li>
-<li>branch：一般选择master</li>
-<li>token：刚才在剪贴板中粘贴的私人令牌，直接复制过来</li>
-<li>其他：保持默认即可</li>
-</ul>
-<p>注意账户名和仓库名要粘贴红色框里面的。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-de04541b1a3730d9b4a27657aa2a92f0_1440w.webp" alt="img"></p>
-<p>配置完毕后，单击【设为默认图床】和【确定】</p>
-<p>对PicGo进行一些其他的设置，正常情况下，【设置Server】中的监听网址保持默认就好。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-a51cd449691b8fd8f47291088499c874_1440w.webp" alt="img"></p>
-<p>一些配置</p>
-<p><img src="https://pic1.zhimg.com/80/v2-a6f4d86a2a8faa7b1ec43ece1446a10c_1440w.webp" alt="img"></p>
-<p>一些配置</p>
-<p>在设置server中，默认应该是这样的IP配置，如果不是就修改成这样。</p>
-<p><img src="https://pic4.zhimg.com/80/v2-cd0c79c97d5a299e33bb948aaca894e7_1440w.webp" alt="img"></p>
-<p>PicGo的一些设置</p>
-<p><img src="https://pic2.zhimg.com/80/v2-8c42a46a26854b305e675751e12c8585_1440w.webp" alt="img"></p>
-<p>配置服务器</p>
-<h3 id="Typora配置工作"><a href="#Typora配置工作" class="headerlink" title="Typora配置工作"></a>Typora配置工作</h3><p>这是最后一步，配置Typora，主要有以下工作：</p>
-<ol>
-<li>设置插入图片的时执行的操作为【上传图片】，并设置相应动作</li>
-<li>配置上传服务为PicGoAPP，并且选择程序所在的安装路径</li>
-<li>单击相应按钮进行验证测试</li>
-</ol>
-<p>返回刚才打开的PicGo的偏好设置，在【图像】界面进行设置：</p>
-<p><img src="https://pic1.zhimg.com/80/v2-9f6b35fab118e7c6d6aad17aa428e290_1440w.webp" alt="img"></p>
-<p>配置Typora</p>
-<p>设置完成后，可以单击【验证图片上传选项】按钮，证实自己的操作是正确的。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/v2-436692777d410ff135402d1b0e75f565_1440w.webp" alt="img"></p>
-<p>验证图片上传功能</p>
-<p>如果出现红色的faild字样，说明以上配置存在错误，可以从以下几个方面排查：</p>
-<ul>
-<li>检查仓库的权限是否被修改为公有</li>
-<li>检查PicGo中的Gitee配置是否和账户中的情况一致，尤其是账户名和仓库名要选择从链接中粘出来的而不是别的</li>
-<li>重启各个软件再次尝试。</li>
-</ul>
-<p>如果提示出现successful字样，则说明上述配置成功。具体使用时，有以下现象：</p>
-<ul>
-<li>在使用Typora编写markdown文档时，不论以何种方式（例如选择本地文件或者其他网页的url文件）添加图片，图片都会自动上传到自己Gitee账户下的仓库中，并且在markdown中将链接地址修改为该图片的Gitee外往访问链接，这些链接是可以通过python或其他方式进行自动爬虫同步本地的，当然也可以自己登录仓库下载，也就意味着本地不需要再保存markdown中用到的图片了。</li>
-<li>打开仓库，可以看到按照时间戳排序的各个图片文件，可以供用户批量下载备份。</li>
-<li>在PicGo的【相册】栏目中也会出现通过该软件上传过的图片。</li>
-</ul>
-<h3 id="解决博客上传不显示的问题"><a href="#解决博客上传不显示的问题" class="headerlink" title="解决博客上传不显示的问题"></a>解决博客上传不显示的问题</h3><p>解决的办法很简单，就是在博客md首段添加</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;</span><br></pre></td></tr></table></figure>
-
-<p>如图所下：</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231115223016431.png" alt="image-20231115223016431"></p>
-<h3 id="本地图片"><a href="#本地图片" class="headerlink" title="本地图片"></a>本地图片</h3><p>其实typora也在本地帮我们备份了一份本地图片，地址在：C:\Users\Lu\AppData\Roaming\Typora\typora-user-images</p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>图床</tag>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>什么是端到端</title>
-    <url>/2023/11/23/test/%E4%BB%80%E4%B9%88%E5%8F%AB%E7%AB%AF%E5%88%B0%E7%AB%AF/</url>
-    <content><![CDATA[<p>端到端是深度学习中一个简单的概念。</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-
-
-<p>我们可以将中文语音转英文文字的任务拆解成，语音转文字和中文翻译成英文两个任务。</p>
-<p>而端到端的学习则是直接将这个任务放到神经网络中学习。</p>
-<p>形成：输入-模型-目标，输入和目标就是两个端，直接通过一个模型便是端到端。</p>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>参数与超参数</title>
-    <url>/2023/11/17/test/%E5%8F%82%E6%95%B0%E4%B8%8E%E8%B6%85%E5%8F%82%E6%95%B0/</url>
-    <content><![CDATA[<p>参数与超参数的一些介绍，哪些是参数哪些是超参数</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-<p>参数是可学习的，超参数需要自己设定的。</p>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>给自己的环境装上jupyter</title>
-    <url>/2023/11/20/test/%E8%A3%85%E4%B8%8Ajupyter/</url>
-    <content><![CDATA[<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 添加</span></span><br><span class="line">conda install ipykernel</span><br><span class="line"><span class="comment"># python -m ipykernel install --user --name [anaconda名称] --display-name &quot;[在jupyter的名称]&quot;</span></span><br><span class="line">python -m ipykernel install --user --name mytensor --display-name <span class="string">&quot;mytensor&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 删除</span></span><br><span class="line">jupyter kernelspec <span class="built_in">list</span></span><br><span class="line">jupyter kernelspec remove &lt;kernel_name&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>在base环境下，输入目标路劲，即可在网页中切换环境。</p>
 ]]></content>
       <tags>
-        <tag>python</tag>
-        <tag>anaconda</tag>
+        <tag>得到</tag>
+        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -1340,259 +1727,6 @@
   </entry>
   <entry>
     <title></title>
-    <url>/2023/11/30/test/%E6%89%98%E7%A6%8F%E5%8F%A3%E8%AF%AD%E7%AD%94%E9%A2%98%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[<p>学习视频为：</p>
-<p>part1:<a href="https://youtu.be/i_tuHAUyB4w">https://youtu.be/i_tuHAUyB4w</a></p>
-<p>part2:<a href="https://www.youtube.com/watch?v=RfhBj0HzQYo">https://www.youtube.com/watch?v=RfhBj0HzQYo</a></p>
-<p>part3:<a href="https://www.youtube.com/watch?v=Fe7edpBpRhI">https://www.youtube.com/watch?v=Fe7edpBpRhI</a></p>
-<p>part4:<a href="https://youtu.be/baONhoO9c7Q">https://youtu.be/baONhoO9c7Q</a></p>
-<p>整理了托福四个Part的答题模板</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Zotero使用说明</title>
-    <url>/2023/12/04/test/Zotero%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
-    <content><![CDATA[<p>Zotero是一款论文文献管理软件，这里我会介绍一些我使用到的功能。</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-<p>原视频指路：<a href="https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&vd_source=065dbebb8f309dd36ff6dbc4c04cbd15">https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&amp;vd_source=065dbebb8f309dd36ff6dbc4c04cbd15</a></p>
-<h1 id="英文和中文文献导入"><a href="#英文和中文文献导入" class="headerlink" title="英文和中文文献导入"></a>英文和中文文献导入</h1><ol>
-<li>利用Zotero Connector从相关论文网站导入（最推荐，可以直接获得PDF）<br> 英文可以一个页面都导入并且找到PDF，中文只能具体页面找到PDF</li>
-<li>如果需要大批量导入，下载参考文献格式导入</li>
-<li>PDF拖拽导入，算法自动识别。</li>
-<li>PDF拖拽导入，创建父条目，DOI号识别。</li>
-<li>直接doi号</li>
-</ol>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image.png" alt="image.png"></p>
-<p>5.安装茉莉花插件, 下载地址[<a href="https://github.com/l0o0/jasminum/releases/tag/v0.2.8]%EF%BC%8CPDF%E6%8B%96%E6%8B%BD%E5%90%8E%EF%BC%8C%E5%8F%B3%E9%94%AE%E7%9F%A5%E7%BD%91%E5%8A%A9%E6%89%8B%E4%B9%9F%E5%8F%AF%E8%8E%B7%E5%BE%97%E4%BF%A1%E6%81%AF%E3%80%82">https://github.com/l0o0/jasminum/releases/tag/v0.2.8]，PDF拖拽后，右键知网助手也可获得信息。</a></p>
-<p>可以选择更新茉莉花中非官方维护中文翻译器和connector</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image%201.png" alt="image.png"></p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image%202.png" alt="image.png"></p>
-<h1 id="小tips"><a href="#小tips" class="headerlink" title="小tips"></a>小tips</h1><ol>
-<li><p>选中某篇文献，长按Ctrl键，可以查看该文献属于哪些文件夹；</p>
-</li>
-<li><p>删除条目会删除这篇文献在所有文件夹。</p>
-</li>
-<li><p>删除从分类中移除条目只删除此分类中。</p>
-</li>
-</ol>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ol>
-<li><p>选择关闭自动添加标签。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204193058146.png" alt="image-20231204193058146"></p>
-</li>
-<li><p>添加完标签，点击某个文件夹，在左下角则会出现这个文件夹里的所有标签。点击某一个标签，则会在中间筛选出贴上这个标签的所有文献；</p>
-</li>
-<li><p>将某条文献拖拽到某个标签上可以快速建立标签；</p>
-</li>
-<li><p>右键标签，点击指派颜色，可以添加标签颜色，“位置”指的是标签的排列位置，设置为1，这个标签就会排在首位；</p>
-</li>
-<li><p>对于有颜色的标签，我们可以通过选中文献，然后键盘按下标签的位置号，从而赋予标签。</p>
-</li>
-</ol>
-<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>可以根据各种文献信息</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204194645394.png" alt="image-20231204194645394"></p>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h2 id="word中引用"><a href="#word中引用" class="headerlink" title="word中引用"></a>word中引用</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204195111773.png" alt="image-20231204195111773"></p>
-<p>在想要引用处 Add&#x2F;Edit Citation 加入编号</p>
-<p>在参考文献处 Add&#x2F;Edit Bibliography 加入文献内容</p>
-<h2 id="引用格式添加"><a href="#引用格式添加" class="headerlink" title="引用格式添加"></a>引用格式添加</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231204195406392.png" alt="image-20231204195406392"></p>
-<h1 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h1><p>下载插件：<a href="http://file.zhouw.top/share/bfP7zqgE">http://file.zhouw.top/share/bfP7zqgE</a></p>
-]]></content>
-      <tags>
-        <tag>科研工具</tag>
-        <tag>Zotero</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>概率论通识</title>
-    <url>/2023/12/04/test/%E6%A6%82%E7%8E%87%E8%AE%BA%E9%80%9A%E8%AF%86/</url>
-    <content><![CDATA[<p>介绍一些概率论思想</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-]]></content>
-      <tags>
-        <tag>得到</tag>
-        <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>anki</title>
-    <url>/2023/12/15/test/ANKI%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="anki的使用场景"><a href="#anki的使用场景" class="headerlink" title="anki的使用场景"></a>anki的使用场景</h1><h1 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h1><h1 id="好用插件"><a href="#好用插件" class="headerlink" title="好用插件"></a>好用插件</h1><h2 id="Ankiconnect"><a href="#Ankiconnect" class="headerlink" title="Ankiconnect"></a>Ankiconnect</h2><h2 id="AwesomeTTS"><a href="#AwesomeTTS" class="headerlink" title="AwesomeTTS"></a>AwesomeTTS</h2><h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;#ContextCloze&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&lt;section&gt;&#123;&#123;&#123;&#123;type:cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line"> </span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;^ContextCloze&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;Text&#125;&#125;&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Note&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;hint:Note&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Note&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Title&#125;&#125;</span><br><span class="line">&lt;section class=&quot;tsource&quot;&gt;</span><br><span class="line">&lt;hr /&gt;</span><br><span class="line">&#123;&#123;#Favicon&#125;&#125;&lt;img src=&quot;&#123;&#123;Favicon&#125;&#125;&quot; /&gt;&#123;&#123;/Favicon&#125;&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123;Url&#125;&#125;&quot;&gt;&#123;&#123;Title&#125;&#125;&lt;/a&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Audio&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Audio&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Audio&#125;&#125;</span><br><span class="line">&#123;&#123;/Title&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;#ContextCloze&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&lt;section&gt;&#123;&#123;&#123;&#123;type:cloze:ContextCloze&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;^ContextCloze&#125;&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123;Text&#125;&#125;&lt;/h1&gt;</span><br><span class="line">&#123;&#123;#Translation&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Translation&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Translation&#125;&#125;</span><br><span class="line">&#123;&#123;/ContextCloze&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Note&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Note&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Note&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;#Title&#125;&#125;</span><br><span class="line">&lt;section class=&quot;tsource&quot;&gt;</span><br><span class="line">&lt;hr /&gt;</span><br><span class="line">&#123;&#123;#Favicon&#125;&#125;&lt;img src=&quot;&#123;&#123;Favicon&#125;&#125;&quot; /&gt;&#123;&#123;/Favicon&#125;&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123;Url&#125;&#125;&quot;&gt;&#123;&#123;Title&#125;&#125;&lt;/a&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&#123;&#123;#Audio&#125;&#125;</span><br><span class="line">&lt;section&gt;&#123;&#123;Audio&#125;&#125;&lt;/section&gt;</span><br><span class="line">&#123;&#123;/Audio&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;/Title&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.card &#123;</span><br><span class="line">  font-family: arial;</span><br><span class="line">  font-size: 20px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #333;</span><br><span class="line">  background-color: white;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">  color: #5caf9e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">input &#123;</span><br><span class="line">  border: 1px solid #eee;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">section &#123;</span><br><span class="line">  margin: 1em 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans &#123;</span><br><span class="line">  border: 1px solid #eee;</span><br><span class="line">  padding: 0.5em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans_title &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  font-size: 0.9em;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.trans_content &#123;</span><br><span class="line">  margin-bottom: 0.5em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.cloze &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  color: #f9690e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  font-size: .8em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource img &#123;</span><br><span class="line">  height: .7em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tsource a &#123;</span><br><span class="line">  text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeGood &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #1EBC61;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeBad &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #F75C4C;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.typeMissed &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  background: #7C8A99;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;答案&#125;&#125;&lt;br&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;&#x27;&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;float:left&#x27;&gt;&lt;/div&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 20px;&#x27;&gt;&lt;b&gt;解析:&lt;/b&gt;&lt;/div&gt;&lt;br&gt;</span><br><span class="line">&lt;div style=&#x27;font-family: Arial; font-size: 18px;&#x27;&gt;&#123;&#123;解析&#125;&#125;&lt;/div&gt;&lt;br&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a>选择题</h2><p>来源：<a href="https://zhuanlan.zhihu.com/p/77627743">https://zhuanlan.zhihu.com/p/77627743</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Question 中添加问题，Options 中添加选项，各选项间用 *** 进行分隔，Answer 中添加答案（一个就是单选，多个就是多选），Remark 中添加问题解析。</span><br></pre></td></tr></table></figure>
-
-<p>批量操作：</p>
-<p>将数据列到 Excel 中，然后导出成 UTF-8 的 CSV 格式，最后导入到 Anki 中。</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>simple passion</title>
-    <url>/2024/05/14/test/simple%20passion/</url>
-    <content><![CDATA[<p>一本小而短的书，英文原版贴一下，方便学习。</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-<p>THIS SUMMER, for the first time, I watched an X-rated film on Canal Plus. My television set doesn’t have a decoder; the images on the screen were blurred, the words replaced by strange sound effects, hissing and babbling, a different sort of language, soft and continuous. One could make out the figure of a woman in a corset and stockings, and a man. The story was incomprehensible; it was impossible to predict any of their actions or movements. The man walked up to the woman. There was a close-up of the woman’s genitals, clearly visible among the shimmerings of the screen, then of the man’s penis, fully erect, sliding into the woman’s vagina. For a long time this coming and going of the two sex organs was shown from several angles. The cock reappeared, in the man’s hand, and the sperm spilled on to the woman’s belly. No doubt one gets used to such a sight; the first time is shattering. Centuries and centuries, hundreds of generations have gone by, and it is only now that one can see this — a man’s penis and a woman’s vagina coming together, the sperm — something one could barely take in without dying has become as easy to watch as a handshake. It occurred to me that writing should also aim for that — the impression conveyed by sexual intercourse, a feeling of anxiety and stupefaction, a suspension of moral judgment.</p>
-<p>FROM SEPTEMBER last year, I did nothing else but wait for a man: for him to call me and come round to my place. I would go to the supermarket, the cinema, take my clothes to the dry cleaner’s, read books, and mark essays. I behaved exactly the same way as before but without the long-standing familiarity of these actions I would have found it impossible to do so, except at the cost of a tremendous effort. It was when I spoke that I realized I was acting instinctively. Words, sentences, and even my laugh, formed on my lips without my actually thinking about it or wanting it. In fact I have only vague memories of the things I did, the films I saw, the people I met. I behaved in an artificial manner. The only actions involving willpower, desire, and what I take to be human intelligence (planning, weighing the pros and cons, assessing the consequences) were all related to this man:</p>
-<ul>
-<li>Reading newspaper articles about his country (he was a foreigner)</li>
-<li>Choosing clothes and make-up</li>
-<li>Writing letters to him</li>
-<li>Changing the sheets on the bed and</li>
-<li>Arranging flowers in the bedroom</li>
-<li>Jotting down something that might interest him, to tell him next time we met</li>
-<li>Buying whisky, fruit, and various delicacies for our evening together</li>
-<li>Imagining in which room we would make love when he arrived.</li>
-</ul>
-<p>In the course of conversation, the only subjects that escaped my indifference were those related to this man, his work, the country he came from, and the places he’d been to. The person speaking to me had no idea that my sudden interest in their conversation had nothing to do with their description or even the subject itself, but with the fact that one day, ten years before I met him, A had been sent to Havana on an assignment and may have set foot in that very night club, the “Fiorendito,” which they were describing in minute detail, encouraged by my attentive listening. In the same way, when I was reading, the sentences that made me pause were those concerning a relationship between a man and a woman. I felt that they could teach me something about A and that they lent credibility to the things I wished to believe. For instance, reading in Vassili Grossman’s Life and Fate that “people in love kiss with their eyes closed” led me to believe that A loved me since that was the way he kissed me. After that passage, the rest of the book returned to being what everything else had been to me for a whole year — a means of filling in time between two meetings.</p>
-<p>I had no future other than the telephone call fixing our next appointment. I would try to leave the house as little as possible except for professional reasons (naturally, he knew my working hours), forever fearing that he might call during my absence. I would also avoid using the vacuum cleaner or the hairdryer as they would have prevented me from hearing the sound of the telephone. Every time it rang, I was consumed with hope, which usually only lasted the time it took me slowly to pick up the receiver and say hello. When I realized it wasn’t him, I felt so utterly dejected that I began to loathe the person who was on the line. As soon as I heard A’s voice, my long, painful wait, invariably tinged with jealousy, dissipated so quickly that I felt I had been mad and had suddenly become sane again. I was struck by the insignificance of that voice and the exaggerated importance it had taken in my life. If he told me he was arriving in an hour — “an opportunity,” in other words an excuse to be late without arousing his wife’s suspicions — I would enter a different phase of waiting, devoid of thought or even desire (to the extent of wondering whether I would be able to achieve an orgasm), bursting with frenzied energy, unable to organize the simplest tasks: having a shower, getting out the glasses, painting my nails, mopping the floor. I no longer even knew who I was waiting for. I was entirely at the mercy of that crucial moment when I would hear the car brake, the door slam, and his footsteps on the concrete porch — a moment which I always anticipated with unspeakable terror. When he left me more time between his phone call and his visit, three or four days, I imagined with disgust all the work I would have to do and the social engagements I would have to attend before seeing him again. I would have liked to have done nothing else but wait for him. I lived with the growing obsession that something might happen to stop us from meeting. One afternoon, when I was driving home and expecting him half an hour later, it occurred to me fleetingly that I could have an accident. Immediately: “I’m not sure that I would stop.”</p>
-<p>Once I had dressed, made up, done my hair, and tidied the house, if I still had some time left, I would be incapable of reading or marking essays. In a way, too, I didn’t want my mind to concentrate on anything else but the wait itself, in order not to spoil it. Quite often I would write down on a sheet of paper the date, the time, and “he’s going to come,” along with other sentences, fears — that he might not come, that he might not feel the same desire for me. In the evening I would go back to the sheet of paper, “he came,” jotting down the details of that meeting at random. Then, dazed, I would stare at the scrawls on the paper and the two paragraphs written before and after, which one read in succession without a break. In between there had been words and gestures that made everything else seem trivial, including the very writing destined to capture them. An interval of time squeezed in between two car noises — his Renault 25 braking, then driving off again — when I knew that nothing in my life (having children, passing exams, traveling to faraway countries) had ever meant as much to me as lying in bed with that man in the middle of the afternoon. It would only last for a few hours. I never wore my watch, removing it just before he arrived. He would keep his on and I dreaded the moment when he would glance at it discreetly. When I went into the kitchen to get some ice, I would look up at the clock hanging above the door: “only two more hours,” “only one more hour,” or “in one hour I’ll be here and he’ll be gone.” Astonished, I asked myself: “Where is the present?” He would dress slowly before leaving. I would watch him button up his shirt, put on his socks, his underpants, his trousers, then turn towards the mirror to fasten his tie. After he had put on his jacket, it would all be over. Now I was only time flowing through myself. As soon as he left, I would be overcome by a wave of fatigue. I wouldn’t tidy up straight away: I would sit staring at the glasses, the plates and their leftovers, the overflowing ashtray, the clothes, the lingerie strewn all over the bedroom and the hallway, the sheets spilling over onto the carpet. I would have liked to keep that mess the way it was — a mess in which every object evoked a caress or a particular moment, forming a still-life whose intensity and pain could never, for me, be captured by any painting in a museum. Naturally I would never wash until the next day, to keep his sperm inside me. I would count the number of times we had made love. I felt that each time something new had been added to our relationship but that somehow this very accumulation of touching and pleasure would eventually draw us apart. We were burning up a capital of desire. What we gained in physical intensity we lost in time. I would slip into a semi-slumber which gave me the sensation I was sleeping in his body. The following day I would enter a state of apathy, forever reliving a caress he had given me or repeating a word he had spoken. He didn’t know any coarse words in French or maybe he chose not to use them because they were not suggestive of social taboo; they were innocent words, just like the others. (The same would have applied to me in the case of obscene words belonging to his language.) In the underground, at the supermarket, I would hear his voice whisper to me: “Stroke my penis with your mouth.” Once, lost in a daydream on the platform at the Opera underground station, I let my train go by without even realizing it. This lethargic condition would gradually ease and I would start expecting his phone call again, with all the more suffering and anxiety as the date of our last meeting receded. As in the past, when the longer I waited after taking an exam the more I became convinced I had failed, so now, as the days went by without him ringing, I was certain he had left me.</p>
-<p>In his absence, I was only happy when I was out buying new dresses, earrings, stockings, and trying them on at home in front of the mirror — the ideal, quite impossible, being that he should see me each time in a different outfit. He would only glimpse my new blouse or pumps for a couple of minutes before they were discarded in some corner until he left. Of course, I realized how pointless new clothes were in the event of his feeling desire for another woman. But presenting myself in clothes he had already seen seemed a mistake, a slackening in the quest for perfection for which I strove in my relationship with him. In the same spirit of perfection, I once browsed through Techniques of Lovemaking in a hypermarket. Beneath the title one could read: “700,000 copies sold.” Quite often I felt I was living out this passion in the same way I would have written a book: the same determination to get every single scene right, the same minute attention to detail. I could even accept the thought of dying providing I had lived this passion through to the very end — without actually defining “to the very end” — in the same way I could die in a few months’ time after finishing this book.</p>
-<p>In front of people I knew, I tried not to betray my obsession by words, although to exercise such self-control continually is extremely taxing. At the hairdresser’s one day I saw a talkative woman to whom everyone had been speaking perfectly normally until she announced, her head tilted back over the basin: “I’m being treated for my nerves.” Immediately, the staff stiffened and addressed her with distant reserve, as if this irrepressible confession were proof of her insanity. I feared I would also be considered abnormal if I had said: “I’m having a passionate love affair.” Yet when I was among other women, at the supermarket checkout or at the bank, I wondered whether they too were wrapped up in a man. If they weren’t, how could they go on living this way — that is to say, judging by my previous standards, with nothing else to wait for but the weekend, a meal out, the gym class, or the children’s school results: things for which I now felt aversion or indifference.</p>
-<p>When someone confided in me, a man or a woman who admitted they were having, or had had, “a crazy love affair with a guy” or “a very close relationship with someone,” I occasionally felt like opening up. But once the excitement of sharing our secrets was over, I resented having let myself go, if only a little. Those conversations, when I had continually responded to the other person by saying “me too, it’s the same for me, I did that too,” suddenly seemed futile, removed from the reality of my own passion. Rather, something was lost through these outbursts.</p>
-<p>To my sons — students who come and stay with me once in a while — I had revealed only the barest practicalities that enabled me to conduct my liaison satisfactorily. They had to call me to find out whether they could come and stay and, if they were already at home, agree to leave as soon as A announced his visit. These arrangements — so it seemed — did not cause any problems. However, I would have preferred to have kept my children completely out of this, in the same way I had never mentioned boyfriends or lovers to my parents in the past. Probably because I feared their judgment. Also, parents and children are the last people able to accept freely the sexuality of those who are closest to them and so remain forever inaccessible. Children will always refuse to see the truth reflected in their mother’s absent stare and silent behavior: at times they mean nothing to her, in the same way that grown-up kittens can mean nothing to a mother cat longing to go on the prowl.</p>
-<p>Throughout this period, I didn’t once listen to any classical music; I preferred songs. Sentimental songs, which previously I had ignored, moved me deeply. In a simple, straightforward manner, they spoke of the absolute, universal nature of passion. When I heard Sylvie Vartan sing, “c’est fatal, animal,” I knew I wasn’t the only woman to feel that way. Songs accompanied and legitimized my own experience.</p>
-<p>In women’s magazines I would always start by reading the horoscope. I would feel the sudden urge to go and see such and such a film, convinced that it encapsulated my own story, bitterly disappointed if, as in the case of an early film like Oshima’s Empire of the Senses, it was no longer showing anywhere. I would give money to the men and women sitting in the corridors of the Metro, making the wish that he would call me that evening. I promised to send two hundred francs to UNICEF if he came to see me before a particular date I had chosen. Breaking with my usual lifestyle, I was inclined to be a spendthrift. I felt that wasting money was part of an overall investment, necessary and inseparable from my passion for A; it also included the time spent on waiting and daydreaming and, naturally, the time spent on my body: making love until I dropped with exhaustion; as if it were for the last time. (And who can say that it isn’t for the last time?) One afternoon when he was there, I burned the living-room carpet down to the weft by placing a boiling coffee pot on top of it. I didn’t care. Quite the contrary. I was happy every time I caught sight of the mark as I remembered that afternoon with him. I was unaffected by the inconveniences of daily life. I didn’t worry about a two-month postal strike since A never wrote to me (no doubt the cautious attitude of a married man). I would sit calmly through traffic jams and queue patiently at the bank, and was not annoyed by the surly attitude of the clerk. Nothing could make me lose my temper. I felt pain, sympathy, and compassion for other people. I understood the dropouts lying on benches, the clients of prostitutes, or a passenger engrossed in her Mills &amp; Boon romance (although I was incapable of saying why I resemble them). One day, as I was going naked to the refrigerator to get some beer, I remembered the women, single or married, mothers with children, living in my old neighborhood, who secretly received a man in the afternoon. (Rumor was rife: it was impossible to say whether people reproached them for their improper conduct or for the fact that they devoted the daylight hours to lovemaking instead of cleaning the windows.) I thought of these women with acute satisfaction.</p>
-<p>During all this time, I felt I was living out my passion in the manner of a novel but now I’m not sure in which style I am writing about it: in the style of a testimony, possibly even the sort of confidence one finds in women’s magazines, a manifesto or a statement, or maybe a critical commentary. I am not giving the account of a liaison, I am not telling a story (half of which escapes me) based on a precise — he came on 11 November — or an approximate chronology — weeks went by. As far as I was concerned, that notion did not enter the relationship; I could experience only absence or presence. I am merely listing the signs of a passion, wavering between “one day” and “every day,” as if this inventory could allow me to grasp the reality of my passion. Naturally, in the listing and description of these facts, there is no irony or derision, which are ways of telling things to people or to oneself after the event, and not experiencing them at the time. As for the origins of my passion, I have no intention of searching for them in my early history — which one reconstitutes with the help of a psychoanalyst — or in my recent history, or for that matter in the cultural standards governing emotion which have influenced me since childhood (Gone with the Wind, Phèdre, or the songs of Edith Piaf are just as decisive as the Oedipus complex). I do not wish to explain my passion — that would imply that it was a mistake or some disorder I need to justify — I just want to describe it. Maybe the only criteria to be taken into account should be of a material order: the time and freedom available to me throughout the affair.</p>
-<p>He liked Yves Saint-Laurent suits, Cerruti ties, and powerful cars. He drove fast, flashing his headlights, without a word, as if carried away by the exhilaration of being free, well-dressed, and in a position of authority on a French motorway, he who came from Eastern Europe. He liked being told that he resembled Alain Delon. I suspected — as far as one reasonably can in the case of a foreigner — that although he respected them, he was not drawn to artistic or intellectual matters. When it came to television, he preferred the quizzes and Santa Barbara. I didn’t mind in the least. No doubt because I attributed A’s tastes — those of a foreigner — above all to cultural differences, whereas in the case of a French-man, they would have been seen by me as social differences. Maybe, too, it was because I liked to recognize in A the “parvenu” part of myself: as a teenager I would crave dresses, records, and trips abroad, deprived of these things among friends who had them — just like A himself, “deprived” along with the whole of his country, longing to possess the expensive shirts and video recorders displayed in Western shops.</p>
-<p>He was a heavy drinker, as people often are in Eastern European countries. It worried me because of the possibility of an accident when he drove back on the motorway, but I wasn’t disgusted. Even if he occasionally stumbled, or belched when kissing me. On the contrary, I was happy to be close to him in these moments of incipient abjection. I wasn’t quite sure how to qualify his relationship with me. In the beginning I had deduced from certain signs that he experienced the same passion as me — his radiant expression and his silence when he looked at me, saying “I drove like a madman to get here,” telling me about his childhood. This certainty gradually wavered. He seemed to be more distant, less inclined to open up, but he only had to talk about his father, or the raspberries he went picking in the woods at the age of twelve, for me to change my mind. He stopped giving me presents. When I received flowers or a book from friends, I thought of the attentions he no longer lavished on me. Then immediately: “He gives me his desire.” I would drink in the sentences that I thought betrayed his jealousy, the only proof of his love in my eyes. After a while I realized that “are you going away for Christmas?” was no more than a simple, practical question, to decide whether or not to fix a meeting, and certainly not a roundabout way of finding out if I was going skiing with someone else (maybe he even wanted me to leave so that he could see another woman). I often wondered what these afternoons of lovemaking meant to him. Probably nothing more than just that, making love. There was no point looking for other reasons. I would only ever be certain of one thing: his desire or lack of desire. The only undeniable truth could be glimpsed by looking at his penis.</p>
-<p>The fact that he was a foreigner made it all the more difficult to understand his behavior, molded by a culture that I knew only through folklore and clichés for tourists. At first I was discouraged by the obvious limitations of our exchanges. These were emphasized by the fact that, although he spoke fairly good French, I could not express myself in his language. Later I realized that this situation spared me the illusion that we shared a perfect relationship, or even formed a whole. Because his French strayed slightly from standard use and because I occasionally had doubts about the meaning he gave to words, I was able to appreciate the approximate quality of our conversations. From the very beginning, and throughout the whole of our affair, I had the privilege of knowing what we all find out in the end: the man we love is a complete stranger.</p>
-<p>The constraints dictated by his married condition — not being able to phone him or send him letters, not giving him presents which would prove difficult to justify, being continually dependent on his timetable — did not outrage me. I would give him the letters I had written to him when he was leaving the house. I suspected that once he had read them he probably tore them up on the motorway but this didn’t stop me writing. I was careful not to leave evidence of myself on his clothes and made no marks on his body. Naturally, I wanted to spare him a scene with his wife but I also feared arousing resentment on his behalf, which might have led him to stop seeing me. For precisely this reason, I avoided meeting him in places where she accompanied him. I was afraid that in front of her I would betray the bond between us by a familiar gesture — stroking the nape of A’s neck, adjusting his clothes, and so on. (Also, I didn’t want to suffer unnecessarily by imagining A making love to her, which happened every time I saw her. The fact that I considered her to be plain, or that he did it simply because he had her “close at hand” did nothing to lessen the torment of this vision.)</p>
-<p>Strangely enough, these very constraints bred waiting and desire. As he always called me from telephone boxes, whose functioning could prove erratic, quite often when I picked up the receiver there was no one on the line. After some time I realized that this “fake” phone call would be followed by the real one, fifteen minutes later at the most, the time it took to find a phone booth in working order. That first silent call was a prelude to his voice, a (rare) promise of happiness, and the interval separating it from the second call — when he would say my name and “can we meet?” — one of the most glorious moments ever.</p>
-<p>In front of my television set in the evening, I wondered if he was watching the same program or film, especially if the subject was love or sex, or if the script bore a resemblance to our situation. I imagined he was watching La femme d’à côté, substituting us for the characters in the movie. If he told me that he had indeed seen the film, I was inclined to believe that he had chosen it that evening because of us and that, acted out on the screen, our story must have seemed more intense, or at least more legitimate. (Naturally, I soon dismissed the idea that our liaison might appear dangerous to him — in films, any passion existing outside marriage invariably ends in disaster.)</p>
-<p>Sometimes I told myself that he might spend a whole day without even thinking about me. I imagined him getting up, drinking his coffee, talking, and laughing, as if I didn’t exist. Compared to my own obsession, such indifference filled me with wonder. How could this be? He himself would have been astonished to find out that I never stopped thinking about him from morning to night. There was nothing to suggest that my attitude was more justifiable than his. In a way, I was luckier than him.</p>
-<p>Walking around Paris, when I saw large cars zooming along the avenues, driven by men on their own resembling high-powered executives, I realized that A was no different from these men, concerned primarily with his career, with bouts of eroticism, possibly love, for a new woman every two or three years. This discovery came as a release. I would decide to stop seeing him. I was certain that he had become as anonymous and insignificant as those yuppies in their BMWs and Renault 25s. But while I was walking, I would look at the dresses and the lingerie in the shop windows, as if anticipating our next meeting.</p>
-<p>These fleeting moments of detachment were prompted by external factors; I did not wish for them. On the contrary, I avoided every opportunity that might tear me away from my obsession — books, social engagements, and the other activities I used to enjoy. I longed for total idleness. I angrily turned down some extra work my boss had asked me to do, almost insulting him over the phone. I felt I had every right to reject the things that prevented me from luxuriating in the sensations and fantasies of my own passion.</p>
-<p>On railway platforms, in the Metro, in waiting rooms, places where you are allowed to do nothing at all, as soon as I sat down, I would start daydreaming about A. A shudder of happiness would course through me the very second I entered that state. I felt I was giving in to physical pleasure, as if the brain, exposed to a repeated flow of the same images and memories, could achieve an orgasm, becoming a sexual organ like the others.</p>
-<p>Naturally, I feel no shame in writing these things because of the time which separates the moment when they are written — when only I can see them — from the moment when they will be read by other people, a moment which I feel will never come. By then I could have had an accident or died; a war or a revolution could have broken out. This delay makes it possible for me to write today, in the same way I used to lie in the scorching sun for a whole day at sixteen, or make love without contraceptives at twenty: without thinking about the consequences. (It is a mistake therefore to compare someone writing about his own life to an exhibitionist, since the latter has only one desire: to show himself and to be seen at the same time.)</p>
-<p>IN THE SPRING my waiting became continual. An early heat wave had set in since the first days of May. Summer dresses appeared on the streets; café terraces were crowded. All over town one heard the strains of an exotic dance, murmured by a woman with a rasping voice, the Lambada. Everything conspired to evoke new forms of pleasure which I was sure A planned to enjoy outside my company. His position and professional responsibilities in France seemed important to me, and likely to arouse the admiration of all women. Conversely, I would belittle myself, failing to find any reason that might hold him back. Whenever I went to Paris, I would expect to see him drive past with a woman by his side. I would walk very straight, affecting an attitude of proud indifference in anticipation of our meeting. The fact that this meeting, understandably, never took place, succeeded only in frustrating me: I would stride down the Boulevard des Italiens, bathed in sweat, under his imaginary gaze while he was in fact somewhere else, inaccessible. The sight of him driving towards the park in Sceaux or the wood in Vincennes, with the windows down and the radio at full volume, haunted me.</p>
-<p>One day, in a television weekly, I began reading about a troupe of Cuban dancers who were on tour in Paris. The author of the article stressed the sensuality and permissiveness of Cuban women. A photograph showed the dancer who had been interviewed, tall, with dark hair, her long legs exposed. As I read on, my intuition grew stronger and stronger. By the time I had finished the article, I was convinced that A, who had been to Cuba, had met the girl in the photograph. I imagined them together in a hotel room and nothing at that point could have persuaded me that this scene was improbable. On the contrary, the very idea that it had not taken place seemed to me absurd, inconceivable.</p>
-<p>When he rang to arrange a meeting, his long-awaited call had no effect on me and I remained locked in the same state of anxiety as before. My condition was such that not even the sound of his voice could make me happy. It was all infinite emptiness, except when we were together making love. And even then I dreaded the moments to come, when he would be gone. I experienced pleasure like a future pain.</p>
-<p>I longed to end the affair, so as not to be at the mercy of a phone call, so as not to suffer, realizing at once what this would entail, seconds after the separation: a series of days with nothing to wait for. I preferred to carry on at any cost—let him have another woman, or even several. (In other words, accepting a torment far greater than the one that made me want to leave him.) Compared to such emptiness, my present situation seemed enviable and my jealousy a sort of frail privilege which I would have been mad to want to end since one day it would end anyway, outside my control, when he would leave the country or would decide to stop seeing me.</p>
-<p>I avoided opportunities of meeting him in public, in the company of other people, as I couldn’t bear the thought of seeing him just for the sake of it. Therefore I didn’t go to an inauguration to which he had been invited, obsessed by his image throughout the evening: smiling, showering a woman with attentions, the same way he had behaved with me when we first met. Afterwards I was told that only a handful of people had turned up. I was relieved and took pleasure in repeating the expression, as if there existed a link between the atmosphere of a party, the number of women invited, and what could only be dictated by chance circumstances, in other words, his desire or not to flirt, in which case a single woman was enough.</p>
-<p>I tried to find out what he did in his spare time and where he went away for the weekend. I would say to myself, “right now he’s in Fontainebleau forest, he’s out running,” “he’s driving towards Deauville,” “he’s sitting on the beach next to his wife,” and so on. This knowledge comforted me. I felt that if I could locate him in a particular place at a particular time, I would be immune to an infidelity on his part. (A similar belief, equally deep-rooted, leads me to believe that knowing where my sons are—at a party or on holiday—is enough to save them from an accident, drugs, or drowning.)</p>
-<p>I didn’t want to go away on holiday that summer and wake up in the morning with the prospect of having to spend a whole day without waiting for his phone call. But giving up my holiday would have meant spelling out my passion to him more eloquently than by saying, “I am crazy about you.” One day, seized by the desire to break up, I decided instead to book a train ticket and a hotel room in Florence for a date two months ahead. This type of separation suited me perfectly as it meant I didn’t have to leave him. I anticipated the moment of my departure the way I would have anticipated an exam for which I had enrolled long in advance and failed to study: with despondency and a feeling of hopelessness. Lying on my bunk in the sleeping car, I kept seeing myself in that same train, this time heading back towards Paris, eight days later: the promise of supreme happiness, almost too good to be true (I might die in Florence, I might never see him again), increased my horror at moving further and further away from Paris, turning the interval of time between the two train journeys into an unbearable, interminable wait.</p>
-<p>The worst part was not being able to stay in my room all day, waiting for the train that would take me back to Paris. I had to justify my trip by visiting places of cultural interest and by going for walks, which I often do on holiday. I walked for hours, in the Oltrarno, the Boboli Gardens, up to the Piazza San Michelangelo and San Miniato. I went into each of the churches that was open and made three wishes, sustained by the belief that one of the three would come true (naturally, all three were related to A). There, I sat in the cool and the silence, indulging in one of the many scenarios which occurred to me continually, wherever I was, from morning to night (a trip together to Florence, meeting him at an airport ten years later, and so on).</p>
-<p>I couldn’t understand why people looked up the date and the history of each painting in their guidebook. Such things had nothing to do with their own lives. My approach to works of art was purely emotional. I went back to La Badia because it was there that Dante had met Beatrice. The partly erased frescoes in Santa Croce moved me because of my story, which would come to resemble them one day—fading fragments in his memory and in mine. In museums I saw only the works representing love. I was drawn to statues of naked men. In them I recognized the shape of A’s shoulders, his loins, his penis, and especially the slight hollow following the inner curve of the thigh up to the groin. I was unable to tear myself away from Michelangelo’s David, filled with wonder that a man, and not a woman, had portrayed the beauty of a male body so sublimely. Even if this could be explained by the oppressed condition of women, it seemed to me that something had been irretrievably lost.</p>
-<p>On the train, on the way back, I felt that I had literally written out my passion in Florence by walking through the streets, visiting the museums, obsessed by A, sharing everything with him, eating and sleeping with him in that noisy hotel on the banks of the River Arno. I need only go back to read this story of a woman in love with a man, which was my story. Those eight days on my own, without speaking, except to waiters in restaurants, haunted by the image of A—I was astonished to be accosted by men, could they not see him silhouetted inside my own body?—were seen by me as an ordeal for the betterment of love. A sort of further investment, this time in imagination and craving through absence.</p>
-<p>HE LEFT FRANCE and went back to his own country six months ago. I shall probably never see him again. At first, when I woke up at two o’clock in the morning, I didn’t care whether I lived or died. My whole body ached. I would have liked to tear out the pain but it was everywhere. I longed for a burglar to come into my bedroom and kill me. During the day I tried desperately to find things to do, so as not to remain idle, otherwise I felt I would be lost (the meaning of the word was vague: to have a nervous breakdown, to start drinking, and so on). For the same reason, I made efforts to dress and make up properly, and to wear my contact lenses instead of my spectacles, although this required considerable courage. I couldn’t watch television or leaf through magazines; all the advertisements, whether they are for perfume or microwaves, show the same thing: a woman waiting for a man. I averted my gaze when I walked past shops selling lingerie.</p>
-<p>When I was feeling really bad, I had a strong urge to consult a fortune-teller; it seemed the only decisive thing I could do. One day I looked up the names of clairvoyants in the electronic directory. The list was long. One of them mentioned that she had predicted the earthquake in San Francisco and the death of the singer Dalida. While I was jotting down their names and phone numbers, I felt the same excitement as the month before, when I was trying on a new dress for A, as if I were still doing something for him. I didn’t call any of the fortune-tellers; I was afraid they would predict he would never return. I thought to myself with surprise, “I’ve come round to this too.” After all, there was no reason why I shouldn’t have.</p>
-<p>One night the thought of getting myself screened for AIDS occurred to me: “At least he would have left me that.” I wanted to remember his body with all my being—from his hair down to the tips of his toes. I could conjure up, vividly, his green eyes, the lock of hair falling over his forehead, the curve of his shoulders. I could feel his teeth, the inside of his mouth, the shape of his thighs, the texture of his skin. I reflected that there was very little difference between this reconstruction and a hallucination, between memory and madness.</p>
-<p>One day, lying on my stomach, I gave myself an orgasm; somehow I felt that it was his orgasm.</p>
-<p>For many weeks:</p>
-<ul>
-<li><p>I would wake up in the middle of the night, and remain in a confused state until morning, awake, incapable of thinking. I wanted to lose myself in a deep sleep but he continued to hover above me.</p>
-</li>
-<li><p>I didn’t want to get up. I would see the day stretch ahead of me, with no plans. I felt that time was no longer taking me anywhere, it only made me grow old.</p>
-</li>
-<li><p>At the supermarket I would say to myself, “I don’t need to buy that anymore” (whisky, salted almonds, and so on).</p>
-</li>
-<li><p>I would look at the blouses and the pairs of shoes I had bought to please a man, now meaningless clothes, existing solely for the sake of fashion. Was it possible to long for these things, or for anything else, other than in connection with a man, other than to serve the cause of love? I had to buy a shawl because of the bitter cold: “He will never see it.”</p>
-</li>
-<li><p>I could no longer stand the company of others. The only people I saw were those I had met during my relationship with A. They featured in my passion. Even if they failed to arouse my interest or sympathy, somehow I was fond of them. But I could not watch a television presenter, an actor whose eyes, appearance, and comic expressions used to remind me of A. These signs of him in a person I didn’t care about were something of an imposture. I hated these men for continuing to look like A.</p>
-</li>
-<li><p>I would make wishes: if he calls me before the end of the month, I’ll give five hundred francs to a charity. I imagined that we had met in a hotel, at an airport, or that he had sent me a letter. I replied to words he had never spoken, sentences he would never write.</p>
-</li>
-<li><p>If I went to the same place I had been to last year, when he was here, I would wear the same suit as before, trying to convince myself that identical circumstances produce identical effects and that he would call me that evening.</p>
-</li>
-<li><p>When I went to bed around midnight, thoroughly demoralized, I realized that I had really believed in that phone call all day.</p>
-</li>
-</ul>
-<p>During my spells of insomnia, I would take myself back to Venice, where I had spent a week’s holiday just before meeting A. I tried to recall my timetable and the places I had visited; I imagined myself walking along the Zattere and the alleys of Giudecca Island. I would reconstitute my room in the annex of La Calcina Hotel, straining to remember every detail: the narrow bed, the blocked window giving on to the back of the Café Cucciolo, the table and its cloth on which I had placed some books. I would reel off the titles of the books. I would enumerate the things that were there, one after the other, attempting to chronicle the contents of a place where I had stayed before my story with A had started, as if an exhaustive inventory would enable me to relive the events. Driven by the same belief, I sometimes felt the urge actually to return to Venice, to the same hotel, the same room.</p>
-<p>Throughout this period, all my thoughts and all my actions involved the repetition of history. I wanted to turn the present back into the past, opening on to happiness. I was always calculating, “it’s two weeks, five weeks since he left” or “last year, around this time, I was there, I was doing that.” Whatever the occasion—the opening of a shopping mall, Gorbachev’s visit to Paris, Chang’s victory at Roland-Garros—I immediately thought: “That was when he was here.” I would relive moments of that period, insignificant in themselves—I am standing in the archive room at La Sorbonne, I am walking along Boulevard Voltaire, I am trying on a skirt in a Benetton shop—with such vivid detail that I wondered why it wasn’t possible to slip into that particular day or moment as easily as one slips into another room.</p>
-<p>In my dreams too was the desire to reverse time. I spoke and argued with my deceased mother, alive once more, although in my dream both of us knew that she was dead. There was nothing extraordinary about this, her death was behind her now; somehow it was “out of the way.” (I believe this dream recurred several times.) On another occasion, it was about a little girl in a swimsuit who had disappeared during an outing. The reconstruction of the murder took place immediately afterwards. The child revived to retrace the events that had led to her death. For the judge, however, knowing the truth made the reconstruction even more complicated. In the other dreams, I lost my way, mislaid my handbag, found myself unable to pack my suitcase in time to catch a train leaving minutes later. I caught sight of A, surrounded by other people. He wasn’t looking at me. We were together in a taxi; I was stroking him, his penis remained limp. Later, he appeared again in front of me with his desire evident. We met in the lavatory of a café, in the street, by a wall. He took me without a word.</p>
-<p>At weekends I would make myself do heavy physical work, gardening or cleaning the house. In the evening I was exhausted, my limbs aching, as they had been when A had spent the afternoon at my place. But in this case the fatigue I experienced was hollow, without the memory of another body, and it repelled me. I began writing “From September last year, I did nothing else but wait for a man . . . ,” approximately two months after A’s departure; I don’t remember the exact day. Although I can clearly recall everything that happened during my relationship with A—the October riots in Algeria, the heat and the hazy sky on 14 July 1989, even the most trivial details such as the acquisition of a blender in June the day before we were due to meet—I find it quite impossible to associate the writing of a particular page with a rainstorm or any one of the events that have occurred in the world over the past five months: the fall of the Berlin wall or the execution of the Ceausescus. Living in passion or writing: in each case one’s perception of time is fundamentally different.</p>
-<p>Yet, when I began to write, I wanted to stay in that age of passion, when all my actions—from the choice of a film to the selection of a lipstick—were channeled towards one person. The past tense used in the first part of the book suggests endless repetition and conveys the belief that “life was better in those days.” It also generated a pain that was to replace the past trauma of waiting for his phone calls and visits. (Even now, rereading those first pages has the same distressing nature as seeing and touching the toweling bathrobe he used to slip on at my place, and take off just before he got dressed to leave. There is one difference, though: these pages will always mean something to me, to others too maybe, whereas the bathrobe—which matters only to me—will lose all significance one day and will be added to a bundle of rags. By writing this, I may also be wanting to save the bathrobe from oblivion.)</p>
-<p>Yet I went on living. In other words, the act of writing didn’t lessen my grief. As soon as I had set down my pen, I felt pangs for the man whose voice and foreign accent I could no longer hear, whose skin I could no longer touch, living an unknown life in some cold city—the real man, far more inaccessible than the written man designated by the letter A. And so I went on doing the things that help alleviate sorrow, offering hope when, theoretically, there is no longer cause for any: playing patience, slipping a ten-franc coin into a beggar’s paper cup at Auber Metro station, making the wish that “he’ll call, he’ll come back.” (Perhaps, after all, writing is one of these things.)</p>
-<p>Despite my aversion to meeting people, I agreed to attend a seminar in Copenhagen because it was an opportunity to send him news of me discreetly: a postcard I felt he would have to answer. As soon as I arrived in Copenhagen, I thought of nothing else: buying a card, copying out the few sentences I had carefully written before leaving, finding a letter box. On the plane, on the way back, I reflected that I had traveled to Denmark simply to send a postcard to a man.</p>
-<p>I felt like rereading one or the other of the books I had skimmed through when A was there. I felt that the waiting and the dreams of that period had crystallized within the pages and that I would rediscover my passion, intact. Yet I was reluctant to do so, postponing the moment when I would open the first page, almost out of superstition, as if Anna Karenina were some esoteric work in which it would be forbidden to turn a particular page on pain of ill fortune.</p>
-<p>One day I felt an overriding urge to go to the Passage Cardinet, in the 17th arrondissement, to the place where I had a clandestine abortion twenty years ago. I felt it was imperative that I return to see the street, the building, and go up to the flat where the events had taken place. Vaguely hoping that this past trauma would cancel my present grief. I got out at Malesherbes Metro station, on a square whose name, recently changed, meant nothing to me. I had to stop at a grocer’s shop to ask the way. The lettering on the plaque bearing the name of the Passage Cardinet is partly erased. The façades are newly restored, white. I went to the street number I remembered and pushed open the door, one of the few remaining ones not be protected by a digital code. On the wall hung the list of tenants. The old woman, an auxiliary nurse, had died or been moved to an old people’s home in the suburbs; the residents living in the street now belong to the high income bracket. As I was heading towards Pont-Cardinet, I saw myself walking beside the old woman, who had insisted on accompanying me to the nearest station, no doubt to make sure that I wouldn’t collapse on her doorstep with a tube up my belly. I thought: “I was here one day.” I wondered what the difference was between this past reality and literature, perhaps just a feeling of disbelief that I had actually been there one day, something I wouldn’t have felt in the case of a fictional character.</p>
-<p>I went back to Malesherbes station and took the Metro. This episode had altered nothing, yet I was glad to have taken the initiative and revived an act of despoilment, also caused by a man.</p>
-<p>(Am I the only woman to return to the scene of an abortion? Sometimes I wonder if the purpose of my writing is to find out whether other people have done or felt the same things or, if not, for them to consider experiencing such things as normal. Maybe I would also like them to live out these very emotions in turn, forgetting that they had once read about them somewhere.)</p>
-<p>Now it’s April. Sometimes I wake up in the morning without immediately thinking of A. The prospect of rediscovering “life’s little pleasures”—meeting friends, going to the cinema, enjoying a good meal—has become less horrific. I am still in the age of passion (one day I will no longer be aware that I wasn’t thinking of A when I woke up) but it has changed, it has ceased to be continuous.</p>
-<p>Suddenly I remember details about him, things he said to me. For instance, that he had gone to the Moscow Circus and that the cat trainer was “incredible.” For a brief moment I feel supremely calm, as I am when I emerge from a dream in which I have seen him, but don’t yet know that I was dreaming. The feeling that everything is back to normal and that “now it’s all right.” Then I realize that these words refer to some remote past: another winter has gone by, the cat trainer may have left the circus, the expression “he’s incredible” belongs to a reality which is long outdated.</p>
-<p>In the course of conversation, I occasionally glimpse one of A’s attitudes or discover an aspect of our relationship that had previously escaped me. A colleague with whom I was having coffee once told me that he’d had an extremely physical relationship with a married woman older than himself: “On leaving her place, I would brace myself and sniff the evening air, swept by a glorious feeling of masculinity.” It occurred to me that A may have experienced the same sensation. I was pleased by this discovery, although it was impossible to check, as if I had captured something imperishable that cannot be conveyed by memories.</p>
-<p>In the Metro tonight, two girls sitting opposite me were chatting. I heard one of them say, “They’ve got a house in Barbizon.” I wondered why the name was familiar and, after a few minutes, remembered that A had told me he had spent one Sunday there with his wife. It was a memory like any other, that, for instance, suggested by the name Brunoy, where an old friend I had lost touch with was living. So the world is beginning to mean something again outside A? The cat trainer from the Moscow Circus, toweling bathrobe, Barbizon, the entire text assembled in my head day after day since the first night with words, images, and gestures, all the signs forming the unwritten novel of a passion are beginning to fall apart. Of the living text, this book is only the remainder, a minor trace. One day it will mean nothing to me, just like its living counterpart.</p>
-<p>Yet I cannot resolve to part with it, just as I was unable to leave A last spring, when my waiting and desire for him were continual. I know full well that I can expect nothing from writing, which, unlike real life, rules out the unexpected. To go on writing is also a means of delaying the trauma of giving this to others to read. I hadn’t considered this eventuality while I still felt the need to write. But now that I have satisfied this need, I stare at the written pages with astonishment and something resembling shame, feelings I certainly never felt when I was living out my passion and writing about it. The prospect of publication brings me closer to people’s judgment and the “normal” values of society. (Having to answer questions such as “Is it an autobiography?” and having to justify this or that may have stopped many books from seeing the light of day, except in the form of a novel, which succeeds in saving appearances.)</p>
-<p>At this point, sitting in front of the pages covered in my indecipherable scrawlings, which only I can interpret, I can still believe this is something private, almost childish, of no consequence whatsoever—like the declarations of love and the obscene expressions I used to write on the back of my exercise books in class, or anything else one may write calmly, in all impunity, when there is no risk of it being read. Once I start typing out the text, once it appears before me in public characters, I shall be through with innocence.</p>
-<p>FEBRUARY 1991</p>
-<p>I could end the book here and pretend that nothing that goes on in the world or in my life could affect this text. In other words, I could consider it removed from time and ready for publication. However, so long as these pages remain personal and within my reach, as they are today, the act of writing will be open. I feel it is more important to mention certain recent developments than to alter the position of an adjective.</p>
-<p>Between last May, when I stopped writing, and today, 6 February 1991, the expected conflict between Iraq and the Western coalition has finally broken out. A “clean” war according to the propagandists, although Iraq has already received “more bombs than the whole of Germany during the Second World War” (this evening’s edition of Le Monde) and eyewitnesses claim to have seen children stumbling through the streets of Baghdad like drunkards, deafened by the explosions. Here we can only wait for disasters which have been forecast but do not in fact happen: a land offensive led by the “Allies,” a chemical warfare attack by Saddam Hussein, a bomb outrage perhaps at the Galeries Lafayette department store. I experience the same feeling of anxiety, the same frustrated desire to know the truth as I did when I was living out my passion. The resemblance ends there. For in this case there is no room for fantasy or imagination.</p>
-<p>On the first Sunday of the war, in the evening, the phone rang. A’s voice. For a split second, I was seized with panic. I kept repeating his name, crying. He said, “It’s me, it’s me,” slowly. He wanted to see me now, at once; he would take a taxi. In the half-hour I had left before he arrived, I dressed and made up in a frenzy. Then I waited in the hallway, wrapped in the shawl he had never seen. I stared at the door in disbelief. He came in without knocking, the way he used to. He must have been drinking; he was swaying when he embraced me and he stumbled on his way upstairs to the bedroom.</p>
-<p>Afterwards, all he wanted was coffee. It seems that his life in the East is no different: the same job as in France, and still no child, although his wife would like to have one. At thirty-eight he still has a youthful appearance although now he looks wearier. His nails are less tidy, his hands less smooth, probably because of the cold climate in his country. He was greatly amused when I told him off for not having kept in touch since he left: “So I would have called you up; hello, how are things? And then what?” He hadn’t received the postcard I sent him from Denmark, addressed to his former workplace in Paris. We dressed again, picking up our clothes tangled on the tiled floor, and I drove him back to his hotel near the Etoile. We kissed and touched each other at the traffic lights between Nanterre and Pont-de-Neuilly.</p>
-<p>In the tunnel at La Défense, on my way back, I thought, “Where is my story?” Then, “Now I can hope for nothing more.”</p>
-<p>He left three days later without us meeting again. Before leaving, over the phone, he said, “I’ll call you.” I don’t know if this means he will call me from his country, or from Paris, when he gets an opportunity to come back. I didn’t ask him.</p>
-<p>I have the impression that this last visit never took place. It doesn’t belong to our story, it’s just a date, 20 January. The man who returned that evening wasn’t the man I was carrying inside me throughout the year when he was here, and when I was writing about him. I shall never see that man again. Yet it is that surreal, almost non-existent last visit that gives my passion its true meaning, which is precisely to be meaningless, and to have been for two years the most violent and unaccountable reality ever.</p>
-<p>In this photograph, the only one I have of him, I can see a tall, fair man, bearing a slight resemblance to Alain Delon. Everything about him was precious to me—his eyes, his mouth, his penis, his childhood memories, his voice, and the decisive way he took hold of things.</p>
-<p>I had decided to learn his language. I kept, without washing it, a glass from which he had drunk.</p>
-<p>I had wished that the plane flying back from Copenhagen would crash if I were never to see him again.</p>
-<p>Last summer in Padua I pressed this photogaph to the wall of St. Anthony’s tomb—along with people pressing a handkerchief or a folded slip of paper bearing their prayers—so that he would come back.</p>
-<p>Whether or not he was “worth it” is of no consequence. And the fact that all this is gradually slipping away from me, as if it concerned another woman, does not change this one truth: thanks to him, I was able to approach the frontier separating me from others, to the extent of actually believing that I could sometimes cross over it.</p>
-<p>I measured time differently, with all my body.</p>
-<p>I discovered what people are capable of, in other words, anything: sublime or deadly desires, lack of dignity, attitudes and beliefs I had found absurd in others until I myself turned to them. Without knowing it, he brought me closer to the world.</p>
-<p>He had said, “You won’t write a book about me.” But I haven’t written a book about him, neither have I written a book about myself. All I have done is translate into words—words he will probably never read; they are not intended for him—the way in which his existence has affected my life. An offering of a sort, bequeathed to others.</p>
-<p>When I was a child, luxury was fur coats, evening dresses, and villas by the sea. Later on, I thought it meant leading the life of an intellectual. Now I feel that it is also being able to live out a passion for a man or a woman.</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>练习英语口语</title>
-    <url>/2023/12/15/test/%E5%A6%82%E4%BD%95%E7%BB%83%E4%B9%A0%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD/</url>
-    <content><![CDATA[<p>老实说，我一直是一个不善言辞的人，我很难在公开场合说出自己的想法，因为我知道我的想法是幼稚的。</p>
-<p>有人说表达能力的底层能力还是思维思辨，但其实如果让我写下一些内容我也可以“下笔如有神”，但如果让我去发表观点，那是极其困难的。</p>
-<p>在雅思口语测试中，不光需要你的口语说的能力，更要求你有表达的能力。</p>
-<p>选择你喜欢的话题（30+），然后设想在生活中别人可能会问到的问题（6个问题）。</p>
-<p>每个问题找到答案（2个长句），要求满足：</p>
-<ol>
-<li>表述完整观点或事件</li>
-<li>出自母语者之手</li>
-</ol>
-<p>分析价值点，灵活拼接。长句生态环境：多话题协作，触类旁通，句模之间拼贴互补，跨话题糅杂</p>
-<p>价值点：词伙，观点</p>
-<p>相同的方法也可以用到结构化面试，工作面试，临时发言之中，找到合适的句模，养成肌肉记忆和思维记忆，便能轻松面对。</p>
-<p>去哪里找输入资料？</p>
-<p><a href="https://www.ted.com/?st_test_bottom_bar_15s_tr_home">https://www.ted.com/?st_test_bottom_bar_15s_tr_home</a></p>
-<p><a href="https://www.wikihow.com/Main-Page">https://www.wikihow.com/Main-Page</a></p>
-<p><a href="https://www.britannica.com/">https://www.britannica.com/</a></p>
-<p>词典里的例句</p>
-<p>零散的知识要拼凑成知识体系。</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
     <url>/2023/12/20/test/%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E4%BB%A5%E5%8F%8A%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<ol>
 <li><p>谷歌日历，联系人记录生日可以提醒．使用很多todo软件，但是谷歌日历同步最方便，多设备同步管理．</p>
@@ -1618,145 +1752,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于语音识别的科普</title>
-    <url>/2023/11/23/test/%E5%85%B3%E4%BA%8E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%E7%9A%84%E7%A7%91%E6%99%AE/</url>
-    <content><![CDATA[<p>关于语音识别的一些入门理解</p>
-<span id="more"></span>   
-
-<meta name="referrer" content="no-referrer" />
-
-<p>原视频指路：<a href="https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&vd_source=065dbebb8f309dd36ff6dbc4c04cbd15">https://www.bilibili.com/video/BV1Km4y1Q7w7/?spm_id_from=333.337.search-card.all.click&amp;vd_source=065dbebb8f309dd36ff6dbc4c04cbd15</a></p>
-<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><blockquote>
-<p>1969年, 贝尔实验室的john peers在一封公开信中, 做出了一个悲观到刻薄的评论, 他将语音识别技术比作把水转化为汽油, 而他认为, 当时人们研究这项技术唯一的动机就是搞钱, 但现在我们知道已经不必再讨论能不能做, 而是怎么做的。 </p>
-</blockquote>
-<p>想要知道机器如何识别语音, 首先我们要理解<strong>什么是声音</strong>？ </p>
-<p>声源振动挤压空气产生声波进入<strong>耳朵,</strong> 带动耳膜震动, 感知到声音。</p>
-<p>机器的耳朵是麦克风, 声波带动麦克风上的膜片振动, 膜片带动套在磁铁上的线圈震动, 产生的声音的<strong>模拟信号</strong>。</p>
-<p>而计算机是<strong>数字系统</strong>, 需要对模拟信号进行采样。 </p>
-<p>人耳能听到的频率范围, 在20HZ到20KHZ。</p>
-<p>根据<strong>香农奈奎斯特采样定理</strong>, 采样频率大于等于最大频率的两倍即可, 一般是44.1KHZ。</p>
-<p>这样我们就得到了一段声音, 在计算机中的数字化格式，也就是我们经常看见的声波图。</p>
-<p>语音识别就是<strong>把一段声波识别为对应的文字</strong>。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231124105103443.png" alt="image-20231124105103443"></p>
-<h2 id="频率、频谱图和特征提取"><a href="#频率、频谱图和特征提取" class="headerlink" title="频率、频谱图和特征提取"></a>频率、频谱图和特征提取</h2><p>这是一个频率为261.625Hz的正弦波，发出的声音是1。</p>
-<p>而这是一个频率为293.6648Hz的正弦波，发出的声音是2。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201185537834.png" alt="image-20231201185537834"></p>
-<p>当我们在听声音，我们在听什么呢？</p>
-<p>我们可以把振幅变大或变小，声音的大小发生了变化，但do还是do re还是re。</p>
-<p>所以我们在听声音时，实际上在听其中的频率。</p>
-<p>换句话说，<strong>声音的信息蕴含在频率之中</strong>。</p>
-<p>但问题是从波形图中很难看出频率的信息，这是哆来咪发唆拉西七个音的波形，或许还能区分得开。</p>
-<p>同时发出哆咪嗦的音，也就是C和弦。同时发出嗦发拉的是DM和弦。从波形图中看频率的事情就变得困难起来。</p>
-<p>但我们可以换一种描述声音的方式，横坐标表示频率值，纵坐标表示频率的强度。那么这些声音信号所蕴含的频率信息，便可以一眼看出，即使是同时包含三个频率的和弦音，也能一眼看出。这样表示声音的图像成为频谱图。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201190041090.png" alt="image-20231201190041090"></p>
-<p>而完成这种转换的就是信号处理领域，非常常用的傅立叶变换，工程实践中一般使用快速傅立叶变换FFT。</p>
-<p>反过来说，傅立叶变换告诉了我们这样一个事实：一个信号可以表示为许多不同频率和强度信号的叠加，即使是这样一个非周期不规则的信号。</p>
-<p>所以在做语音识别之前，为了更好地分析一段语音的信息，需要把波形图转化为频率相关的频谱图。</p>
-<p>当然，一般不会直接对整段语音做傅立叶变换，而是把它截成小段，以确保不会错过其中的细节信息（语音是短时平稳信号）。一般用一个长度为25ms的窗口，从头开始截取25ms的语音信息，成为第一帧，然后向后滑动10ms，再截取第二帧，再向后滑动10ms，截取第三帧，以此类推，这样一个一秒的语音就被截成了100帧。</p>
-<p>截取出所有帧后，接下来就是对每一帧的波形信号进行FFT变为频谱图。</p>
-<p>当然人们向来是好奇的，他们想要看看把所有真的频谱放在一起，诊断语音在转换后是什么样子。方法也很简单，比如第一帧横坐标表示频率，纵坐标表示该频率信号分量的强度，那强度除了用纵坐标的值来表示，用不同的颜色似乎也可以。比如我们用从黑到黄表示不同大小的值，对应到一个颜色，这样就可以把曲线上每个频率对应的强度都转化成一个颜色，得到一个色条。其他帧也是如此。</p>
-<p>我们再建立一个坐标系，把第一帧的色条放在第一帧的位置，把第二帧的色条放在第二帧的位置，以此类推。</p>
-<p>最后就形成了一个叫做语谱图的东西，横坐标表示第几帧，纵坐标表示这一帧中蕴含哪些频率，而颜色则表示这些频率信号的强度。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201191836345.png" alt="image-20231201191836345"></p>
-<p>不过到此还未结束，根据人类发声和听觉的特性，还需要对原始频谱进行三角滤波，然后取对数，再经过DCT变换，这个过程被称之为MFCC特征提取。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201192224800.png" alt="image-20231201192224800"></p>
-<p>最终的效果就是，把每一帧的频谱转化为一个39维的特征向量。<img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201192318975.png" alt="image-20231201192318975"> </p>
-<p>一段语音信号最终也就被转化成了一个特征向量序列，最后的特征向量序列才是要识别的数据。</p>
-<h2 id="语音识别的思想"><a href="#语音识别的思想" class="headerlink" title="语音识别的思想"></a>语音识别的思想</h2><p>当我们设计一个只能识别”hi”、”hello”和”world”的系统时，首先录制了一些这些单词的语音。经过MFCC提取出特征向量序列，作为模板放进这个系统中。这样，对一个新的信号做预测时，就和模板做对比。也就是求解带预测语音的特征向量序列和这些模板中的向量序列的距离，从而得到相似度。相似度最大的便是识别的结果。</p>
-<p>但直接和模板进行比较，一看就很不高级啊，不是主要是效果不好。不过这个想法的意义在于，虽然那些真正可用的识别模型和算法很复杂，但基本思路与此并无区别。而把这个想法用一个精简的数学公式来表达，就是给定一个X出现W的概率。X表示声音的特征，W表示某个词，P表示概率。</p>
-<p>$W^{*}&#x3D;argmax P(W|X)$</p>
-<p>利用概率统计学中的贝叶斯公式。因为我们要找W和X无关，所以分母P(X)的可以直接忽略。就可以把这个问题转化为两个子问题：</p>
-<p>P(X|W)表示一个单词发出某段语音信号的概率，称为声学模型。P(W)表示一个词出现的概率，称之为语言模型。这两个模型就构成了一个语音识别系统。</p>
-<h3 id="声学模型"><a href="#声学模型" class="headerlink" title="声学模型"></a>声学模型</h3><p>从上个世纪80年代开始，一直到本世纪初，一种被称之为Gmm-Hmm的方案始终占领着升学模型的主导地位。以识别”hi”、”hello”和”world”这三个词为例。首先我们采集这些词大量的语音数据，但不再作为比较的模板，而是把它们作为训练数据。给每个词训练一个p of x given w模型（P(X|W)）。训练完成后，当我们将这三个模型中输入一段新的语音信号，每个模型就会给出一个概率值。</p>
-<p>以”hi”这个词举例，我们来详细地研究这些特征向量。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201194411380.png" alt="image-20231201194411380"></p>
-<p>39维的向量并不便于作图和理解，所以从现在开始到最后，我们都假设这些向量是二维的。如果我们把这些特征向量都绘制在一张平面直角坐标系上，你会发现有的地方密集，有的地方稀疏。这样我们就可以使用一个高斯模型，去拟合这些数据的分布，得到一个概率密度函数。第三个维度就表示这段语音是”hi”这个词产生的概率高低。</p>
-<p>在由”hi”的训练数据形成的模型中，如果一段带预测语音的特征向量，在这些密集的区域，则大概率是”hi”，如果在稀疏的区域，则小概率是”hi”。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201194715318.png" alt="image-20231201194715318"></p>
-<p>但事情往往不会这样简单，比如”hello”，这个词在训练数据上的分布是这样的，肉眼可见的是有两个密集区域。一个高斯分布可能不太合适，那就再加一个高斯，做出两个鼓包的模型，这就是高斯混合模型。当然也有可能是三个、四个或者五个等等。这个模型的训练方法，在训练数据上使用聚类算法就好。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201194655368.png" alt="image-20231201194655368"></p>
-<p>在利用训练数据得到每个词的GMM模型之后，现在要识别一段新的语音。首先通过MFCC把这段语音转成特征向量序列，然后再把特征向量丢进每个词的GMM模型中，计算出每个词发出这段语音的概率，找到概率最大的即可。</p>
-<p>不过你可能已经发觉得蹊跷，每门语言中的字词数量太多了。</p>
-<p>以英文举例，现代英语的词汇量已经达到了几十万，给每个词都建立模型显然不现实，而且一个词的发音时间很长，发出的音也很多变，所以直接对词建立GMM模型往往效果很差。</p>
-<p>但我们在英语课上学过一种叫做音标的东西。虽然英语词汇的数量几十万，但发音音素的数量却是固定的48个。</p>
-<p>所以我们可以把单词”hi”拆分为”h”和”i”；”hello”拆分为&#x2F;h&#x2F;,&#x2F;ə&#x2F;,&#x2F;l&#x2F;,&#x2F;əʊ&#x2F;。</p>
-<p>这样我们只需要给这些因素建立GMM模型，来识别一段语音中有哪些因素就好。</p>
-<p>不过人们往往把音素分为更小的单位，因为人们发现，不同音素后面接其他不同的音素时有一点不同。同样前面结合也会影响它的发音。所以把它前后的因素都考虑进去，形成一个更小的识别单位称为三音素。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201200236680.png" alt="image-20231201200236680"></p>
-<p>不过实际上在做识别时，每个三音素还是被拆成了若干个更小的单位，这个单位称之为状态。</p>
-<p>下面的例子是三个状态，我们给每个状态建立GMM模型。</p>
-<p>然后用识别出来的状态拼接成三音素，用三音素拼接成音素，再把音素拼接成词的音标。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201205329036.png" alt="image-20231201205329036"></p>
-<p>而对于中文，汉语拼音的23个声母和24个韵母，相当于音素的角色。</p>
-<p>到此似乎万事俱备，但思考一个问题，每个状态之间真的就像图像画的那样毫无关系吗？</p>
-<p>声音作为一个序列信息，前后之间必然会有某种联系，也就是说一个三音素中，每个状态之间也会有一定的转移概率，当然也有可能转移到自己，而原地打转。</p>
-<p>那这些概率值是多少呢，不知道需要通过大量的语音数据训练出来，这实际上就是模型中的隐马尔可夫模型。</p>
-<p>HMM的细节以及在连续语音识别中的过程，这里用单个因素为例，简单的描述一下大致的流程。</p>
-<p>这些是隐藏状态，它们之间存在转移概率，而下面的GMM仍旧在计算，每个状态产生某阵语音信号特征向量的概率。不过不再直接用来预测，而是作为HMM模型需要的发射概率，用大量的语音数据完成。</p>
-<p>以马尔可夫模型和高斯混合模型的训练之后，预测时搜索语音的特征向量序列，经过高斯混合模型，计算出以马尔可夫模型的发射概率。</p>
-<p>而后以马尔可夫模型，利用状态转移概率和发射概率，搜索出概率值最大的因素。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201205919469.png" alt="image-20231201205919469"></p>
-<p>所以以马尔可夫模型为何适合语音识别问题呢，我们举个例子。</p>
-<p>比如有人语速快，有人语速慢。在引入隐马尔可夫模型之后，因为状态转移概率可以原地打转，所以即使是拖长音状态，多驻留一会儿就可以应对，也就增强了不同发音风格的解析能力。</p>
-<p>这就是流传许久的GMM-HMM模型。</p>
-<p>当然这只是一个声学模型，最后识别出来的结果只是音标或者中文的拼音，但一个拼音可能对应很多个字。</p>
-<h3 id="语言模型"><a href="#语言模型" class="headerlink" title="语言模型"></a>语言模型</h3><p>比如一段语音经过GMM-HMM声学模型之后，识别结果是”LAO YUE HAN NIU BI”。</p>
-<p>那如何得到最终的文字呢，这就要利用语言模型部分。所谓语言模型就是分析一句话像不像话。</p>
-<p>比如把它识别为”捞月汉扭臂”，这就不像人话，语言模型可能给出0.001的概率值。</p>
-<p>而”老约翰牛逼”则很像人话模型，可能给出0.99的概率值。</p>
-<p>结合语言模型最后得到识别的结果。</p>
-<p>这就是从上个世纪80年代开始到本世纪初，语音识别主流的技术线路。</p>
-<h2 id="深度学习带来的改变"><a href="#深度学习带来的改变" class="headerlink" title="深度学习带来的改变"></a>深度学习带来的改变</h2><p>但随着深度学习的兴起，逐渐出现了只要能用上深度学习的最后就一定会用上深度学习这个现象。</p>
-<p>这件事情在语音识别领域中发挥的淋漓尽致。</p>
-<p>一开始深度学习还很保守，只想取代前面的部分，也就是MFCC。</p>
-<p>既然MFCC是在把一段声音信号转化成特征向量，而且MFCC里的手段都是人们手工建立的，那训练一个深度神经网络，让它自己提取出特征向量不香吗？</p>
-<p>再然后深度学习的触角又升到了GMM。既然GMM是一个因素发出某个语音的概率模型，那么训练一个深度神经网络，让它自己拟合出概率值不香吗？这样原来的GMM-HMM模型就变成了DNN-HMM模型。</p>
-<p>另一方面，除了声学模型、语言模型这边，像n-gram这样传统的语言模型也在被取代。</p>
-<p>以循环神经网络为代表的深度学习模型正在飞速的取代传统方式。</p>
-<p>最后深度学习彻底摊牌，不装了。</p>
-<p>隐马尔可夫模型也别留着了，直接all in deep learning。</p>
-<p>这样整个语音识别系统，就变成了深度学习的天下，比如基于循环神经网络的LAS模型，以及CTC，RNN-T等等。</p>
-<p>我们说基于GMM-HMM模型的传统语音识别系统中有声学模型、语言模型。</p>
-<p>实际上在因素拆解时还要有语言学的音素词典，这些部分各自独立训练，优化目标各不相同，所以把它们连接在一起，必然会导致识别精度的损失。而深度学习可以直接在神经网络上训练P of W given X这个模型，最终的输出不再需要先划分为音素，再组成拼音，再转化成文字，而是直接输出文字结果。</p>
-<p>这就是所谓的端到端的识别框架，输入语音经过模型直接识别出文字，甚至不局限于识别。</p>
-<p>比如输入一段英文直接输出中文的翻译结果，也就是说，把翻译功能也在深度神经网络中给训练出来。</p>
-<p>端到端的框架，直接针对最终的目标优化模型，省略了中间的转换和连接，有更好的表现。</p>
-<p>而深度学习作为一种强大的方法论，使用起来也极具想象力。这里有一个比较有意思的想法，把语音识别问题转化为图像识别问题。</p>
-<p>我们再来看看语谱图，这些是理解万岁的语谱图，而这些是你好世界的语谱图。</p>
-<p>而这是图像识别中经典的猫狗识别问题。</p>
-<p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201211301800.png" alt="image-20231201211301800"></p>
-<p>想必你已经看出了端倪所在。既然语谱图已经很好地体现了一段语音的特征，有经验的语言学家甚至能直接从其中看出说话的内容，那么为什么不能像识别一只猫或者一只狗那样，直接去识别这些语谱图呢？</p>
-<p>细细说来，它们之间相似的地方非常多。比如这是一只中华田园猫，这是一只加菲猫，这是一段男性产生的理解万岁的离谱图，而这是女性产生的同一类识别对象，都可能有不同的个体特征。这是在草地上的猫，这是在室内的猫，而这是在商场噪音下的理解万岁，这是在火车站环境噪音下的理解万岁，同一类识别对象都可能有不同的噪音背景。</p>
-<p>所以把语音识别问题转化为图像识别问题是一个很妙的想法。比如科大讯飞在2010年提出的DFCNN，利用了图像识别领域中非常流行的卷积神经网络，并借鉴了在图像识别中表现最好的网络配置，搭建了一个很深的全序列卷积神经网络，直接对语音的语谱图发起识别。</p>
-<p>实验证明，DFCNN比当时在学术界和工业界最好的BLSTM的识别率提升了15%以上。</p>
-<p>那么最后语音识别技术究竟走到了哪一步呢？听说已经超越了人，因为近些年总有媒体这么说，是也不是。</p>
-<p>这些对语音识别成果的震撼报道似乎不太喜欢提及一个事实，训练和测试数据中的声音多是在理想环境下录制，比如在安静的办公室，甚至是专业的录音室。</p>
-<p>但在被称为史上最难语音识别任务的CHIME6比赛中，数据集中的语音是充满环境噪音的。</p>
-<p>这看起来就不像是现在的AI能搞定的问题。</p>
-<p>科大讯飞采用了一种基于空间，说话人同步感知的迭代掩码估计算法，简单来说就是使用麦克风阵列，在复杂环境中综合考虑空间和说话人的信息，对声音做进一步的处理，最后把错误率从46.1%降低到了30.5%，在这项国际赛事上完成了三连冠。</p>
-<h2 id="对于语音人工智能的思考"><a href="#对于语音人工智能的思考" class="headerlink" title="对于语音人工智能的思考"></a>对于语音人工智能的思考</h2><p>不过领先归领先，30.5%的错误率却远远达不到好用的程度。所以我们到底该不该报以理解万岁的态度呢？可以但不完全的可以。</p>
-<p>人们一般把人工智能的能力分为三个层次， <strong>运算智能, 感知智能和认知智能</strong>。</p>
-<p>运算智能人类已经一败涂地，而感知智能近些年已经开始追求，甚至超越了人类，比如特定场景下的图像识别和语音识别，机器越来越聪明。</p>
-<p>然而对于认知智能，也就是像人一样，能够自主应对复杂多变的现实场景，我们到现在甚至没有找到正确的方向，这种尴尬是语音识别乃至整个人工智能领域，从感知智能进入到认知智能之前的常态。所以可以理解，但不完全可以理解的是，那些试图超越技术发展阶段的产品逻辑。</p>
-<p>找对语音识别的应用场景往往很重要。</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><img src="https://gitee.com/insufficient-memory-space/image-bed/raw/master/image-20231201211848798.png" alt="image-20231201211848798"></p>
-<h2 id="评论区大神补充"><a href="#评论区大神补充" class="headerlink" title="评论区大神补充"></a>评论区大神补充</h2><ol>
-<li><p>最近开源了一个端到端框架，speechbrain。他们的目标是打造最牛批语音框架。我自己用过，还挺灵活，有兴趣的可以试试。</p>
-</li>
-<li><p>cnn的前身是tdnn，对于dnn hmm来说效果确实不错，单手源代码使用c++写的，网上有来源的pytorch版本。</p>
-</li>
-<li><p>流行的Transformer也可以用在语音识别里面，配合ctc解码，效果相当不错。不过google又搞出来了conformer，又进一步提高了正确率。</p>
-</li>
-<li><p>我写论文用的是Tedlium，就是ted演讲的内容。语音和文本都是现成的，后期校对一下就好。还有中文的aishell数据库是中文语音库，国内的一家公司特地值作然后开源出来的。更多开源的库，可以去看看openasr</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>深度学习</tag>
-        <tag>语音识别</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英语输入流</title>
     <url>/2024/05/14/test/%E8%8B%B1%E8%AF%AD%E8%BE%93%E5%85%A5%E6%95%B4%E7%90%86/</url>
     <content><![CDATA[<p>介绍我的英语学习工作流</p>
@@ -1771,14 +1766,19 @@
       </tags>
   </entry>
   <entry>
-    <title>word排版论文</title>
-    <url>/2024/05/14/test/word%E6%8E%92%E7%89%88%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/</url>
-    <content><![CDATA[<p>虽然以后可能用latex，但是这也算是个基础技能。</p>
-<span id="more"></span>   
+    <title>给自己的环境装上jupyter</title>
+    <url>/2023/11/20/test/%E8%A3%85%E4%B8%8Ajupyter/</url>
+    <content><![CDATA[<span id="more"></span>   
 
-<meta name="referrer" content="no-referrer" />]]></content>
+<meta name="referrer" content="no-referrer" />
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 添加</span></span><br><span class="line">conda install ipykernel</span><br><span class="line"><span class="comment"># python -m ipykernel install --user --name [anaconda名称] --display-name &quot;[在jupyter的名称]&quot;</span></span><br><span class="line">python -m ipykernel install --user --name mytensor --display-name <span class="string">&quot;mytensor&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 删除</span></span><br><span class="line">jupyter kernelspec <span class="built_in">list</span></span><br><span class="line">jupyter kernelspec remove &lt;kernel_name&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在base环境下，输入目标路劲，即可在网页中切换环境。</p>
+]]></content>
       <tags>
-        <tag>技能</tag>
+        <tag>python</tag>
+        <tag>anaconda</tag>
       </tags>
   </entry>
 </search>
