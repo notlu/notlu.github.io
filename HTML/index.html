@@ -26,10 +26,14 @@ header {
     text-align: center;
 }
 
-#site-title {
+#allsite-title {
     font-size: 2em;
     color: #333;
     margin: 10px 0;
+}
+
+.site-title {
+    font-size: 0.6em;
 }
 
 #engine-buttons {
@@ -119,7 +123,7 @@ header {
 }
 
 .card-title {
-    font-size: 1.2em;
+    font-size: 1.0em;
     color: #333;
     margin-bottom: 10px;
     text-align: center;
@@ -165,6 +169,16 @@ header {
     margin-top: 5px;
     text-align: center;
 }
+.site-icon {
+	width: 25px; /* 或者你想要的图标尺寸 */
+    height: 25px;
+     margin-right: 5px;
+}
+.site-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 </style>
 
 
@@ -178,7 +192,7 @@ header {
 
 <body>
     <header>
-        <h1 id="site-title">老约翰导航</h1>
+        <h1 id="allsite-title">老约翰导航</h1>
         <div id="engine-buttons">
             <button data-engine="https://www.google.com/search?q=">Google</button>
             <button data-engine="https://www.bing.com/search?q=">Bing</button>
@@ -194,74 +208,167 @@ header {
             <button type="submit"><i class="fas fa-search"></i></button>
         </form>
     </header>
-
-   <div class="container">
+    <div class="container">
 
         <div class="card">
             <div class="card-title">个人记录</div>
             <div class="sub-grid">
-                <a href="https://note.wps.cn/">
-                    <i class="fas fa-code"></i><span>WPS便签</span>
+                <a href="https://note.wps.cn/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=note.wps.cn" alt="WPS便签" class="site-icon">
+                    <span class="site-title">WPS便签</span>
                 </a>
-                <a href="https://keep.google.com/">
-					<i class="fas fa-home"></i><span>谷歌便签</span>
-				</a>
-                <a href="https://cloud.oppo.com/owork/mapp/sticky-notes"><i class="fas fa-home"></i><span>手机自带便签</span></a>
-                <a href="https://yun.smartisan.com/#/notes"><i class="fas fa-home"></i><span></span></a>
-                <a href="https://yun.smartisan.com/#/notes">
-                    <i class="fas fa-code"></i><span>锤子便签</span>
+                <a href="https://keep.google.com/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=keep.google.com" alt="谷歌便签" class="site-icon">
+                    <span class="site-title">谷歌便签</span>
+                </a>
+                <a href="https://cloud.oppo.com/owork/mapp/sticky-notes" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=cloud.oppo.com" alt="手机自带便签" class="site-icon">
+                    <span class="site-title">手机自带便签</span>
+                </a>
+                <a href="https://yun.smartisan.com/#/notes" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=yun.smartisan.com" alt="锤子便签" class="site-icon">
+                    <span class="site-title">锤子便签</span>
                     <span class="site-description">已停用，有以前的东西</span>
                 </a>
-				
-                <a href="https://flowus.cn/"><i class="fas fa-home"></i><span>flowus</span></a>
-                <a href="https://www.zhixi.com/space"><i class="fas fa-home"></i><span>知悉思维导图</span></a>
-                <a href="https://mubu.com/"><i class="fas fa-home"></i><span>幕布</span></a>
-                <a href="https://www.notion.so/zh-cn"><i class="fas fa-home"></i><span>notion</span></a>
+                <a href="https://flowus.cn/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=flowus.cn" alt="flowus" class="site-icon">
+                    <span class="site-title">flowus</span>
+                </a>
+                <a href="https://www.zhixi.com/space" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=zhixi.com" alt="知悉思维导图" class="site-icon">
+                    <span class="site-title">知悉思维导图</span>
+                </a>
+                <a href="https://mubu.com/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=mubu.com" alt="幕布" class="site-icon">
+                    <span class="site-title">幕布</span>
+                </a>
+                <a href="https://www.notion.so/zh-cn" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=notion.so" alt="notion" class="site-icon">
+                    <span class="site-title">notion</span>
+                </a>
             </div>
         </div>
-
+	
         <div class="card">
-            <div class="card-title">编程</div>
+            <div class="card-title">我的资源</div>
             <div class="sub-grid">
-                <a href="https://mubu.com/>
-                    <i class="fas fa-code"></i><span>幕布</span>
-                    <span class="site-description">站点21的说明文本</span>
+                <a href="https://pan.baidu.com/disk/main#/im/session?fromId=611636170" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=baidu.com" alt="百度网盘" class="site-icon">
+                    <span class="site-title">百度网盘</span>
                 </a>
-                <a href="https://example22.com">
-                    <i class="fas fa-code"></i><span>站点22</span>
-                    <span class="site-description">站点22的说明文本</span>
+                <a href="https://www.alipan.com/drive/file/all/backup/62011901d6166d2c36fc4b29813205a7ec7a565e" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=alipan.com" alt="阿里云盘资源" class="site-icon">
+                    <span class="site-title">阿里云盘资源</span>
                 </a>
-                <a href="https://example23.com">
-                    <i class="fas fa-code"></i><span>站点23</span>
-                    <span class="site-description">站点23的说明文本</span>
+                <a href="z-library.rs" class="site-link">
+                    <img src="z-library.rs/s2/favicons?domain=cloud.oppo.com" alt="z-lib" class="site-icon">
+                    <span class="site-title">手机自带便签</span>
                 </a>
-                <a href="https://example24.com">
-                    <i class="fas fa-code"></i><span>站点24</span>
-                    <span class="site-description">站点24的说明文本</span>
+                <a href="https://yun.smartisan.com/#/notes" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=yun.smartisan.com" alt="锤子便签" class="site-icon">
+                    <span class="site-title">锤子便签</span>
+                    <span class="site-description">已停用，有以前的东西</span>
                 </a>
-                <a href="https://example25.com">
-                    <i class="fas fa-code"></i><span>站点25</span>
-                    <span class="site-description">站点25的说明文本</span>
+                <a href="https://flowus.cn/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=flowus.cn" alt="flowus" class="site-icon">
+                    <span class="site-title">flowus</span>
                 </a>
-                <a href="https://example26.com">
-                    <i class="fas fa-code"></i><span>站点26</span>
-                    <span class="site-description">站点26的说明文本</span>
+                <a href="https://www.zhixi.com/space" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=zhixi.com" alt="知悉思维导图" class="site-icon">
+                    <span class="site-title">知悉思维导图</span>
+                </a>
+                <a href="https://mubu.com/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=mubu.com" alt="幕布" class="site-icon">
+                    <span class="site-title">幕布</span>
+                </a>
+                <a href="https://www.notion.so/zh-cn" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=notion.so" alt="notion" class="site-icon">
+                    <span class="site-title">notion</span>
                 </a>
             </div>
         </div>
-
-
+		
         <div class="card">
-            <div class="card-title">视频分享</div>
+            <div class="card-title">阅读学习</div>
             <div class="sub-grid">
-                <a href="https://example27.com"><i class="fas fa-video"></i><span>站点27</span></a>
-                <a href="https://example28.com"><i class="fas fa-video"></i><span>站点28</span></a>
-                <a href="https://example29.com"><i class="fas fa-video"></i><span>站点29</span></a>
-                <a href="https://example30.com"><i class="fas fa-video"></i><span>站点30</span></a>
+                <a href="https://en.d2l.ai/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=note.wps.cn" alt="Dive into Deep Learning" class="site-icon">
+                    <span class="site-title">Dive into Deep Learning</span>
+                </a>
+                <a href="https://www.alipan.com/drive/file/all/backup/62011901d6166d2c36fc4b29813205a7ec7a565e" class="site-link">
+                    <img src="https://www.alipan.com/s2/favicons?domain=keep.google.com" alt="阿里云盘资源" class="site-icon">
+                    <span class="site-title">阿里云盘资源</span>
+                </a>
+                <a href="https://cloud.oppo.com/owork/mapp/sticky-notes" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=cloud.oppo.com" alt="手机自带便签" class="site-icon">
+                    <span class="site-title">手机自带便签</span>
+                </a>
+                <a href="https://yun.smartisan.com/#/notes" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=yun.smartisan.com" alt="锤子便签" class="site-icon">
+                    <span class="site-title">锤子便签</span>
+                    <span class="site-description">已停用，有以前的东西</span>
+                </a>
+                <a href="https://flowus.cn/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=flowus.cn" alt="flowus" class="site-icon">
+                    <span class="site-title">flowus</span>
+                </a>
+                <a href="https://www.zhixi.com/space" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=zhixi.com" alt="知悉思维导图" class="site-icon">
+                    <span class="site-title">知悉思维导图</span>
+                </a>
+                <a href="https://mubu.com/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=mubu.com" alt="幕布" class="site-icon">
+                    <span class="site-title">幕布</span>
+                </a>
+                <a href="https://www.notion.so/zh-cn" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=notion.so" alt="notion" class="site-icon">
+                    <span class="site-title">notion</span>
+                </a>
             </div>
         </div>
+		
+        <div class="card">
+            <div class="card-title">阅读学习</div>
+            <div class="sub-grid">
+                <a href="https://en.d2l.ai/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=en.d2l.ai" alt="Dive into Deep Learning" class="site-icon">
+                    <span class="site-title">Dive into Deep Learning</span>
+                </a>
+                <a href="https://www.alipan.com/drive/file/all/backup/62011901d6166d2c36fc4b29813205a7ec7a565e" class="site-link">
+                    <img src="https://www.alipan.com/s2/favicons?domain=keep.google.com" alt="阿里云盘资源" class="site-icon">
+                    <span class="site-title">谷歌便签</span>
+                </a>
+                <a href="https://cloud.oppo.com/owork/mapp/sticky-notes" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=cloud.oppo.com" alt="手机自带便签" class="site-icon">
+                    <span class="site-title">手机自带便签</span>
+                </a>
+                <a href="https://yun.smartisan.com/#/notes" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=yun.smartisan.com" alt="锤子便签" class="site-icon">
+                    <span class="site-title">锤子便签</span>
+                    <span class="site-description">已停用，有以前的东西</span>
+                </a>
+                <a href="https://flowus.cn/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=flowus.cn" alt="flowus" class="site-icon">
+                    <span class="site-title">flowus</span>
+                </a>
+                <a href="https://www.zhixi.com/space" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=zhixi.com" alt="知悉思维导图" class="site-icon">
+                    <span class="site-title">知悉思维导图</span>
+                </a>
+                <a href="https://mubu.com/" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=mubu.com" alt="幕布" class="site-icon">
+                    <span class="site-title">幕布</span>
+                </a>
+                <a href="https://www.notion.so/zh-cn" class="site-link">
+                    <img src="https://www.google.com/s2/favicons?domain=notion.so" alt="notion" class="site-icon">
+                    <span class="site-title">notion</span>
+                </a>
+            </div>
+        </div>
+
 
     </div>
+
 
 
     <script>
